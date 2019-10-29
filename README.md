@@ -2,7 +2,7 @@
 ```
 mkdir build
 cd build
-conan install ../src
+conan install ..
 ```
 
 ## Windows
