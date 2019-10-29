@@ -14,7 +14,7 @@ cmake --build .
 ```
 
 #Running
-In project directory
+In build directory
 ```
 ./bin/quickie.exe
 ```
