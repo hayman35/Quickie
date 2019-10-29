@@ -1,24 +1,22 @@
-Test Push to origin
-
-#Building
+# Building
 ```
 mkdir build
 cd build
 conan install ../src
 ```
 
-##Windows
+## Windows
 ```
 cmake .. -G "Visual Studio 15 Win64"
 cmake --build . --config Release
 ```
-##Unix/Mac
+## Unix/Mac
 ```
 cmake .. -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release
 cmake --build .
 ```
 
-#Running
+# Running
 In build directory
 ```
 ./bin/quickie.exe
