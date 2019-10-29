@@ -1,8 +1,13 @@
 Test Push to origin
 
 #Building
+```
+mkdir build
+cd build
+conan install ../src
+```
+
 ##Windows
-In build directory
 ```
 cmake .. -G "Visual Studio 15 Win64"
 cmake --build . --config Release
