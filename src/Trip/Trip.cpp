@@ -65,7 +65,7 @@ class Trip{
             return endLocation;
         }
 
-        void setStartLocation(GeographicCoordinate endLocation){
+        void setEndLocation(GeographicCoordinate endLocation){
             this.endLocation = endLocation;
         }
 }
