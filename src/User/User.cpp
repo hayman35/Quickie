@@ -32,12 +32,12 @@ void User::setStartLocation(GeographicCoordinate startLocation) {
     this->startLocation = &startLocation;
 }
 
-void User::addTrip(Trip trip) {
-    this->trip = &trip;
+void User::addTrip(Trip* trip) {
+    this->trip = trip;
 }
 
-Trip User::getTrip() {
-    return *trip;
+Trip* User::getTrip() {
+    return trip;
 }
 
 void User::removeTrip() {
