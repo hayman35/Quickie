@@ -15,6 +15,9 @@ int main(int argc, char** argv)
     UserFactory userFactory = new UserFactory();
     TripFactory tripFactory = new TripFactory();
 
+    //Get command
+    //request trip
+
     long startLat = 0;
     long startLong = 0;
 
@@ -30,6 +33,7 @@ int main(int argc, char** argv)
     Trip trip = tripFactory.create(user, user.getStartLocation(), endLocation)
     user.addTrip(trip);
     trip.start();
+
 
     return 0;
 }
