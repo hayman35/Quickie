@@ -47,5 +47,6 @@ class UberTrip: public Trip {
         void setEndLocation(GeographicCoordinate endLocation);
 
         void start();
+
 };
 #endif //QUICKIE_UBERTRIP_H

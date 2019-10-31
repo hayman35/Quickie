@@ -41,7 +41,8 @@ Trip* User::getTrip() {
 }
 
 void User::removeTrip() {
-    delete trip;
+    //delete trip;
+    ;
 }
 
 void User::updateUberType(std::string uberType){

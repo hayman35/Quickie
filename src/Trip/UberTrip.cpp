@@ -64,7 +64,3 @@ void UberTrip::setEndLocation(GeographicCoordinate endLocation){
 void UberTrip::start(){
     ;
 }
-
-~Trip() {
-    ;
-}

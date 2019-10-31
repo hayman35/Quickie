@@ -29,7 +29,6 @@ class Trip {
         virtual GeographicCoordinate getEndLocation() = 0;
         virtual void setEndLocation(GeographicCoordinate endLocation) = 0;
         virtual void start() = 0;
-        virtual ~Trip() = 0;
 
 };
 #endif //QUICKIE_TRIP_H
