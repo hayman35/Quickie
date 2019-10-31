@@ -1,6 +1,6 @@
 #include <string.h>
 #include "./../Domain/GeographicCoordinate.cpp"
-#include "../Trip/Trip.cpp"
+#include "../Headers/Trip.h"
 
 #ifndef QUICKIE_USER_H
 #define QUICKIE_USER_H
