@@ -1,29 +1,22 @@
 #include "../Headers/GeographicCoordinate.h"
 
-class GeographicCoordinate{
-    private:
-        long latitude;
-        long longitude;
+GeographicCoordinate(long latitude, long longitude){
+    this->latitude = latitude;
+    this->longitude = longitude;
+}
 
-    public:
-        GeographicCoordinate(long latitude, long longitude){
-            this->latitude = latitude;
-            this->longitude = longitude;
-        }
+long GeographicCoordinate::getLatitude(){
+    return latitude;
+}
 
-        long getLatitude(){
-            return latitude;
-        }
+void GeographicCoordinate::setLatitude(long latitude){
+    this->latitude = latitude;
+}
 
-        void setLatitude(long latitude){
-            this->latitude = latitude;
-        }
+long GeographicCoordinate::getLongitude(){
+    return longitude;
+}
 
-        long getLongitude(){
-            return longitude;
-        }
-
-        void setLongitude(long longitude){
-            this->longitude = longitude;
-        }
-};
+void GeographicCoordinate::setLongitude(long longitude){
+    this->longitude = longitude;
+}
