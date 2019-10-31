@@ -65,6 +65,6 @@ void UberTrip::start(){
     ;
 }
 
-~Trip() {
+UberTrip::~UberTrip() {
     ;
 }
