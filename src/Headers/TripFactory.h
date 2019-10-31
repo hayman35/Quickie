@@ -1,6 +1,7 @@
 #include "../Headers/GeographicCoordinate.h"
 #include "../Headers/Trip.h"
 #include "../Headers/User.h"
+#include "../Headers/UberTrip.h"
 
 #ifndef QUICKIE_TRIPFACTORY_H
 #define QUICKIE_TRIPFACTORY_H
