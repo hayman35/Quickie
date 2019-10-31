@@ -7,7 +7,7 @@ void UberDummyApiImplementation::getFareEstimate(Trip* trip){
         trip->setDistance(5);
         trip->setTimeEstimate(3);
         trip->setDistanceUnit("miles");
-};
+}
 
 void UberDummyApiImplementation::getTripEstimate(Trip* trip){
     trip->setStatus("trip estimated");
@@ -15,11 +15,11 @@ void UberDummyApiImplementation::getTripEstimate(Trip* trip){
     trip->setDistance(5);
     trip->setTimeEstimate(3);
     trip->setDistanceUnit("miles");
-};
+}
 
 void UberDummyApiImplementation::rideRequest(Trip* trip){
     trip->setStatus("ride requested");
-};
+}
 
 void UberDummyApiImplementation::cancelRideRequest(Trip* trip){
     trip->setStatus("cancelled");
@@ -27,8 +27,8 @@ void UberDummyApiImplementation::cancelRideRequest(Trip* trip){
     trip->setDistance(-1);
     trip->setTimeEstimate(-1);
     trip->setDistanceUnit("");
-};
+}
 
 void UberDummyApiImplementation::getCurrentRide(Trip* trip){
     ;
-};
+}
