@@ -25,7 +25,7 @@ void User::setOAuthToken(std::string oAuthToken) {
 }
 
 GeographicCoordinate User::getStartLocation() {
-    return startLocation;
+    return *startLocation;
 }
 
 void User::setStartLocation(GeographicCoordinate startLocation) {
