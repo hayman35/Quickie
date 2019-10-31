@@ -15,10 +15,10 @@ void requestRide(user){
     long startLong = 0;
 
     std::cout << "Enter starting lat: ";
-    *startLat << std::cin;
+    startLat << std::cin;
 
     std::cout << "Enter starting long: ";
-    *startLong << std::cin;
+    startLong << std::cin;
 
     GeographicCoordinate endLocation = new GeographicCoordinate(startLat, startLong);
 
