@@ -2,7 +2,7 @@
 #include <string>
 #include <GeographicCoordinate.h>
 
-class Trip{
+class Trip {
     private:
         string status;
         double fareValue;
