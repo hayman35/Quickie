@@ -10,7 +10,7 @@ class User {
         std::string oAuthToken;
         GeographicCoordinate startLocation;
         Trip *trip;
-        std::string userType;
+        std::string uberType;
 
     public:
         User(std::string userID, GeographicCoordinate startLocation);
