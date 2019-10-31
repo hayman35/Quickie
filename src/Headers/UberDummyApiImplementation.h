@@ -14,5 +14,5 @@ class UberDummyApiImplementation: UberApiInterface {
 
     void UberDummyApiImplementation::getCurrentRide(Trip *trip);
 
-}
+};
 #endif //QUICKIE_UBERDUMMYAPIIMPLEMENTATION_H
