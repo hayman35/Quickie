@@ -1,3 +1,4 @@
+#include "../Headers/GeographicCoordinate.h"
 
 class GeographicCoordinate{
     private:
