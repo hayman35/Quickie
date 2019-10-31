@@ -2,11 +2,11 @@
 // Created by Kevin Johar on 2019-10-30.
 //
 #include <string.h>
-#include "GeographicCoordinate.h"
+#include "../Domain/GeographicCoordinate.cpp"
 
 class User {
     private:
-        string userID;
+        String userID;
         string oAuthToken;
         GeographicCoordinate startLocation;
 
