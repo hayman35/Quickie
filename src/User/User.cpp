@@ -1,57 +1,44 @@
 //
 // Created by Kevin Johar on 2019-10-30.
-//
 #include <string.h>
 #include "../Headers/User.h"
-#include "../Domain/GeographicCoordinate.cpp"
-#include "../Trip/Trip.cpp"
 
-class User {
-    private:
-        std::string userID;
-        std::string oAuthToken;
-        GeographicCoordinate* startLocation;
-        Trip* trip;
+User(std::string userID) {
+    this->userID = userID;
+}
 
-    public:
-        User(std::string userID){
-            this->userID = userID;
-        }
+std::string User::getUserID() {
+    return userID;
+}
 
-        std::string getUserID(){
-            return userID;
-        }
+void User::setUserID() {
+    this->userID = userID;
+}
 
-        void setUserID(){
-            this->userID = userID;
-        }
+std::string User::getOAuthToken() {
+    return oAuthToken;
+}
 
-        std::string getOAuthToken(){
-            return oAuthToken;
-        }
+void User::setOAuthToken(std::string oAuthToken) {
+    this->oAuthToken = oAuthToken;
+}
 
-        void setOAuthToken(std::string oAuthToken){
-            this->oAuthToken = oAuthToken;
-        }
+GeographicCoordinate User::getStartLocation() {
+    return *startLocation;
+}
 
-        GeographicCoordinate getStartLocation(){
-            return *startLocation;
-        }
+void User::setStartLocation(GeographicCoordinate startLocation) {
+    this->startLocation = &startLocation;
+}
 
-        void setStartLocation(GeographicCoordinate startLocation){
-            this->startLocation = &startLocation;
-        }
+void User::addTrip(Trip trip) {
+    this->trip = &trip;
+}
 
-        void addTrip(Trip trip){
-            this->trip = &trip;
-        }
+Trip User::getTrip() {
+    return *trip;
+}
 
-        Trip getTrip(){
-            return *trip;
-        }
-
-        Trip removeTrip(){
-            delete trip;
-        }
-
-};
+Trip User::removeTrip() {
+    delete trip;
+}
