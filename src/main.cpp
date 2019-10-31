@@ -15,10 +15,10 @@ void requestRide(User user){
     long startLong = 0;
 
     std::cout << "Enter starting lat: ";
-    startLat << std::cin;
+    startLat << long(std::cin);
 
     std::cout << "Enter starting long: ";
-    startLong << std::cin;
+    startLong << long(std::cin);
 
     GeographicCoordinate endLocation = new GeographicCoordinate(startLat, startLong);
 
@@ -72,7 +72,7 @@ int main(int argc, char** argv)
         std::cout << "4) Exit" << std::endl;
 
         int response;
-        response << std::cin;
+        response << int(std::cin);
         if(response != 1 && response != 2 && response != 3 && response != 4){
             continue;
         }
