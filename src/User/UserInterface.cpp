@@ -1,12 +1,13 @@
 //
 // Created by Kevin Johar on 2019-10-30.
 //
+#include <string>
 #include "./../Domain/GeographicCoordinate.cpp"
 
 class UserInterface {
     private:
-        string userId;
-        string oAuthToken;
+        std::string userId;
+        std::string oAuthToken;
         GeographicCoordinate startLocation;
 
     public:

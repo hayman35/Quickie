@@ -3,7 +3,7 @@
 class UserFactory{
 
     public:
-        User* createUser(){
+        User createUser(){
             User* user = new User("startingID");
 
             //Authorize
@@ -12,7 +12,7 @@ class UserFactory{
             long startLat = 0;
             GeographicCoordinate* startGeo = new GeographicCoordinate(startLong, startLat);
             user->setStartLocation(*startGeo);
-            return user;
+            return *user;
 
         }
 };

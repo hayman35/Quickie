@@ -17,7 +17,7 @@ class Trip {
             return status;
         }
 
-        void setStats(std::string status){
+        void setStatus(std::string status){
             this->status = status;
         }
 

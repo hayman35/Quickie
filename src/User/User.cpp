@@ -9,8 +9,8 @@ class User {
     private:
         std::string userID;
         std::string oAuthToken;
-        GeographicCoordinate startLocation;
-        Trip trip;
+        GeographicCoordinate* startLocation;
+        Trip* trip;
 
     public:
         User(std::string userID){
@@ -34,23 +34,23 @@ class User {
         }
 
         GeographicCoordinate getStartLocation(){
-            return startLocation;
+            return *startLocation;
         }
 
         void setStartLocation(GeographicCoordinate startLocation){
-            this->startLocation = startLocation;
+            this->startLocation = &startLocation;
         }
 
         void addTrip(Trip trip){
-            this->trip = trip;
+            this->trip = &trip;
         }
 
-        Trip getTrip(Trip trip){
-            return trip;
+        Trip getTrip(){
+            return *trip;
         }
 
         Trip removeTrip(){
-            this->trip = NULL;
+            delete trip;
         }
 
 };
