@@ -1,6 +1,7 @@
 #include "../Domain/GeographicCoordinate.cpp"
 #include "../Trip/Trip.cpp"
 #include "../User/User.cpp"
+#include "../Headers/TripFactory.h"
 class TripFactory {
 
     public:
@@ -8,6 +9,6 @@ class TripFactory {
             Trip* trip = new Trip();
             trip->setStartLocation(start);
             trip->setEndLocation(end);
-            return trip;
+            return *trip;
         }
 };

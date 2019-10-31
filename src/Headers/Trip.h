@@ -1,7 +1,10 @@
 #include <string>
 #include "../Domain/GeographicCoordinate.cpp"
+#ifndef QUICKIE_UBER_H
+#define QUICKIE_UBER_H
 
 class Trip {
+    
     private:
         std::string status;
         double fareValue;
@@ -26,3 +29,4 @@ class Trip {
         virtual void setEndLocation(GeographicCoordinate endLocation);
 
 };
+#endif //QUICKIE_UBER_H
