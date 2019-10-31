@@ -9,13 +9,8 @@ class User {
     private:
         std::string userID;
         std::string oAuthToken;
-<<<<<<< Updated upstream
-        GeographicCoordinate startLocation;
-        Trip trip;
-=======
         GeographicCoordinate* startLocation;
         Trip* trip;
->>>>>>> Stashed changes
 
     public:
         User(std::string userID){
