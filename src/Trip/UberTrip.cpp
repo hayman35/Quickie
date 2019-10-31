@@ -57,3 +57,7 @@ GeographicCoordinate UberTrip::getEndLocation(){
 void UberTrip::setEndLocation(GeographicCoordinate endLocation){
     this->endLocation = endLocation;
 }
+
+void UberTrip::start(){
+    ;
+}

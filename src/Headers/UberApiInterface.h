@@ -13,8 +13,8 @@ class UberApiInterface {
         void getCurrentRide(Trip*);
 
     private:
-        string clientID;
-        string state;
-        string redirectURL;
-}
+        std::string clientID;
+        std::string state;
+        std::string redirectURL;
+};
 #endif //QUICKIE_UBERAPIINTERFACE_H

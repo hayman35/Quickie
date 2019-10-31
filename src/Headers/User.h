@@ -12,7 +12,7 @@ class User {
         Trip *trip;
 
     public:
-        User(std::string userID);
+        User(std::string userID, GeographicCoordinate startLocation);
         std::string getUserID();
         void setUserID();
         std::string getOAuthToken();

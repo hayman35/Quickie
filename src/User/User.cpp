@@ -3,8 +3,9 @@
 #include <string.h>
 #include "../Headers/User.h"
 
-User::User(std::string userID) {
+User::User(std::string userID, GeographicCoordinate startLocation) {
     this->userID = userID;
+    this->startLocation = startLocation;
 }
 
 std::string User::getUserID() {
