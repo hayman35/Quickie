@@ -22,7 +22,7 @@ void requestRide(User user){
 
     GeographicCoordinate* endLocation = new GeographicCoordinate(startLat, startLong);
 
-    Trip* trip = tripFactory->create(user, user.getStartLocation(), *endLocation)
+    Trip* trip = tripFactory->create(user, user.getStartLocation(), *endLocation);
     user.addTrip(*trip);
     std::string response = "";
     std::cout << "confirm [Y]es, [N]o? ";
