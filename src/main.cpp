@@ -8,7 +8,7 @@
 #include "Headers/User.h"
 #include "Headers/GeographicCoordinate.h"
 
-void requestRide(User user){
+void requestRide(User *user){
     TripFactory* tripFactory = new TripFactory();
 
     long startLat = 0;
@@ -22,8 +22,8 @@ void requestRide(User user){
 
     GeographicCoordinate* endLocation = new GeographicCoordinate(startLat, startLong);
 
-    Trip* trip = tripFactory->create(user, user.getStartLocation(), *endLocation);
-    user.addTrip(trip);
+    Trip* trip = tripFactory->create(*user, user->getStartLocation(), *endLocation);
+    user->addTrip(trip);
     std::string response = "";
     std::cout << "confirm [Y]es, [N]o? ";
     std::cin >> response;
@@ -32,20 +32,20 @@ void requestRide(User user){
         std::cout << "Trip Started!";
     } else {
         std::cout << "Trip cancelled" << std::endl;
-        user.removeTrip();
+        user->removeTrip();
     }
 }
 
-void setUberType(User user){
+void setUberType(User *user){
     std::string uberType = "";
     std::cout << "Enter Uber Type (UberX, UberXL, UberBlack): ";
     std::cin >> uberType;
-    user.updateUberType(uberType);
+    user->updateUberType(uberType);
     std::cout << std::endl <<"Uber type updated";
 }
 
-void getCurrentETA(User user){
-    Trip* trip = user.getTrip();
+void getCurrentETA(User *user){
+    Trip* trip = user->getTrip();
     std::cout << trip->getTimeEstimate() << std::endl;
 }
 
@@ -64,6 +64,7 @@ int main(int argc, char** argv)
     //Get command
     //request trip
 
+    int rideRequest = 0;
     while(true){
         std::cout << "Select command" << std::endl;
         std::cout << "1) Request Ride" << std::endl;
@@ -71,17 +72,22 @@ int main(int argc, char** argv)
         std::cout << "3) Get Current Ride ETA" << std::endl;
         std::cout << "4) Exit" << std::endl;
 
-        int response;
+        int response = 0;
         std::cin >> response;
         if(response != 1 && response != 2 && response != 3 && response != 4){
             continue;
         }
         if(response == 1){
-            requestRide(*user);
+            rideRequest = 1;
+            requestRide(user);
         } else if(response == 2) {
-            setUberType(*user);
+            setUberType(user);
         } else if(response == 3){
-            getCurrentETA(*user);
+            if(rideRequest == 1){
+                getCurrentETA(user);
+            } else {
+                std::cout << "Please request a ride first" << std::endl;
+            }
         } else if(response == 4) {
             break;
         }

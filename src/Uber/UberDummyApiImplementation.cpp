@@ -5,7 +5,7 @@ void UberDummyApiImplementation::getFareEstimate(Trip* trip){
         trip->setStatus("fare estimated");
         trip->setFareValue(10.0);
         trip->setDistance(5);
-        trip->setTimeEstimate(3);
+        trip->setTimeEstimate(12);
         trip->setDistanceUnit("miles");
 }
 
