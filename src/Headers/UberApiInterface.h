@@ -16,5 +16,5 @@ class UberApiInterface {
         string clientID;
         string state;
         string redirectURL;
-}
+};
 #endif //QUICKIE_UBER_H
