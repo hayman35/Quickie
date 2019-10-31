@@ -1,8 +1,8 @@
 #include <string>
 #include "../Domain/GeographicCoordinate.cpp"
 
-#ifndef QUICKIE_UBER_H
-#define QUICKIE_UBER_H
+#ifndef QUICKIE_TRIP_H
+#define QUICKIE_TRIP_H
 
 class Trip {
 
@@ -30,4 +30,4 @@ class Trip {
         virtual void setEndLocation(GeographicCoordinate endLocation);
 
 };
-#endif //QUICKIE_UBER_H
+#endif //QUICKIE_TRIP_H

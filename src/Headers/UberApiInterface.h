@@ -1,8 +1,8 @@
 #include <string.h>
 #include "../Headers/Trip.h"
 
-#ifndef QUICKIE_UBER_H
-#define QUICKIE_UBER_H
+#ifndef QUICKIE_UBERAPIINTERFACE_H
+#define QUICKIE_UBERAPIINTERFACE_H
 
 class UberApiInterface {
     public:
@@ -16,5 +16,5 @@ class UberApiInterface {
         string clientID;
         string state;
         string redirectURL;
-};
-#endif //QUICKIE_UBER_H
+}
+#endif //QUICKIE_UBERAPIINTERFACE_H
