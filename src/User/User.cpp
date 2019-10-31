@@ -3,7 +3,7 @@
 #include <string.h>
 #include "../Headers/User.h"
 
-User(std::string userID) {
+User::User(std::string userID) {
     this->userID = userID;
 }
 

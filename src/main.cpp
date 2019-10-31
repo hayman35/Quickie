@@ -11,21 +11,21 @@
 void requestRide(user){
     TripFactory tripFactory = new TripFactory();
 
-    long startLat = 0;
-    long startLong = 0;
+    long* startLat = 0;
+    long* startLong = 0;
 
     std::cout << "Enter starting lat: ";
-    startLat << std::cin;
+    *startLat << std::cin;
 
     std::cout << "Enter starting long: ";
-    startLong << std::cin;
+    *startLong << std::cin;
 
     GeographicCoordinate endLocation = new GeographicCoordinate(startLat, startLong);
 
     Trip trip = tripFactory.create(user, user.getStartLocation(), endLocation)
     user.addTrip(trip);
     string response = "";
-    std::cout << "confirm [Y]es, [n]o? ";
+    std::cout << "confirm [Y]es, [N]o? ";
     response << std::cin;
     if(response == "Y"){
         trip.start();
