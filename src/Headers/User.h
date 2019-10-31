@@ -9,7 +9,7 @@ class User {
         std::string userId;
         std::string oAuthToken;
         GeographicCoordinate startLocation;
-        Trip trip;
+        Trip *trip;
 
     public:
         User(std::string userID);
