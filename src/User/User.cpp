@@ -2,6 +2,7 @@
 // Created by Kevin Johar on 2019-10-30.
 //
 #include <string.h>
+#include "../Headers/User.h"
 #include "../Domain/GeographicCoordinate.cpp"
 #include "../Trip/Trip.cpp"
 
