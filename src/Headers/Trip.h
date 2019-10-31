@@ -9,6 +9,8 @@ class Trip {
     private:
         std::string status;
         double fareValue;
+
+        //TODO: Remove distance and time estimate, only give values directly from API once implemented, should be the latest data ONLY
         double distance;
         double timeEstimate;
         std::string distanceUnit;
