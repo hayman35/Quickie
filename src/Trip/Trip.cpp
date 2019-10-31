@@ -3,7 +3,13 @@
 #include "../Headers/Trip.h"
 class Trip {
     private:
-
+        std::string status;
+        double fareValue;
+        double distance;
+        double timeEstimate;
+        std::string distanceUnit;
+        GeographicCoordinate startLocation;
+        GeographicCoordinate endLocation;
     public:
         virtual std::string getStatus();
 
