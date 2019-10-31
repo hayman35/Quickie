@@ -1,7 +1,7 @@
 
-#include "../Headers/UberDummyApiImplementation.h"
+#include "../Headers/UberApiInterface.h"
 
-class UberDummyApiImplementation: UberApiInterfact {
+class UberDummyApiImplementation: UberApiInterface {
     void getFareEstimate(Trip* trip);
 
     void UberDummyApiImplementation::getTripEstimate(Trip* trip);
