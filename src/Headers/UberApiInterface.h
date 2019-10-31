@@ -4,7 +4,7 @@
 #ifndef QUICKIE_UBER_H
 #define QUICKIE_UBER_H
 
-class UberApi {
+class UberApiInterface {
     public:
         void getFareEstimate(Trip*);
         void getTripEstimate(Trip*);
