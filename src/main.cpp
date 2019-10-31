@@ -59,7 +59,7 @@ int main(int argc, char** argv)
     std::cout << Poco::DigestEngine::digestToHex(md5.digest()) << std::endl;
 
     UserFactory* userFactory = new UserFactory();
-    User user = userFactory->createUser();
+    User* user = userFactory->createUser();
 
     //Get command
     //request trip
@@ -77,11 +77,11 @@ int main(int argc, char** argv)
             continue;
         }
         if(response == 1){
-            requestRide(user);
+            requestRide(*user);
         } else if(response == 2) {
-            setUberType(user);
+            setUberType(*user);
         } else if(response == 3){
-            getCurrentETA(user);
+            getCurrentETA(*user);
         } else if(response == 4) {
             break;
         }
