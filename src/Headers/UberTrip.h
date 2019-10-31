@@ -12,10 +12,12 @@ class UberTrip: public Trip {
         double distance;
         double timeEstimate;
         std::string distanceUnit;
-        GeographicCoordinate startLocation;
-        GeographicCoordinate endLocation;
+        GeographicCoordinate *startLocation;
+        GeographicCoordinate *endLocation;
 
     public:
+        UberTrip();
+
         std::string getStatus();
 
         void setStatus(std::string status);
