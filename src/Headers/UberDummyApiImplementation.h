@@ -3,7 +3,7 @@
 #ifndef QUICKIE_UBERDUMMYAPIIMPLEMENTATION_H
 #define QUICKIE_UBERDUMMYAPIIMPLEMENTATION_H
 
-class UberDummyApiImplementation: UberApiInterface {
+class UberDummyApiImplementation: public UberApiInterface {
     void getFareEstimate(Trip *trip);
 
     void getTripEstimate(Trip *trip);
