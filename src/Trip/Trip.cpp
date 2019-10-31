@@ -11,61 +11,33 @@ class Trip {
         GeographicCoordinate startLocation;
         GeographicCoordinate endLocation;
     public:
-        std::string getStatus(){
-            return status;
-        }
+        virtual std::string getStatus();
 
-        void setStats(std::string status){
-            this->status = status;
-        }
+        virtual void setStatus(std::string status);
 
-        double getFareValue(){
-            return fareValue;
-        }
+        virtual double getFareValue();
 
-        void setFareValue(double fareValue){
-            this->fareValue = fareValue;
-        }
+        virtual void setFareValue(double fareValue);
 
-        double getDistance(){
-            return distance;
-        }
+        virtual double getDistance();
 
-        void setDistance(double distance){
-            this->distance = distance;
-        }
+        virtual void setDistance(double distance);
 
-        double getTimeEstimate(){
-            return timeEstimate;
-        }
+        virtual double getTimeEstimate();
 
-        void setTimeEstimate(double timeEstimate){
-            this->timeEstimate = timeEstimate;
-        }
+        virtual void setTimeEstimate(double timeEstimate);
 
-        std::string getDistanceUnit(){
-            return distanceUnit;
-        }
+        virtual std::string getDistanceUnit();
 
-        void setDistanceUnit(std::string distanceUnit){
-            this->distanceUnit = distanceUnit;
-        }
+        virtual void setDistanceUnit(std::string distanceUnit);
 
-        GeographicCoordinate getStartLocation(){
-            return startLocation;
-        }
+        virtual GeographicCoordinate getStartLocation();
 
-        void setStartLocation(GeographicCoordinate startLocation){
-            this->startLocation = startLocation;
-        }
+        virtual void setStartLocation(GeographicCoordinate startLocation);
 
-        GeographicCoordinate getEndLocation(){
-            return endLocation;
-        }
+        virtual GeographicCoordinate getEndLocation();
 
-        void setEndLocation(GeographicCoordinate endLocation){
-            this->endLocation = endLocation;
-        }
+        virtual void setEndLocation(GeographicCoordinate endLocation);
 };
 
 
