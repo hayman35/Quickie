@@ -11,18 +11,18 @@ class Trip {
         GeographicCoordinate startLocation;
         GeographicCoordinate endLocation;
     public:
-    std::string getStatus();
-    void setStats(std::string status);
-    void setFareValue(double fareValue);
-    double getDistance();
-    void setDistance(double distance);
-    double getTimeEstimate();
-    void setTimeEstimate(double timeEstimate);
-    std::string getDistanceUnit();
-    void setDistanceUnit(std::string distanceUnit);
-    GeographicCoordinate getStartLocation();
-    void setStartLocation(GeographicCoordinate startLocation);
-    GeographicCoordinate getEndLocation();
-    void setEndLocation(GeographicCoordinate endLocation);
+        virtual std::string getStatus();
+        virtual void setStats(std::string status);
+        virtual void setFareValue(double fareValue);
+        virtual double getDistance();
+        virtual void setDistance(double distance);
+        virtual double getTimeEstimate();
+        virtual void setTimeEstimate(double timeEstimate);
+        virtual std::string getDistanceUnit();
+        virtual void setDistanceUnit(std::string distanceUnit);
+        virtual GeographicCoordinate getStartLocation();
+        virtual void setStartLocation(GeographicCoordinate startLocation);
+        virtual GeographicCoordinate getEndLocation();
+        virtual void setEndLocation(GeographicCoordinate endLocation);
 
 };
