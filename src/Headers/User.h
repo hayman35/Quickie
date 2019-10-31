@@ -1,6 +1,6 @@
 #include <string.h>
 #include "./../Domain/GeographicCoordinate.cpp"
-#include "../Trip/Trip.cpp"
+#include "../Headers/Trip.h"
 
 #include <string>
 #include "./../Domain/GeographicCoordinate.cpp"
