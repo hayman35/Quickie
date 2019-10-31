@@ -5,6 +5,11 @@ class GeographicCoordinate{
         long longitude;
 
     public:
+        GeographicCoordinate(long latitude, long longitude){
+            this->latitude = latitude;
+            this->longitude = longitude;
+        }
+
         long getLatitude(){
             return latitude;
         }

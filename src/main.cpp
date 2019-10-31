@@ -2,7 +2,7 @@
 #include "Poco/DigestStream.h"
 
 #include <iostream>
-
+using namespace std;
 
 int main(int argc, char** argv)
 {
@@ -10,6 +10,26 @@ int main(int argc, char** argv)
     Poco::DigestOutputStream ds(md5);
     ds << "abcdefghijklmnopqrstuvwxyz";
     ds.close();
-    std::cout << Poco::DigestEngine::digestToHex(md5.digest()) << std::endl;
+    cout << Poco::DigestEngine::digestToHex(md5.digest()) << endl;
+
+    UserFactory userFactory = new UserFactory();
+    TripFactory tripFactory = new TripFactory();
+
+    long startLat = 0;
+    long startLong = 0;
+
+    cout << "Enter starting lat: ";
+    startLat << cin;
+
+    cout << "Enter starting long: ";
+    startLong << cin;
+
+    GeographicCoordinate endLocation = new GeographicCoordinate(startLat, startLong);
+
+    User user = userFactory.createUser();
+    Trip trip = tripFactory.create(user, user.getStartLocation(), endLocation)
+    user.addTrip(trip);
+    trip.start();
+
     return 0;
 }
