@@ -1,5 +1,5 @@
 #include <string>
-#include "./../Domain/GeographicCoordinate.cpp"
+#include "../Headers/GeographicCoordinate.h"
 
 #ifndef QUICKIE_USER_H
 #define QUICKIE_USER_H
