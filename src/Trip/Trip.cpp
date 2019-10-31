@@ -1,23 +1,23 @@
 
 #include <string>
-#include <GeographicCoordinate.h>
+#include "../Domain/GeographicCoordinate.cpp"
 
 class Trip {
     private:
-        string status;
+        std::string status;
         double fareValue;
         double distance;
         double timeEstimate;
-        string distanceUnit;
+        std::string distanceUnit;
         GeographicCoordinate startLocation;
         GeographicCoordinate endLocation;
 
     public:
-        string getStatus(){
+        std::string getStatus(){
             return status;
         }
 
-        void setStats(string status){
+        void setStats(std::string status){
             this->status = status;
         }
 
@@ -45,11 +45,11 @@ class Trip {
             this->timeEstimate = timeEstimate;
         }
 
-        string getDistanceUnit(){
+        std::string getDistanceUnit(){
             return distanceUnit;
         }
 
-        void setDistanceUnit(string distanceUnit){
+        void setDistanceUnit(std::string distanceUnit){
             this->distanceUnit = distanceUnit;
         }
 

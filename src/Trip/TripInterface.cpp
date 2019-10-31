@@ -1,11 +1,10 @@
 
 #include <string.h>
-#include <Trip.h>
-
+#include "Trip.cpp"
 class TripInterface{
     public:
-        string getStatus();
-        void setStatus(string);
+        std::string getStatus();
+        void setStatus(std::string);
 
         double getFareValue();
         void setFareValue(double);
@@ -16,8 +15,8 @@ class TripInterface{
         double getTimeEstimate();
         void setTimeEstimate(double);
 
-        string getDistanceUnit();
-        void setDistanceUnit(string);
+        std::string getDistanceUnit();
+        void setDistanceUnit(std::string);
 
         GeographicCoordinate getStartLocation();
         void setStartLocation(GeographicCoordinate);
@@ -26,11 +25,11 @@ class TripInterface{
         void setEndLocation(GeographicCoordinate);
 
     private:
-        string status;
+        std::string status;
         double fareValue;
         double distance;
         double timeEstimate;
-        string distanceUnit;
+        std::string distanceUnit;
         GeographicCoordinate startLocation;
         GeographicCoordinate endLocation;
 };
