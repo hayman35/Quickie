@@ -4,11 +4,11 @@
 
 class UberApiInterface{
     public:
-        virtual Trip getFareEstimate(Trip);
-        virtual Trip getTripEstimate(Trip);
-        virtual Trip rideRequest(Trip);
-        virtual Trip cancelRideRequest(Trip);
-        virtual Trip getCurrentRide(Trip);
+        Trip getFareEstimate(Trip);
+        Trip getTripEstimate(Trip);
+        Trip rideRequest(Trip);
+        Trip cancelRideRequest(Trip);
+        Trip getCurrentRide(Trip);
 
     private:
         string clientID;

@@ -18,7 +18,7 @@ class Trip{
         }
 
         void setStats(string status){
-            this.status = status;
+            this->status = status;
         }
 
         double getFareValue(){
@@ -26,7 +26,7 @@ class Trip{
         }
 
         void setFareValue(double fareValue){
-            this.fareValue = fareValue;
+            this->fareValue = fareValue;
         }
 
         double getDistance(){
@@ -34,7 +34,7 @@ class Trip{
         }
 
         void setDistance(double distance){
-            this.distance = distance;
+            this->distance = distance;
         }
 
         double getTimeEstimate(){
@@ -42,7 +42,7 @@ class Trip{
         }
 
         void setTimeEstimate(double timeEstimate){
-            this.timeEstimate = timeEstimate;
+            this->timeEstimate = timeEstimate;
         }
 
         string getDistanceUnit(){
@@ -50,7 +50,7 @@ class Trip{
         }
 
         void setDistanceUnit(string distanceUnit){
-            this.distanceUnit = distanceUnit;
+            this->distanceUnit = distanceUnit;
         }
 
         GeographicCoordinate getStartLocation(){
@@ -58,7 +58,7 @@ class Trip{
         }
 
         void setStartLocation(GeographicCoordinate startLocation){
-            this.startLocation = startLocation;
+            this->startLocation = startLocation;
         }
 
         GeographicCoordinate getEndLocation(){
@@ -66,6 +66,6 @@ class Trip{
         }
 
         void setEndLocation(GeographicCoordinate endLocation){
-            this.endLocation = endLocation;
+            this->endLocation = endLocation;
         }
 }
