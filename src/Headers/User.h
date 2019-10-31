@@ -15,7 +15,7 @@ class User {
     public:
         User(std::string userID, GeographicCoordinate startLocation);
         std::string getUserID();
-        void setUserID();
+        void setUserID(std::string userID);
         std::string getOAuthToken();
         void setOAuthToken(std::string oAuthToken);
         GeographicCoordinate getStartLocation();
