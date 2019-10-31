@@ -22,8 +22,8 @@ void requestRide(User user){
 
     GeographicCoordinate* endLocation = new GeographicCoordinate(startLat, startLong);
 
-    Trip trip = tripFactory->create(user, user.getStartLocation(), *endLocation)
-    user.addTrip(trip);
+    Trip* trip = tripFactory->create(user, user.getStartLocation(), *endLocation)
+    user.addTrip(*trip);
     std::string response = "";
     std::cout << "confirm [Y]es, [N]o? ";
     response << std::cin;
@@ -32,7 +32,7 @@ void requestRide(User user){
         std::cout << "Trip Started!";
     } else {
         std::cout << "Trip cancelled" << std::endl;
-        user.removeTrip(Trip);
+        user.removeTrip();
     }
 }
 
