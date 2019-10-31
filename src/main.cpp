@@ -1,12 +1,11 @@
 #include "Poco/MD5Engine.h"
 #include "Poco/DigestStream.h"
-
 #include <iostream>
-#include "Trip/Trip.cpp"
-#include "Trip/TripFactory.cpp"
-#include "User/UserFactory.cpp"
-#include "User/User.cpp"
-#include "Domain/GeographicCoordinate.cpp"
+#include "../Headers/Trip.h"
+#include "../Headers/TripFactory.h"
+#include "../Headers/UserFactory.h"
+#include "../Headers/User.h"
+#include "../Headers/GeographicCoordinate.h"
 
 void requestRide(user){
     TripFactory tripFactory = new TripFactory();
