@@ -5,7 +5,7 @@
 
 User::User(std::string userID, GeographicCoordinate startLocation) {
     this->userID = userID;
-    this->startLocation = startLocation;
+    this->startLocation = &startLocation;
 }
 
 std::string User::getUserID() {
@@ -40,6 +40,10 @@ Trip User::getTrip() {
     return *trip;
 }
 
-Trip User::removeTrip() {
+void User::removeTrip() {
     delete trip;
+}
+
+void User::updateUberType(std::string uberType){
+    this->uberType = uberType;
 }
