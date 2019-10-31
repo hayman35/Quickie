@@ -5,7 +5,7 @@
 
 User::User(std::string userID, GeographicCoordinate startLocation) {
     this->userID = userID;
-    this->startLocation = startLocation;
+    this->startLocation = &startLocation;
 }
 
 std::string User::getUserID() {
@@ -29,7 +29,7 @@ GeographicCoordinate User::getStartLocation() {
 }
 
 void User::setStartLocation(GeographicCoordinate startLocation) {
-    this->startLocation = startLocation;
+    this->startLocation = &startLocation;
 }
 
 void User::addTrip(Trip trip) {
