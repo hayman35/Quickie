@@ -1,5 +1,7 @@
 
 #include "../Headers/UberApiInterface.h"
+#ifndef QUICKIE_USER_H
+#define QUICKIE_USER_H
 
 class UberDummyApiImplementation: UberApiInterface {
     void getFareEstimate(Trip* trip);
@@ -13,3 +15,4 @@ class UberDummyApiImplementation: UberApiInterface {
     void UberDummyApiImplementation::getCurrentRide(Trip* trip);
 
 }
+#endif //QUICKIE_UBER_H
