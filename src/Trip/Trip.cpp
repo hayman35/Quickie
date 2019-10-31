@@ -2,8 +2,8 @@
 #include <string>
 #include "../Headers/Trip.h"
 class Trip {
-    private:
-        
+
+
     public:
         virtual std::string getStatus();
 
