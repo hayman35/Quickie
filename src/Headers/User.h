@@ -20,8 +20,8 @@ class User {
         void setOAuthToken(std::string oAuthToken);
         GeographicCoordinate getStartLocation();
         void setStartLocation(GeographicCoordinate startLocation);
-        void addTrip(Trip trip);
-        Trip getTrip();
+        void addTrip(Trip* trip);
+        Trip* getTrip();
         void removeTrip();
         void updateUberType(std::string uberType);
 

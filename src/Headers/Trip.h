@@ -15,20 +15,20 @@ class Trip {
         GeographicCoordinate startLocation;
         GeographicCoordinate endLocation;
     public:
-        virtual std::string getStatus();
-        virtual void setStatus(std::string status);
-        virtual void setFareValue(double fareValue);
-        virtual double getDistance();
-        virtual void setDistance(double distance);
-        virtual double getTimeEstimate();
-        virtual void setTimeEstimate(double timeEstimate);
-        virtual std::string getDistanceUnit();
-        virtual void setDistanceUnit(std::string distanceUnit);
-        virtual GeographicCoordinate getStartLocation();
-        virtual void setStartLocation(GeographicCoordinate startLocation);
-        virtual GeographicCoordinate getEndLocation();
-        virtual void setEndLocation(GeographicCoordinate endLocation);
-        virtual void start();
+        virtual std::string getStatus() = 0;
+        virtual void setStatus(std::string status) = 0;
+        virtual void setFareValue(double fareValue) = 0;
+        virtual double getDistance() = 0;
+        virtual void setDistance(double distance) = 0;
+        virtual double getTimeEstimate() = 0;
+        virtual void setTimeEstimate(double timeEstimate) = 0;
+        virtual std::string getDistanceUnit() = 0;
+        virtual void setDistanceUnit(std::string distanceUnit) = 0;
+        virtual GeographicCoordinate getStartLocation() = 0;
+        virtual void setStartLocation(GeographicCoordinate startLocation) = 0;
+        virtual GeographicCoordinate getEndLocation() = 0;
+        virtual void setEndLocation(GeographicCoordinate endLocation) = 0;
+        virtual void start() = 0;
 
 };
 #endif //QUICKIE_TRIP_H
