@@ -6,7 +6,7 @@
 
 class User {
     private:
-        std::string userId;
+        std::string userID;
         std::string oAuthToken;
         GeographicCoordinate startLocation;
         Trip *trip;
