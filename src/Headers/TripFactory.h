@@ -1,5 +1,5 @@
 #include "../Headers/GeographicCoordinate.h"
-#include "../Trip/Trip.cpp"
+#include "../Headers/Trip.h"
 #include "../User/User.cpp"
 #ifndef QUICKIE_UBER_H
 #define QUICKIE_UBER_H

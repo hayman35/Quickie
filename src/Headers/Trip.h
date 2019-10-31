@@ -4,6 +4,7 @@
 #define QUICKIE_UBER_H
 
 class Trip {
+    
     private:
         std::string status;
         double fareValue;
