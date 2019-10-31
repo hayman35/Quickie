@@ -9,15 +9,15 @@ class GeographicCoordinate {
         long longitude;
 
     public:
-        GeographicCoordinate(long *latitude, long *longitude);
+        GeographicCoordinate(long latitude, long longitude);
 
         long getLatitude();
 
-        void setLatitude(long *latitude);
+        void setLatitude(long latitude);
 
         long getLongitude();
 
-        void setLongitude(long *longitude);
+        void setLongitude(long longitude);
 };
 
 #endif //QUICKIE_GEOGRAPHICCOORDINATE_H

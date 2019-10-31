@@ -9,8 +9,8 @@ long GeographicCoordinate::getLatitude(){
     return this->latitude;
 }
 
-void GeographicCoordinate::setLatitude(long *latitude){
-    this->latitude = &latitude;
+void GeographicCoordinate::setLatitude(long latitude){
+    this->latitude = latitude;
 }
 
 long GeographicCoordinate::getLongitude(){
@@ -18,5 +18,5 @@ long GeographicCoordinate::getLongitude(){
 }
 
 void GeographicCoordinate::setLongitude(long longitude){
-    this->longitude = *longitude;
+    this->longitude = longitude;
 }

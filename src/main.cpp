@@ -11,8 +11,8 @@
 void requestRide(user){
     TripFactory tripFactory = new TripFactory();
 
-    long* startLat = 0;
-    long* startLong = 0;
+    long startLat = 0;
+    long startLong = 0;
 
     std::cout << "Enter starting lat: ";
     *startLat << std::cin;
