@@ -1,7 +1,7 @@
 
 #include <../Trip/Trip.cpp>
 
-class UberDummyApiImplementation{
+class UberDummyApiImplementation {
     private:
         ;
 
