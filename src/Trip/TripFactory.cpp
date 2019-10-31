@@ -10,4 +10,4 @@ class TripFactory {
             trip.setEndLocation(end);
             return trip
         }
-}
+};
