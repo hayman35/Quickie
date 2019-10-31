@@ -1,18 +1,14 @@
-#include "User.cpp"
+#include "../Headers/UserFactory.h"
 
-class UserFactory{
+User UserFactory::createUser(){
+    User* user = new User("startingID");
 
-    public:
-        User createUser(){
-            User* user = new User("startingID");
+    //Authorize
+    user->setOAuthToken("mockToken");
+    long startLong = 0;
+    long startLat = 0;
+    GeographicCoordinate* startGeo = new GeographicCoordinate(startLong, startLat);
+    user->setStartLocation(*startGeo);
+    return *user;
 
-            //Authorize
-            user->setOAuthToken("mockToken");
-            long startLong = 0;
-            long startLat = 0;
-            GeographicCoordinate* startGeo = new GeographicCoordinate(startLong, startLat);
-            user->setStartLocation(*startGeo);
-            return *user;
-
-        }
-};
+}
