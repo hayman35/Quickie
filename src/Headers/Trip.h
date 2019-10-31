@@ -16,7 +16,7 @@ class Trip {
         GeographicCoordinate endLocation;
     public:
         virtual std::string getStatus();
-        virtual void setStats(std::string status);
+        virtual void setStatus(std::string status);
         virtual void setFareValue(double fareValue);
         virtual double getDistance();
         virtual void setDistance(double distance);
