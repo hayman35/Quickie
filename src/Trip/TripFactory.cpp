@@ -1,4 +1,4 @@
-#include "../Domain/GeographicCoordinate.cpp"
+#include "../Headers/GeographicCoordinate.h"
 #include "../Trip/Trip.cpp"
 #include "../User/User.cpp"
 #include "../Headers/TripFactory.h"

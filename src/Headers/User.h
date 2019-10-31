@@ -2,8 +2,7 @@
 // Created by Kevin Johar on 2019-10-30.
 //
 
-using namespace std;
-#include <string.h>
+#include <string>
 #include "./../Domain/GeographicCoordinate.cpp"
 
 #ifndef QUICKIE_USER_H
@@ -13,8 +12,8 @@ class UserInterface {
     public:
         GeographicCoordinate getStartLocation();
     private:
-        string userId;
-        string oAuthToken;
+        std::string userId;
+        std::string oAuthToken;
         GeographicCoordinate startLocation;
 };
 
