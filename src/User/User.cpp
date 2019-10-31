@@ -39,4 +39,16 @@ class User {
             this->startLocation = startLocation;
         }
 
+        void addTrip(Trip trip){
+            this->trip = trip;
+        }
+
+        Trip getTrip(Trip trip){
+            return trip;
+        }
+
+        Trip removeTrip(){
+            this->trip = NULL;
+        }
+
 }

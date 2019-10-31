@@ -1,6 +1,6 @@
 
 #include <string.h>
-#include <Trip.h>
+#include "../Trip/Trip.cpp"
 
 class UberApiInterface{
     public:

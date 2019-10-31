@@ -2,6 +2,12 @@
 #include "Poco/DigestStream.h"
 
 #include <iostream>
+#include "Trip/Trip.cpp"
+#include "Trip/TripFactory.cpp"
+#include "User/UserFactory.cpp"
+#include "User/User.cpp"
+#include "Domain/GeographicCoordinate.cpp"
+
 using namespace std;
 
 
