@@ -1,7 +1,3 @@
-//
-// Created by Kevin Johar on 2019-10-31.
-//
-
 #include <string.h>
 #include "../Trip/Trip.cpp"
 
