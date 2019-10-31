@@ -29,7 +29,7 @@ GeographicCoordinate User::getStartLocation() {
 }
 
 void User::setStartLocation(GeographicCoordinate startLocation) {
-    this->startLocation = &startLocation;
+    this->startLocation = startLocation;
 }
 
 void User::addTrip(Trip trip) {
