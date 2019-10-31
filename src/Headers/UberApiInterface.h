@@ -1,10 +1,10 @@
 #include <string.h>
-#include "../Trip/Trip.cpp"
+#include "../Headers/Trip.h"
 
 #ifndef QUICKIE_UBER_H
 #define QUICKIE_UBER_H
 
-class UberApi {
+class UberApiInterface {
     public:
         void getFareEstimate(Trip*);
         void getTripEstimate(Trip*);
