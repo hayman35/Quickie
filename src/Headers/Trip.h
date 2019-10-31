@@ -1,5 +1,6 @@
 #include <string>
 #include "../Domain/GeographicCoordinate.cpp"
+
 #ifndef QUICKIE_UBER_H
 #define QUICKIE_UBER_H
 
