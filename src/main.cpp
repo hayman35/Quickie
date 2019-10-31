@@ -28,7 +28,7 @@ void requestRide(User user){
     std::cout << "confirm [Y]es, [N]o? ";
     std::cin >> response;
     if(response == "Y"){
-        trip.start();
+        trip->start();
         std::cout << "Trip Started!";
     } else {
         std::cout << "Trip cancelled" << std::endl;

@@ -43,3 +43,7 @@ Trip User::getTrip() {
 Trip User::removeTrip() {
     delete trip;
 }
+
+void User::updateUberType(std::string uberType){
+    this->uberType = uberType;
+}
