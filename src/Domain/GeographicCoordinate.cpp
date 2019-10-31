@@ -1,6 +1,6 @@
 #include "../Headers/GeographicCoordinate.h"
 
-GeographicCoordinate::GeographicCoordinate(long latitude, long longitude){
+GeographicCoordinate::GeographicCoordinate(long latitude, long longitude) {
     this->latitude = latitude;
     this->longitude = longitude;
 }
