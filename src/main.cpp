@@ -9,7 +9,7 @@
 #include "Headers/GeographicCoordinate.h"
 
 void requestRide(User user){
-    TripFactory tripFactory = new TripFactory();
+    TripFactory* tripFactory = new TripFactory();
 
     long startLat = 0;
     long startLong = 0;
@@ -20,9 +20,9 @@ void requestRide(User user){
     std::cout << "Enter starting long: ";
     startLong << long(std::cin);
 
-    GeographicCoordinate endLocation = new GeographicCoordinate(startLat, startLong);
+    GeographicCoordinate* endLocation = new GeographicCoordinate(startLat, startLong);
 
-    Trip trip = tripFactory.create(user, user.getStartLocation(), endLocation)
+    Trip trip = tripFactory->create(user, user.getStartLocation(), *endLocation)
     user.addTrip(trip);
     std::string response = "";
     std::cout << "confirm [Y]es, [N]o? ";
@@ -58,8 +58,8 @@ int main(int argc, char** argv)
     ds.close();
     std::cout << Poco::DigestEngine::digestToHex(md5.digest()) << std::endl;
 
-    UserFactory userFactory = new UserFactory();
-    User user = userFactory.createUser();
+    UserFactory* userFactory = new UserFactory();
+    User user = userFactory->createUser();
 
     //Get command
     //request trip
