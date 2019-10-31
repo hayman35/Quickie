@@ -1,23 +1,15 @@
 
 #include <string>
-#include "../Domain/GeographicCoordinate.cpp"
-
+#include "../Headers/Trip.h"
 class Trip {
     private:
-        std::string status;
-        double fareValue;
-        double distance;
-        double timeEstimate;
-        std::string distanceUnit;
-        GeographicCoordinate startLocation;
-        GeographicCoordinate endLocation;
 
     public:
         std::string getStatus(){
             return status;
         }
 
-        void setStatus(std::string status){
+        void setStats(std::string status){
             this->status = status;
         }
 
@@ -69,3 +61,6 @@ class Trip {
             this->endLocation = endLocation;
         }
 };
+
+
+
