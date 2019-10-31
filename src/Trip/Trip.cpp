@@ -68,4 +68,4 @@ class Trip {
         void setEndLocation(GeographicCoordinate endLocation){
             this->endLocation = endLocation;
         }
-}
+};

@@ -10,8 +10,8 @@ class UserFactory{
             user.setOAuthToken("mockToken");
             long startLong = 0;
             long startLat = 0;
-            GeographicCoordinate startGeo = new GeographicCoordinate(startLong, startLat);
-            user.setStartLocation(startGeo);
+            GeographicCoordinate* startGeo = new GeographicCoordinate(startLong, startLat);
+            user.setStartLocation(*startGeo);
             return user;
 
         }

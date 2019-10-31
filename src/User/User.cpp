@@ -3,19 +3,20 @@
 //
 #include <string.h>
 #include "../Domain/GeographicCoordinate.cpp"
+#include "../Trip/Trip.cpp"
 
 class User {
     private:
-        String userID;
-        string oAuthToken;
+        std::string userID;
+        std::string oAuthToken;
         GeographicCoordinate startLocation;
 
     public:
-        User(string userID){
-            this->userUD = userID;
+        User(std::string userID){
+            this->userID = userID;
         }
 
-        string getUserID(){
+        std::string getUserID(){
             return userID;
         }
 
@@ -23,11 +24,11 @@ class User {
             this->userID = userID;
         }
 
-        string getOAuthToken(){
+        std::string getOAuthToken(){
             return oAuthToken;
         }
 
-        void setOAuthToken(string oAuthToken){
+        void setOAuthToken(std::string oAuthToken){
             this->oAuthToken = oAuthToken;
         }
 
