@@ -7,7 +7,7 @@
 #include "Headers/User.h"
 #include "Headers/GeographicCoordinate.h"
 
-void requestRide(user){
+void requestRide(User user){
     TripFactory tripFactory = new TripFactory();
 
     long startLat = 0;
@@ -35,7 +35,7 @@ void requestRide(user){
     }
 }
 
-void setUberType(user){
+void setUberType(User user){
     string uberType = "";
     std::cout << "Enter Uber Type (UberX, UberXL, UberBlack): ";
     uberType << std::cin;
@@ -43,7 +43,7 @@ void setUberType(user){
     std::cout << std::endl <<"Uber type updated";
 }
 
-void getCurrentETA(user){
+void getCurrentETA(User user){
     Trip trip = user.getTrip();
     std::cout << trip.getTimeEstimate() << std::endl;
 }
