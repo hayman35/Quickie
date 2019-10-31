@@ -1,4 +1,4 @@
-#include <string.h>
+#include <string>
 
 #ifndef QUICKIE_GEOGRAPHICCOORDINATE_H
 #define QUICKIE_GEOGRAPHICCOORDINATE_H

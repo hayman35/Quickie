@@ -69,6 +69,7 @@ int main(int argc, char** argv)
         std::cout << "1) Request Ride" << std::endl;
         std::cout << "2) Set Uber Type" << std::endl;
         std::cout << "3) Get Current Ride ETA" << std::endl;
+        std::cout << "4) Exit" << std::endl;
 
         int response;
         response << std::cin;
@@ -79,8 +80,10 @@ int main(int argc, char** argv)
             requestRide(user);
         } else if(response == 2) {
             setUberType(user);
-        } else {
+        } else if(response == 3){
             getCurrentETA(user);
+        } else if(response == 4) {
+            break;
         }
 
     }
