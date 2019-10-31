@@ -40,7 +40,7 @@ Trip User::getTrip() {
     return *trip;
 }
 
-Trip User::removeTrip() {
+void User::removeTrip() {
     delete trip;
 }
 

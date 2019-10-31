@@ -22,7 +22,7 @@ class User {
         void setStartLocation(GeographicCoordinate startLocation);
         void addTrip(Trip trip);
         Trip getTrip();
-        Trip removeTrip();
+        void removeTrip();
         void updateUberType(std::string uberType);
 
 };
