@@ -11,6 +11,7 @@ class Trip {
         std::string distanceUnit;
         GeographicCoordinate startLocation;
         GeographicCoordinate endLocation;
+
     public:
         virtual std::string getStatus();
 
