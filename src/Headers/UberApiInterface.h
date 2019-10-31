@@ -1,4 +1,4 @@
-#include <string.h>
+#include <string>
 #include "../Headers/Trip.h"
 
 #ifndef QUICKIE_UBERAPIINTERFACE_H

@@ -1,6 +1,6 @@
 //
 // Created by Kevin Johar on 2019-10-30.
-#include <string.h>
+#include <string>
 #include "../Headers/User.h"
 
 User::User(std::string userID, GeographicCoordinate startLocation) {
