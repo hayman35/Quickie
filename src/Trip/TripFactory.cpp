@@ -8,6 +8,6 @@ class TripFactory {
             Trip trip = new Trip();
             trip.setStartLocation(start);
             trip.setEndLocation(end);
-            return trip
+            return trip;
         }
 };
