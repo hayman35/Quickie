@@ -15,10 +15,10 @@ void requestRide(User user){
     long startLong = 0;
 
     std::cout << "Enter starting lat: ";
-    startLat << long(std::cin);
+    std::cin >> startLat;
 
     std::cout << "Enter starting long: ";
-    startLong << long(std::cin);
+    std::cin >> startLong;
 
     GeographicCoordinate* endLocation = new GeographicCoordinate(startLat, startLong);
 
@@ -26,7 +26,7 @@ void requestRide(User user){
     user.addTrip(trip);
     std::string response = "";
     std::cout << "confirm [Y]es, [N]o? ";
-    response << std::cin;
+    std::cin >> response;
     if(response == "Y"){
         trip.start();
         std::cout << "Trip Started!";
@@ -39,7 +39,7 @@ void requestRide(User user){
 void setUberType(User user){
     std::string uberType = "";
     std::cout << "Enter Uber Type (UberX, UberXL, UberBlack): ";
-    uberType << std::cin;
+    std::cin >> uberType;
     user.updateUberType(uberType);
     std::cout << std::endl <<"Uber type updated";
 }
@@ -72,7 +72,7 @@ int main(int argc, char** argv)
         std::cout << "4) Exit" << std::endl;
 
         int response;
-        response << int(std::cin);
+        std::cin >> response;
         if(response != 1 && response != 2 && response != 3 && response != 4){
             continue;
         }
