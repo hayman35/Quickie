@@ -1,6 +1,7 @@
 #include "Poco/MD5Engine.h"
 #include "Poco/DigestStream.h"
 #include <iostream>
+#include <string>
 #include "Headers/Trip.h"
 #include "Headers/TripFactory.h"
 #include "Headers/UserFactory.h"
@@ -8,21 +9,21 @@
 #include "Headers/GeographicCoordinate.h"
 
 void requestRide(User user){
-    TripFactory tripFactory = new TripFactory();
+    TripFactory* tripFactory = new TripFactory();
 
     long startLat = 0;
     long startLong = 0;
 
     std::cout << "Enter starting lat: ";
-    startLat << std::cin;
+    startLat << long(std::cin);
 
     std::cout << "Enter starting long: ";
-    startLong << std::cin;
+    startLong << long(std::cin);
 
-    GeographicCoordinate endLocation = new GeographicCoordinate(startLat, startLong);
+    GeographicCoordinate* endLocation = new GeographicCoordinate(startLat, startLong);
 
-    Trip trip = tripFactory.create(user, user.getStartLocation(), endLocation)
-    user.addTrip(trip);
+    Trip* trip = tripFactory->create(user, user.getStartLocation(), *endLocation)
+    user.addTrip(*trip);
     std::string response = "";
     std::cout << "confirm [Y]es, [N]o? ";
     response << std::cin;
@@ -31,7 +32,7 @@ void requestRide(User user){
         std::cout << "Trip Started!";
     } else {
         std::cout << "Trip cancelled" << std::endl;
-        user.removeTrip(Trip);
+        user.removeTrip();
     }
 }
 
@@ -57,8 +58,8 @@ int main(int argc, char** argv)
     ds.close();
     std::cout << Poco::DigestEngine::digestToHex(md5.digest()) << std::endl;
 
-    UserFactory userFactory = new UserFactory();
-    User user = userFactory.createUser();
+    UserFactory* userFactory = new UserFactory();
+    User* user = userFactory->createUser();
 
     //Get command
     //request trip
@@ -71,16 +72,16 @@ int main(int argc, char** argv)
         std::cout << "4) Exit" << std::endl;
 
         int response;
-        response << std::cin;
+        response << int(std::cin);
         if(response != 1 && response != 2 && response != 3 && response != 4){
             continue;
         }
         if(response == 1){
-            requestRide(user);
+            requestRide(*user);
         } else if(response == 2) {
-            setUberType(user);
+            setUberType(*user);
         } else if(response == 3){
-            getCurrentETA(user);
+            getCurrentETA(*user);
         } else if(response == 4) {
             break;
         }
