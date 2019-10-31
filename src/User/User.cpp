@@ -50,7 +50,7 @@ class User {
         }
 
         Trip removeTrip(){
-            this->trip = NULL;
+            delete trip;
         }
 
 };
