@@ -1,10 +1,10 @@
 #include "../Headers/User.h"
-#include "../Headers/GeographicCoordinate.h"
 
 #ifndef QUICKIE_USERFACTORY_H
 #define QUICKIE_USERFACTORY_H
+
 #include "../Headers/User.h"
-class UserFactory{
+class UserFactory {
     public:
         User* createUser();
 };

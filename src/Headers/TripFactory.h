@@ -6,7 +6,6 @@
 #define QUICKIE_TRIPFACTORY_H
 
 class TripFactory {
-
     public:
         Trip* create(User user, GeographicCoordinate start, GeographicCoordinate end);
 };
