@@ -24,7 +24,7 @@ void requestRide(user){
     Trip trip = tripFactory.create(user, user.getStartLocation(), endLocation)
     user.addTrip(trip);
     string response = "";
-    std::cout << "confirm [Y]es, [n]o? ";
+    std::cout << "confirm [Y]es, [N]o? ";
     response << std::cin;
     if(response == "Y"){
         trip.start();

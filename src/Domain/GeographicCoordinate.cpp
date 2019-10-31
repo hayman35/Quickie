@@ -1,12 +1,12 @@
 #include "../Headers/GeographicCoordinate.h"
 
-GeographicCoordinate(long latitude, long longitude){
+GeographicCoordinate::GeographicCoordinate(long latitude, long longitude){
     this->latitude = latitude;
     this->longitude = longitude;
 }
 
 long GeographicCoordinate::getLatitude(){
-    return latitude;
+    return this->latitude;
 }
 
 void GeographicCoordinate::setLatitude(long latitude){
@@ -14,7 +14,7 @@ void GeographicCoordinate::setLatitude(long latitude){
 }
 
 long GeographicCoordinate::getLongitude(){
-    return longitude;
+    return this->longitude;
 }
 
 void GeographicCoordinate::setLongitude(long longitude){
