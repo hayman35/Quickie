@@ -1,6 +1,8 @@
 #include <string>
 #include "../Headers/GeographicCoordinate.h"
 #include "../Headers/Trip.h"
+#ifndef QUICKIE_USER_H
+#define QUICKIE_USER_H
 
 class UberTrip: public Trip {
     private:
@@ -40,3 +42,6 @@ class UberTrip: public Trip {
         GeographicCoordinate getEndLocation();
 
         void setEndLocation(GeographicCoordinate endLocation);
+
+};
+#endif //QUICKIE_UBER_H
