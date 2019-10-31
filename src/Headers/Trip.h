@@ -12,8 +12,8 @@ class Trip {
         double distance;
         double timeEstimate;
         std::string distanceUnit;
-        GeographicCoordinate startLocation;
-        GeographicCoordinate endLocation;
+        GeographicCoordinate *startLocation;
+        GeographicCoordinate *endLocation;
     public:
         virtual std::string getStatus() = 0;
         virtual void setStatus(std::string status) = 0;
