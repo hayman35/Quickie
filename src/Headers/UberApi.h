@@ -1,8 +1,4 @@
-//
-// Created by Kevin Johar on 2019-10-31.
-//
-
-#include <string>
+#include <string.h>
 #include "../Trip/Trip.cpp"
 
 #ifndef QUICKIE_UBER_H

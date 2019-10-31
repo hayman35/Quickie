@@ -1,6 +1,6 @@
-//
-// Created by Kevin Johar on 2019-10-30.
-//
+#include <string.h>
+#include "./../Domain/GeographicCoordinate.cpp"
+#include "../Trip/Trip.cpp"
 
 #include <string>
 #include "./../Domain/GeographicCoordinate.cpp"
@@ -22,10 +22,24 @@ class User {
         std::string getOAuthToken();
         void setOAuthToken(std::string oAuthToken);
         GeographicCoordinate getStartLocation();
+
     private:
+        // Attributes
         std::string userId;
         std::string oAuthToken;
         GeographicCoordinate startLocation;
+
+        // Methods
+        User(std::string userID);
+        std::string getUserID();
+        void setUserID();
+        std::string getOAuthToken();
+        void setOAuthToken(std::string oAuthToken);
+        GeographicCoordinate getStartLocation();
+        void setStartLocation(GeographicCoordinate startLocation);
+        void addTrip(Trip trip);
+        Trip getTrip();
+        Trip removeTrip();
 };
 
 #endif //QUICKIE_USER_H

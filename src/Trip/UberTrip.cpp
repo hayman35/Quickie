@@ -1,72 +1,59 @@
 
-#include <string>
-#include "../Domain/GeographicCoordinate.cpp"
-#include "../Trip/Trip.cpp"
+#include "../Headers/UberTrip.h"
 
-class UberTrip: public Trip {
-    private:
-        std::string status;
-        double fareValue;
-        double distance;
-        double timeEstimate;
-        std::string distanceUnit;
-        GeographicCoordinate startLocation;
-        GeographicCoordinate endLocation;
 
-    public:
-        std::string getStatus(){
-            return status;
-        }
+std::string UberTrip::getStatus(){
+    return status;
+}
 
-        void setStatus(std::string status){
-            this->status = status;
-        }
+void UberTrip::setStatus(std::string status){
+    this->status = status;
+}
 
-        double getFareValue(){
-            return fareValue;
-        }
+double UberTrip::getFareValue(){
+    return fareValue;
+}
 
-        void setFareValue(double fareValue){
-            this->fareValue = fareValue;
-        }
+void UberTrip::setFareValue(double fareValue){
+    this->fareValue = fareValue;
+}
 
-        double getDistance(){
-            return distance;
-        }
+double UberTrip::getDistance(){
+    return distance;
+}
 
-        void setDistance(double distance){
-            this->distance = distance;
-        }
+void UberTrip::setDistance(double distance){
+    this->distance = distance;
+}
 
-        double getTimeEstimate(){
-            return timeEstimate;
-        }
+double UberTrip::getTimeEstimate(){
+    return timeEstimate;
+}
 
-        void setTimeEstimate(double timeEstimate){
-            this->timeEstimate = timeEstimate;
-        }
+void UberTrip::setTimeEstimate(double timeEstimate){
+    this->timeEstimate = timeEstimate;
+}
 
-        std::string getDistanceUnit(){
-            return distanceUnit;
-        }
+std::string UberTrip::getDistanceUnit(){
+    return distanceUnit;
+}
 
-        void setDistanceUnit(std::string distanceUnit){
-            this->distanceUnit = distanceUnit;
-        }
+void UberTrip::setDistanceUnit(std::string distanceUnit){
+    this->distanceUnit = distanceUnit;
+}
 
-        GeographicCoordinate getStartLocation(){
-            return startLocation;
-        }
+GeographicCoordinate UberTrip::getStartLocation(){
+    return startLocation;
+}
 
-        void setStartLocation(GeographicCoordinate startLocation){
-            this->startLocation = startLocation;
-        }
+void UberTrip::setStartLocation(GeographicCoordinate startLocation){
+    this->startLocation = startLocation;
+}
 
-        GeographicCoordinate getEndLocation(){
-            return endLocation;
-        }
+GeographicCoordinate UberTrip::getEndLocation(){
+    return endLocation;
+}
 
-        void setEndLocation(GeographicCoordinate endLocation){
-            this->endLocation = endLocation;
-        }
-};
+void UberTrip::setEndLocation(GeographicCoordinate endLocation){
+    this->endLocation = endLocation;
+}
