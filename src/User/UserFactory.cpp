@@ -3,15 +3,15 @@
 class UserFactory{
 
     public:
-        User createUser(){
-            User user = new User("startingID");
+        User* createUser(){
+            User* user = new User("startingID");
 
             //Authorize
-            user.setOAuthToken("mockToken");
+            user->setOAuthToken("mockToken");
             long startLong = 0;
             long startLat = 0;
             GeographicCoordinate* startGeo = new GeographicCoordinate(startLong, startLat);
-            user.setStartLocation(*startGeo);
+            user->setStartLocation(*startGeo);
             return user;
 
         }

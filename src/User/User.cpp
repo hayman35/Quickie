@@ -10,6 +10,7 @@ class User {
         std::string userID;
         std::string oAuthToken;
         GeographicCoordinate startLocation;
+        Trip trip;
 
     public:
         User(std::string userID){
@@ -52,4 +53,4 @@ class User {
             this->trip = NULL;
         }
 
-}
+};
