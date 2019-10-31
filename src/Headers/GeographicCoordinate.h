@@ -18,7 +18,6 @@ class GeographicCoordinate {
         long getLongitude();
 
         void setLongitude(long longitude);
-
 };
 
 #endif //QUICKIE_GEOGRAPHICCOORDINATE_H
