@@ -8,48 +8,45 @@
 #include "User/User.cpp"
 #include "Domain/GeographicCoordinate.cpp"
 
-using namespace std;
-
-
 void requestRide(user){
     TripFactory tripFactory = new TripFactory();
 
     long startLat = 0;
     long startLong = 0;
 
-    cout << "Enter starting lat: ";
-    startLat << cin;
+    std::cout << "Enter starting lat: ";
+    startLat << std::cin;
 
-    cout << "Enter starting long: ";
-    startLong << cin;
+    std::cout << "Enter starting long: ";
+    startLong << std::cin;
 
     GeographicCoordinate endLocation = new GeographicCoordinate(startLat, startLong);
 
     Trip trip = tripFactory.create(user, user.getStartLocation(), endLocation)
     user.addTrip(trip);
     string response = "";
-    cout << "confirm [Y]es, [n]o? ";
-    response << cin;
+    std::cout << "confirm [Y]es, [n]o? ";
+    response << std::cin;
     if(response == "Y"){
         trip.start();
-        cout << "Trip Started!";
+        std::cout << "Trip Started!";
     } else {
-        cout << "Trip cancelled" << endl;
+        std::cout << "Trip cancelled" << std::endl;
         user.removeTrip(Trip);
     }
 }
 
 void setUberType(user){
     string uberType = "";
-    cout << "Enter Uber Type (UberX, UberXL, UberBlack): ";
-    uberType << cin;
+    std::cout << "Enter Uber Type (UberX, UberXL, UberBlack): ";
+    uberType << std::cin;
     user.updateUberType(uberType);
-    cout << endl <<"Uber type updated";
+    std::cout << std::endl <<"Uber type updated";
 }
 
 void getCurrentETA(user){
     Trip trip = user.getTrip();
-    cout << trip.getTimeEstimate() << endl;
+    std::cout << trip.getTimeEstimate() << std::endl;
 }
 
 
@@ -59,7 +56,7 @@ int main(int argc, char** argv)
     Poco::DigestOutputStream ds(md5);
     ds << "abcdefghijklmnopqrstuvwxyz";
     ds.close();
-    cout << Poco::DigestEngine::digestToHex(md5.digest()) << endl;
+    std::cout << Poco::DigestEngine::digestToHex(md5.digest()) << std::endl;
 
     UserFactory userFactory = new UserFactory();
     User user = userFactory.createUser();
@@ -68,13 +65,13 @@ int main(int argc, char** argv)
     //request trip
 
     while(true){
-        cout << "Select command" << endl;
-        cout << "1) Request Ride" << endl;
-        cout << "2) Set Uber Type" << endl;
-        cout << "3) Get Current Ride ETA" << endl;
+        std::cout << "Select command" << std::endl;
+        std::cout << "1) Request Ride" << std::endl;
+        std::cout << "2) Set Uber Type" << std::endl;
+        std::cout << "3) Get Current Ride ETA" << std::endl;
 
         int response;
-        response << cin;
+        response << std::cin;
         if(response != 1 && response != 2 && response != 3 && response != 4){
             continue;
         }
