@@ -1,6 +1,7 @@
 #include "Poco/MD5Engine.h"
 #include "Poco/DigestStream.h"
 #include <iostream>
+#include <string>
 #include "Headers/Trip.h"
 #include "Headers/TripFactory.h"
 #include "Headers/UserFactory.h"
@@ -23,7 +24,7 @@ void requestRide(User user){
 
     Trip trip = tripFactory.create(user, user.getStartLocation(), endLocation)
     user.addTrip(trip);
-    string response = "";
+    std::string response = "";
     std::cout << "confirm [Y]es, [N]o? ";
     response << std::cin;
     if(response == "Y"){
@@ -36,7 +37,7 @@ void requestRide(User user){
 }
 
 void setUberType(User user){
-    string uberType = "";
+    std::string uberType = "";
     std::cout << "Enter Uber Type (UberX, UberXL, UberBlack): ";
     uberType << std::cin;
     user.updateUberType(uberType);
