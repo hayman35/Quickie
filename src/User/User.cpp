@@ -12,7 +12,7 @@ std::string User::getUserID() {
     return userID;
 }
 
-void User::setUserID() {
+void User::setUserID(std::string userID) {
     this->userID = userID;
 }
 
