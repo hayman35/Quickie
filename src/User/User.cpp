@@ -9,8 +9,13 @@ class User {
     private:
         std::string userID;
         std::string oAuthToken;
+<<<<<<< Updated upstream
         GeographicCoordinate startLocation;
         Trip trip;
+=======
+        GeographicCoordinate* startLocation;
+        Trip* trip;
+>>>>>>> Stashed changes
 
     public:
         User(std::string userID){
@@ -34,19 +39,19 @@ class User {
         }
 
         GeographicCoordinate getStartLocation(){
-            return startLocation;
+            return *startLocation;
         }
 
         void setStartLocation(GeographicCoordinate startLocation){
-            this->startLocation = startLocation;
+            this->startLocation = &startLocation;
         }
 
         void addTrip(Trip trip){
-            this->trip = trip;
+            this->trip = &trip;
         }
 
-        Trip getTrip(Trip trip){
-            return trip;
+        Trip getTrip(){
+            return *trip;
         }
 
         Trip removeTrip(){
