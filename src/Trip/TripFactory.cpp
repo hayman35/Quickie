@@ -6,7 +6,7 @@ Trip* TripFactory::create(User user, GeographicCoordinate start, GeographicCoord
     trip->setStartLocation(start);
     trip->setEndLocation(end);
 
-    UberApiInterface* uberApi = new UberDummyApiImplementation();
+    UberDummyApiImplementation* uberApi = new UberDummyApiImplementation();
     uberApi->getFareEstimate(trip);
 
     return trip;

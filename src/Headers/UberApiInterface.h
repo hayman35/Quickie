@@ -6,11 +6,11 @@
 
 class UberApiInterface {
     public:
-        void getFareEstimate(Trip*);
-        void getTripEstimate(Trip*);
-        void rideRequest(Trip*);
-        void cancelRideRequest(Trip*);
-        void getCurrentRide(Trip*);
+        virtual void getFareEstimate(Trip*);
+        virtual void getTripEstimate(Trip*);
+        virtual void rideRequest(Trip*);
+        virtual void cancelRideRequest(Trip*);
+        virtual void getCurrentRide(Trip*);
 
     private:
         std::string clientID;
