@@ -1,5 +1,3 @@
-#include <string.h>
-
 #ifndef QUICKIE_GEOGRAPHICCOORDINATE_H
 #define QUICKIE_GEOGRAPHICCOORDINATE_H
 

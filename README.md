@@ -1,7 +1,11 @@
+# Setup
+```
+cd src
+setup.sh
+```
+
 # Building
 ```
-mkdir build
-cd build
 conan install ..
 ```
 

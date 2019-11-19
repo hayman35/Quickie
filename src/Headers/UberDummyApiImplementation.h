@@ -1,15 +1,16 @@
+#include "../Headers/UberApiInterface.h"
+#include "../Headers/Trip.h"
 
-#include "../Headers/UberDummyApiImplementation.h"
+#ifndef QUICKIE_UBERDUMMYAPIIMPLEMENTATION_H
+#define QUICKIE_UBERDUMMYAPIIMPLEMENTATION_H
 
-class UberDummyApiImplementation: UberApiInterfact {
-    void getFareEstimate(Trip* trip);
+class UberDummyApiImplementation {
+    public:
+        void getFareEstimate(Trip *trip);
+        void getTripEstimate(Trip *trip);
+        void rideRequest(Trip *trip);
+        void cancelRideRequest(Trip *trip);
+        void getCurrentRide(Trip *trip);
 
-    void UberDummyApiImplementation::getTripEstimate(Trip* trip);
-
-    void UberDummyApiImplementation::rideRequest(Trip* trip);
-
-    void UberDummyApiImplementation::cancelRideRequest(Trip* trip);
-
-    void UberDummyApiImplementation::getCurrentRide(Trip* trip);
-
-}
+};
+#endif //QUICKIE_UBERDUMMYAPIIMPLEMENTATION_H

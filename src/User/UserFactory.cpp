@@ -1,14 +1,16 @@
 #include "../Headers/UserFactory.h"
 
-User UserFactory::createUser(){
-    User* user = new User("startingID");
+//TODO: This method should take an input (file with ONE user or start long/lat)
+// which defines which specific user is getting created first
 
-    //Authorize
-    user->setOAuthToken("mockToken");
+User* UserFactory::createUser() {
     long startLong = 0;
     long startLat = 0;
     GeographicCoordinate* startGeo = new GeographicCoordinate(startLong, startLat);
-    user->setStartLocation(*startGeo);
-    return *user;
+    User* user = new User("startingID", *startGeo);
 
+    //Authorize
+    user->setOAuthToken("mockToken");
+    user->setStartLocation(*startGeo);
+    return user;
 }

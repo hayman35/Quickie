@@ -1,7 +1,10 @@
+#include "../Headers/User.h"
+
 #ifndef QUICKIE_USERFACTORY_H
 #define QUICKIE_USERFACTORY_H
 
-class UserFactory{
+#include "../Headers/User.h"
+class UserFactory {
     public:
         User* createUser();
 };

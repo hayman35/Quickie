@@ -1,17 +1,18 @@
 //
 // Created by Kevin Johar on 2019-10-30.
-#include <string.h>
+#include <string>
 #include "../Headers/User.h"
 
-User(std::string userID) {
+User::User(std::string userID, GeographicCoordinate startLocation) {
     this->userID = userID;
+    this->startLocation = &startLocation;
 }
 
 std::string User::getUserID() {
     return userID;
 }
 
-void User::setUserID() {
+void User::setUserID(std::string userID) {
     this->userID = userID;
 }
 
@@ -31,14 +32,19 @@ void User::setStartLocation(GeographicCoordinate startLocation) {
     this->startLocation = &startLocation;
 }
 
-void User::addTrip(Trip trip) {
-    this->trip = &trip;
+void User::addTrip(Trip* trip) {
+    this->trip = trip;
 }
 
-Trip User::getTrip() {
-    return *trip;
+Trip* User::getTrip() {
+    return trip;
 }
 
-Trip User::removeTrip() {
-    delete trip;
+void User::removeTrip() {
+    //delete trip;
+    ;
+}
+
+void User::updateUberType(std::string uberType){
+    this->uberType = uberType;
 }

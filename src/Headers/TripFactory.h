@@ -1,12 +1,15 @@
-#include "../Domain/GeographicCoordinate.cpp"
-#include "../Trip/Trip.cpp"
-#include "../User/User.cpp"
-#ifndef QUICKIE_UBER_H
-#define QUICKIE_UBER_H
+#include "../Headers/GeographicCoordinate.h"
+#include "../Headers/Trip.h"
+#include "../Headers/User.h"
+#include "../Headers/UberTrip.h"
+#include "../Headers/UberDummyApiImplementation.h"
+#include "../Headers/UberApiInterface.h"
+
+#ifndef QUICKIE_TRIPFACTORY_H
+#define QUICKIE_TRIPFACTORY_H
 
 class TripFactory {
-
     public:
         Trip* create(User user, GeographicCoordinate start, GeographicCoordinate end);
 };
-#endif //QUICKIE_UBER_H
+#endif //QUICKIE_TRIPFACTORY_H

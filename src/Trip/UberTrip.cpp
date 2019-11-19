@@ -1,6 +1,9 @@
 
 #include "../Headers/UberTrip.h"
 
+UberTrip::UberTrip(){
+    ;
+}
 
 std::string UberTrip::getStatus(){
     return status;
@@ -43,17 +46,21 @@ void UberTrip::setDistanceUnit(std::string distanceUnit){
 }
 
 GeographicCoordinate UberTrip::getStartLocation(){
-    return startLocation;
+    return *startLocation;
 }
 
 void UberTrip::setStartLocation(GeographicCoordinate startLocation){
-    this->startLocation = startLocation;
+    this->startLocation = &startLocation;
 }
 
 GeographicCoordinate UberTrip::getEndLocation(){
-    return endLocation;
+    return *endLocation;
 }
 
 void UberTrip::setEndLocation(GeographicCoordinate endLocation){
-    this->endLocation = endLocation;
+    this->endLocation = &endLocation;
+}
+
+void UberTrip::start(){
+    ;
 }

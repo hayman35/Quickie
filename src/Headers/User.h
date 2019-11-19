@@ -1,6 +1,6 @@
-#include <string.h>
-#include "./../Domain/GeographicCoordinate.cpp"
-#include "../Trip/Trip.cpp"
+#include <string>
+#include "../Headers/GeographicCoordinate.h"
+#include "../Headers/Trip.h"
 
 #ifndef QUICKIE_USER_H
 #define QUICKIE_USER_H
@@ -9,34 +9,23 @@ class User {
     private:
         std::string userID;
         std::string oAuthToken;
-        GeographicCoordinate* startLocation;
-        Trip* trip;
+        GeographicCoordinate *startLocation;
+        Trip *trip;
+        std::string uberType;
 
     public:
-        User(std::string userID);
+        User(std::string userID, GeographicCoordinate startLocation);
         std::string getUserID();
-        void setUserID();
-        std::string getOAuthToken();
-        void setOAuthToken(std::string oAuthToken);
-        GeographicCoordinate getStartLocation();
-
-    private:
-        // Attributes
-        std::string userId;
-        std::string oAuthToken;
-        GeographicCoordinate startLocation;
-
-        // Methods
-        User(std::string userID);
-        std::string getUserID();
-        void setUserID();
+        void setUserID(std::string userID);
         std::string getOAuthToken();
         void setOAuthToken(std::string oAuthToken);
         GeographicCoordinate getStartLocation();
         void setStartLocation(GeographicCoordinate startLocation);
-        void addTrip(Trip trip);
-        Trip getTrip();
-        Trip removeTrip();
+        void addTrip(Trip* trip);
+        Trip* getTrip();
+        void removeTrip();
+        void updateUberType(std::string uberType);
+
 };
 
 #endif //QUICKIE_USER_H
