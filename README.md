@@ -1,6 +1,5 @@
 # Setup
 ```
-cd src
 setup.sh
 ```
 
