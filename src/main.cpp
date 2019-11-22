@@ -1,6 +1,14 @@
 #include "Poco/MD5Engine.h"
 #include "Poco/DigestStream.h"
-#include "Poco/Net/HTTPClientSession.h"
+
+#include <Poco/Net/HTTPClientSession.h>
+#include <Poco/Net/HTTPRequest.h>
+#include <Poco/Net/HTTPResponse.h>
+#include <Poco/StreamCopier.h>
+#include <Poco/Path.h>
+#include <Poco/URI.h>
+#include <Poco/Exception.h>
+
 #include <iostream>
 #include <string>
 #include "Headers/Trip.h"
@@ -9,7 +17,11 @@
 #include "Headers/User.h"
 #include "Headers/GeographicCoordinate.h"
 
-void requestRide(User *user){
+using namespace Poco::Net;
+using namespace Poco;
+using namespace std;
+
+void requestRide(User *user) {
     TripFactory* tripFactory = new TripFactory();
 
     long startLat = 0;
@@ -53,61 +65,73 @@ void getCurrentETA(User *user){
 
 int main(int argc, char** argv)
 {
-//    Poco::MD5Engine md5;
-//    Poco::DigestOutputStream ds(md5);
-//    ds << "abcdefghijklmnopqrstuvwxyz";
-//    ds.close();
-//    std::cout << Poco::DigestEngine::digestToHex(md5.digest()) << std::endl;
+    Poco::MD5Engine md5;
+    Poco::DigestOutputStream ds(md5);
+    ds << "abcdefghijklmnopqrstuvwxyz";
+    ds.close();
+    std::cout << Poco::DigestEngine::digestToHex(md5.digest()) << std::endl;
 
-    Poco::Net::HTTPClientSession* session = Poco::Net::HTTPSessionFactory::defaultFactory().createClientSession("https://webhook.site/4f41a6f6-a403-42e9-8025-070d9316b825");
-    Poco::Net::HTTPRequest request(Poco::Net::HTTPRequest::HTTP_POST, serverUri.getPathAndQuery(), Poco::Net::HTTPMessage::HTTP_1_1);
+    try
+    {
+        // prepare session
+        URI uri("https://cs3307uwo.api.stdlib.com/uberestimate@dev/");
+        HTTPClientSession session(uri.getHost(), uri.getPort());
 
-    Poco::Net::HTMLForm form;
-    form.add("test_id", "123");
-    form.prepareSubmit(request);
+        // prepare path
+        string path(uri.getPathAndQuery());
+        if (path.empty()) path = "/";
 
-    std::ostream& requestStream = session->sendRequest(request);
-    form.write(requestStream);
+        // send request
+        HTTPRequest req(HTTPRequest::HTTP_GET, path, HTTPMessage::HTTP_1_1);
+        session.sendRequest(req);
 
-    Poco::Net::HTTPResponse response;
-    std::istream& responseStream = session->receiveResponse(response);
-    std::stringstream rawJson;
-    Poco::StreamCopier::copyStream(responseStream, rawJson);
+        // get response
+        HTTPResponse res;
+        std::cout << res.getStatus() << " " << res.getReason() << std::endl;
+        res.read();
 
-    UserFactory* userFactory = new UserFactory();
-    User* user = userFactory->createUser();
-
-    //Get command
-    //request trip
-
-    int rideRequest = 0;
-    while(true){
-        std::cout << "Select command" << std::endl;
-        std::cout << "1) Request Ride" << std::endl;
-        std::cout << "2) Set Uber Type" << std::endl;
-        std::cout << "3) Get Current Ride ETA" << std::endl;
-        std::cout << "4) Exit" << std::endl;
-
-        int response = 0;
-        std::cin >> response;
-        if(response != 1 && response != 2 && response != 3 && response != 4){
-            continue;
-        }
-        if(response == 1){
-            rideRequest = 1;
-            requestRide(user);
-        } else if(response == 2) {
-            setUberType(user);
-        } else if(response == 3){
-            if(rideRequest == 1){
-                getCurrentETA(user);
-            } else {
-                std::cout << "Please request a ride first" << std::endl;
-            }
-        } else if(response == 4) {
-            break;
-        }
-
+        // print response
+        istream &is = session.receiveResponse(res);
+        StreamCopier::copyStream(is, cout);
     }
-    return 0;
+    catch (Exception &ex)
+    {
+        cerr << ex.displayText() << endl;
+        return -1;
+    }
+
+
+//    //Get command
+//    //request trip
+//
+//    int rideRequest = 0;
+//    while(true) {
+//        std::cout << "Select command" << std::endl;
+//        std::cout << "1) Request Ride" << std::endl;
+//        std::cout << "2) Set Uber Type" << std::endl;
+//        std::cout << "3) Get Current Ride ETA" << std::endl;
+//        std::cout << "4) Exit" << std::endl;
+//
+//        int response = 0;
+//        std::cin >> response;
+//        if(response != 1 && response != 2 && response != 3 && response != 4) {
+//            continue;
+//        }
+//        if(response == 1) {
+//            rideRequest = 1;
+//            requestRide(user);
+//        } else if(response == 2) {
+//            setUberType(user);
+//        } else if(response == 3){
+//            if(rideRequest == 1){
+//                getCurrentETA(user);
+//            } else {
+//                std::cout << "Please request a ride first" << std::endl;
+//            }
+//        } else if(response == 4) {
+//            break;
+//        }
+//
+//    }
+//    return 0;
 }
