@@ -1,5 +1,6 @@
 #include "Poco/MD5Engine.h"
 #include "Poco/DigestStream.h"
+#include "Poco/Net/HTTPClientSession.h"
 #include <iostream>
 #include <string>
 #include "Headers/Trip.h"
@@ -52,11 +53,26 @@ void getCurrentETA(User *user){
 
 int main(int argc, char** argv)
 {
-    Poco::MD5Engine md5;
-    Poco::DigestOutputStream ds(md5);
-    ds << "abcdefghijklmnopqrstuvwxyz";
-    ds.close();
-    std::cout << Poco::DigestEngine::digestToHex(md5.digest()) << std::endl;
+//    Poco::MD5Engine md5;
+//    Poco::DigestOutputStream ds(md5);
+//    ds << "abcdefghijklmnopqrstuvwxyz";
+//    ds.close();
+//    std::cout << Poco::DigestEngine::digestToHex(md5.digest()) << std::endl;
+
+    Poco::Net::HTTPClientSession* session = Poco::Net::HTTPSessionFactory::defaultFactory().createClientSession("https://webhook.site/4f41a6f6-a403-42e9-8025-070d9316b825");
+    Poco::Net::HTTPRequest request(Poco::Net::HTTPRequest::HTTP_POST, serverUri.getPathAndQuery(), Poco::Net::HTTPMessage::HTTP_1_1);
+
+    Poco::Net::HTMLForm form;
+    form.add("test_id", "123");
+    form.prepareSubmit(request);
+
+    std::ostream& requestStream = session->sendRequest(request);
+    form.write(requestStream);
+
+    Poco::Net::HTTPResponse response;
+    std::istream& responseStream = session->receiveResponse(response);
+    std::stringstream rawJson;
+    Poco::StreamCopier::copyStream(responseStream, rawJson);
 
     UserFactory* userFactory = new UserFactory();
     User* user = userFactory->createUser();

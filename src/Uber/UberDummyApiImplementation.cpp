@@ -1,4 +1,3 @@
-
 #include "../Headers/UberDummyApiImplementation.h"
 
 void UberDummyApiImplementation::getFareEstimate(Trip* trip){
