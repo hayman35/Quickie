@@ -65,21 +65,17 @@ void getCurrentETA(User *user){
 
 int main(int argc, char** argv)
 {
-    Poco::MD5Engine md5;
-    Poco::DigestOutputStream ds(md5);
-    ds << "abcdefghijklmnopqrstuvwxyz";
-    ds.close();
-    std::cout << Poco::DigestEngine::digestToHex(md5.digest()) << std::endl;
-
     try
     {
         // prepare session
-        URI uri("https://cs3307uwo.api.stdlib.com/uberestimate@dev/");
+        URI uri("http://cs3307uwo.api.stdlib.com/uberestimate@dev/");
         HTTPClientSession session(uri.getHost(), uri.getPort());
 
         // prepare path
         string path(uri.getPathAndQuery());
-        if (path.empty()) path = "/";
+        if (path.empty()) {
+            path = "/";
+        }
 
         // send request
         HTTPRequest req(HTTPRequest::HTTP_GET, path, HTTPMessage::HTTP_1_1);
@@ -87,15 +83,16 @@ int main(int argc, char** argv)
 
         // get response
         HTTPResponse res;
-        std::cout << res.getStatus() << " " << res.getReason() << std::endl;
-        res.read();
+        std::cout << "Status: " << res.getStatus() << endl;
+        std:: cout << "Reason: " << res.getReason() << std::endl;
 
         // print response
-        istream &is = session.receiveResponse(res);
+        std::istream &is = session.receiveResponse(res);
         StreamCopier::copyStream(is, cout);
     }
-    catch (Exception &ex)
+    catch (Poco::Exception &ex)
     {
+        cout << "ERROR" << endl;
         cerr << ex.displayText() << endl;
         return -1;
     }
