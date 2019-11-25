@@ -1,13 +1,3 @@
-#include "Poco/MD5Engine.h"
-#include "Poco/DigestStream.h"
-
-#include <Poco/Net/HTTPClientSession.h>
-#include <Poco/Net/HTTPRequest.h>
-#include <Poco/Net/HTTPResponse.h>
-#include <Poco/StreamCopier.h>
-#include <Poco/Path.h>
-#include <Poco/URI.h>
-#include <Poco/Exception.h>
 
 #include <iostream>
 #include <string>
@@ -16,9 +6,8 @@
 #include "Headers/UserFactory.h"
 #include "Headers/User.h"
 #include "Headers/GeographicCoordinate.h"
+#include "Headers/UserHttpRequest.h"
 
-using namespace Poco::Net;
-using namespace Poco;
 using namespace std;
 
 void requestRide(User *user) {
@@ -27,108 +16,79 @@ void requestRide(User *user) {
     long startLat = 0;
     long startLong = 0;
 
-    std::cout << "Enter starting lat: ";
-    std::cin >> startLat;
+    cout << "Enter starting lat: ";
+    cin >> startLat;
 
-    std::cout << "Enter starting long: ";
-    std::cin >> startLong;
+    cout << "Enter starting long: ";
+    cin >> startLong;
 
     GeographicCoordinate* endLocation = new GeographicCoordinate(startLat, startLong);
 
     Trip* trip = tripFactory->create(*user, user->getStartLocation(), *endLocation);
     user->addTrip(trip);
-    std::string response = "";
-    std::cout << "confirm [Y]es, [N]o? ";
-    std::cin >> response;
+    string response = "";
+    cout << "confirm [Y]es, [N]o? ";
+    cin >> response;
     if(response == "Y"){
         trip->start();
-        std::cout << "Trip Started!";
+        cout << "Trip Started!";
     } else {
-        std::cout << "Trip cancelled" << std::endl;
+        cout << "Trip cancelled" << endl;
         user->removeTrip();
     }
 }
 
 void setUberType(User *user){
-    std::string uberType = "";
-    std::cout << "Enter Uber Type (UberX, UberXL, UberBlack): ";
-    std::cin >> uberType;
+    string uberType = "";
+    cout << "Enter Uber Type (UberX, UberXL, UberBlack): ";
+    cin >> uberType;
     user->updateUberType(uberType);
-    std::cout << std::endl <<"Uber type updated";
+    cout << endl <<"Uber type updated";
 }
 
 void getCurrentETA(User *user){
     Trip* trip = user->getTrip();
-    std::cout << trip->getTimeEstimate() << std::endl;
+    cout << trip->getTimeEstimate() << endl;
 }
 
 
-int main(int argc, char** argv)
-{
-    try
-    {
-        // prepare session
-        URI uri("http://cs3307uwo.api.stdlib.com/uberestimate@dev/");
-        HTTPClientSession session(uri.getHost(), uri.getPort());
+int main(int argc, char** argv){
+    UserHttpRequest* requestFactory = new UserHttpRequest();
+    requestFactory->sendRequest("uri");
 
-        // prepare path
-        string path(uri.getPathAndQuery());
-        if (path.empty()) {
-            path = "/";
+    UserFactory* userFactory = new UserFactory();
+    User* user = userFactory->createUser();
+    //Get command
+    //request trip
+
+    int rideRequest = 0;
+    while(true) {
+        cout << "Select command" << endl;
+        cout << "1) Request Ride" << endl;
+        cout << "2) Set Uber Type" << endl;
+        cout << "3) Get Current Ride ETA" << endl;
+        cout << "4) Exit" << endl;
+
+        int response = 0;
+        cin >> response;
+        if(response != 1 && response != 2 && response != 3 && response != 4) {
+            continue;
+        }
+        if(response == 1) {
+            rideRequest = 1;
+            requestRide(user);
+        } else if(response == 2) {
+            setUberType(user);
+        } else if(response == 3){
+            if(rideRequest == 1){
+                getCurrentETA(user);
+            } else {
+                cout << "Please request a ride first" << endl;
+            }
+        } else if(response == 4) {
+            break;
         }
 
-        // send request
-        HTTPRequest req(HTTPRequest::HTTP_GET, path, HTTPMessage::HTTP_1_1);
-        session.sendRequest(req);
-
-        // get response
-        HTTPResponse res;
-        std::cout << "Status: " << res.getStatus() << endl;
-        std:: cout << "Reason: " << res.getReason() << std::endl;
-
-        // print response
-        std::istream &is = session.receiveResponse(res);
-        StreamCopier::copyStream(is, cout);
     }
-    catch (Poco::Exception &ex)
-    {
-        cout << "ERROR" << endl;
-        cerr << ex.displayText() << endl;
-        return -1;
-    }
-
-
-//    //Get command
-//    //request trip
-//
-//    int rideRequest = 0;
-//    while(true) {
-//        std::cout << "Select command" << std::endl;
-//        std::cout << "1) Request Ride" << std::endl;
-//        std::cout << "2) Set Uber Type" << std::endl;
-//        std::cout << "3) Get Current Ride ETA" << std::endl;
-//        std::cout << "4) Exit" << std::endl;
-//
-//        int response = 0;
-//        std::cin >> response;
-//        if(response != 1 && response != 2 && response != 3 && response != 4) {
-//            continue;
-//        }
-//        if(response == 1) {
-//            rideRequest = 1;
-//            requestRide(user);
-//        } else if(response == 2) {
-//            setUberType(user);
-//        } else if(response == 3){
-//            if(rideRequest == 1){
-//                getCurrentETA(user);
-//            } else {
-//                std::cout << "Please request a ride first" << std::endl;
-//            }
-//        } else if(response == 4) {
-//            break;
-//        }
-//
-//    }
-//    return 0;
+    return 0;
 }
