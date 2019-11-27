@@ -54,7 +54,7 @@ void getCurrentETA(User *user){
 
 int main(int argc, char** argv){
     UserHttpRequest* requestFactory = new UserHttpRequest();
-    requestFactory->sendRequest("uri");
+    requestFactory->sendRequest("http://cs3307uwo.api.stdlib.com/uberestimate@dev/");
 
     UserFactory* userFactory = new UserFactory();
     User* user = userFactory->createUser();

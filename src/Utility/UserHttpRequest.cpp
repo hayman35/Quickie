@@ -5,9 +5,9 @@
 using namespace Poco::Net;
 using namespace Poco;
 
-std::string UserHttpRequest::sendRequest(std::string uri){
+std::string UserHttpRequest::sendRequest(std::string url){
     try{
-        URI uri("http://cs3307uwo.api.stdlib.com/uberestimate@dev/");
+        URI uri(url);
         HTTPClientSession session(uri.getHost(), uri.getPort());
 
         // prepare path
