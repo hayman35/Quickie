@@ -9,18 +9,18 @@ class User {
     private:
         std::string userID;
         std::string oAuthToken;
-        GeographicCoordinate *startLocation;
+        GeographicCoordinate* startLocation;
         Trip *trip;
         std::string uberType;
 
     public:
-        User(std::string userID, GeographicCoordinate startLocation);
+        User(std::string userID, GeographicCoordinate* startLocation);
         std::string getUserID();
         void setUserID(std::string userID);
         std::string getOAuthToken();
         void setOAuthToken(std::string oAuthToken);
-        GeographicCoordinate getStartLocation();
-        void setStartLocation(GeographicCoordinate startLocation);
+        GeographicCoordinate* getStartLocation();
+        void setStartLocation(GeographicCoordinate* startLocation);
         void addTrip(Trip* trip);
         Trip* getTrip();
         void removeTrip();

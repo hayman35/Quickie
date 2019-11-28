@@ -13,8 +13,8 @@ class UberTrip: public Trip {
         double timeEstimate;
         double timeToArrive;
         std::string distanceUnit;
-        GeographicCoordinate *startLocation;
-        GeographicCoordinate *endLocation;
+        GeographicCoordinate* startLocation;
+        GeographicCoordinate* endLocation;
         time_t orderTime;
         std::string uberType;
         std::string driverName;
@@ -42,13 +42,13 @@ class UberTrip: public Trip {
 
         void setDistanceUnit(std::string distanceUnit);
 
-        GeographicCoordinate getStartLocation();
+        GeographicCoordinate* getStartLocation();
 
-        void setStartLocation(GeographicCoordinate startLocation);
+        void setStartLocation(GeographicCoordinate* startLocation);
 
-        GeographicCoordinate getEndLocation();
+        GeographicCoordinate* getEndLocation();
 
-        void setEndLocation(GeographicCoordinate endLocation);
+        void setEndLocation(GeographicCoordinate* endLocation);
 
         void start();
 

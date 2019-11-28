@@ -45,20 +45,20 @@ void UberTrip::setDistanceUnit(std::string distanceUnit){
     this->distanceUnit = distanceUnit;
 }
 
-GeographicCoordinate UberTrip::getStartLocation(){
-    return *startLocation;
+GeographicCoordinate* UberTrip::getStartLocation(){
+    return startLocation;
 }
 
-void UberTrip::setStartLocation(GeographicCoordinate startLocation){
-    this->startLocation = &startLocation;
+void UberTrip::setStartLocation(GeographicCoordinate* startLocation){
+    this->startLocation = startLocation;
 }
 
-GeographicCoordinate UberTrip::getEndLocation(){
-    return *endLocation;
+GeographicCoordinate* UberTrip::getEndLocation(){
+    return endLocation;
 }
 
-void UberTrip::setEndLocation(GeographicCoordinate endLocation){
-    this->endLocation = &endLocation;
+void UberTrip::setEndLocation(GeographicCoordinate* endLocation){
+    this->endLocation = endLocation;
 }
 
 void UberTrip::start(){

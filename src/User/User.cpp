@@ -3,9 +3,9 @@
 #include <string>
 #include "../Headers/User.h"
 
-User::User(std::string userID, GeographicCoordinate startLocation) {
+User::User(std::string userID, GeographicCoordinate* startLocation) {
     this->userID = userID;
-    this->startLocation = &startLocation;
+    this->startLocation = startLocation;
 }
 
 std::string User::getUserID() {
@@ -24,12 +24,12 @@ void User::setOAuthToken(std::string oAuthToken) {
     this->oAuthToken = oAuthToken;
 }
 
-GeographicCoordinate User::getStartLocation() {
-    return *startLocation;
+GeographicCoordinate* User::getStartLocation() {
+    return startLocation;
 }
 
-void User::setStartLocation(GeographicCoordinate startLocation) {
-    this->startLocation = &startLocation;
+void User::setStartLocation(GeographicCoordinate* startLocation) {
+    this->startLocation = startLocation;
 }
 
 void User::addTrip(Trip* trip) {

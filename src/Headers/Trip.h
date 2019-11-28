@@ -14,8 +14,8 @@ class Trip {
         double distance;
         double timeEstimate;
         std::string distanceUnit;
-        GeographicCoordinate *startLocation;
-        GeographicCoordinate *endLocation;
+        GeographicCoordinate* startLocation;
+        GeographicCoordinate* endLocation;
     public:
         virtual std::string getStatus() = 0;
         virtual void setStatus(std::string status) = 0;
@@ -26,10 +26,10 @@ class Trip {
         virtual void setTimeEstimate(double timeEstimate) = 0;
         virtual std::string getDistanceUnit() = 0;
         virtual void setDistanceUnit(std::string distanceUnit) = 0;
-        virtual GeographicCoordinate getStartLocation() = 0;
-        virtual void setStartLocation(GeographicCoordinate startLocation) = 0;
-        virtual GeographicCoordinate getEndLocation() = 0;
-        virtual void setEndLocation(GeographicCoordinate endLocation) = 0;
+        virtual GeographicCoordinate* getStartLocation() = 0;
+        virtual void setStartLocation(GeographicCoordinate* startLocation) = 0;
+        virtual GeographicCoordinate* getEndLocation() = 0;
+        virtual void setEndLocation(GeographicCoordinate* endLocation) = 0;
         virtual void start() = 0;
         virtual double getFareValue() = 0;
         virtual void setTimeToArrive(double timeToArrive) = 0;

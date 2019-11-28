@@ -9,6 +9,7 @@
 #include "Headers/UserHttpRequest.h"
 #include "Headers/UberApiInterface.h"
 #include "Headers/UberApiImplementation.h"
+//#include "Headers/voce.h"
 
 
 using namespace std;
@@ -28,7 +29,7 @@ void requestRide(User *user) {
 
     GeographicCoordinate* endLocation = new GeographicCoordinate(startLat, startLong);
 
-    Trip* trip = tripFactory->create(*user, user->getStartLocation(), *endLocation);
+    Trip* trip = tripFactory->create(*user, user->getStartLocation(), endLocation);
     trip->setUberType(user->getUberType());
 
     user->addTrip(trip);
@@ -44,11 +45,11 @@ void requestRide(User *user) {
     if(response == "Y"){
         uber->rideRequest(trip);
         //pickup, destination, type, payment method, fare estimation
-        cout << "Pickup Location Latitude: " << (trip->getStartLocation()).getLatitude() << endl;
-        cout << "Pickup Location Longitude: " << (trip->getStartLocation()).getLongitude() << endl;
+        cout << "Pickup Location Latitude: " << (trip->getStartLocation())->getLatitude() << endl;
+        cout << "Pickup Location Longitude: " << (trip->getStartLocation())->getLongitude() << endl;
         //TODO fix pointer
-        cout << "Destination Location Latitude: " << (trip->getEndLocation()).getLatitude() << endl;
-        cout << "Destination Location Longitude: " << (trip->getEndLocation()).getLongitude() << endl;
+        cout << "Destination Location Latitude: " << (trip->getEndLocation())->getLatitude() << endl;
+        cout << "Destination Location Longitude: " << (trip->getEndLocation())->getLongitude() << endl;
         cout << "Driver name: " << trip->getDriverName() << endl;
 
 
@@ -96,7 +97,7 @@ void cancelRide(User *user){
 
 
 int main(int argc, char** argv){
-
+    //voce::init("../../lib", true, false, "", "");
     UserFactory* userFactory = new UserFactory();
     User* user = userFactory->createUser();
     //Get command
@@ -104,6 +105,7 @@ int main(int argc, char** argv){
 
     int rideRequest = 0;
     while(true) {
+        //voce::synthesize("Select command");
         cout << "Select command" << endl;
         cout << "1) Request Ride" << endl;
         cout << "2) Set Uber Type" << endl;

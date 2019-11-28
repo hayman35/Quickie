@@ -10,6 +10,6 @@
 
 class TripFactory {
     public:
-        Trip* create(User user, GeographicCoordinate start, GeographicCoordinate end);
+        Trip* create(User user, GeographicCoordinate* start, GeographicCoordinate* end);
 };
 #endif //QUICKIE_TRIPFACTORY_H
