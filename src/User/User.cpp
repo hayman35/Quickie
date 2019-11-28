@@ -48,3 +48,7 @@ void User::removeTrip() {
 void User::updateUberType(std::string uberType){
     this->uberType = uberType;
 }
+
+std::string User::getUberType(){
+    return uberType;
+}

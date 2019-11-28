@@ -29,9 +29,14 @@ void requestRide(User *user) {
     GeographicCoordinate* endLocation = new GeographicCoordinate(startLat, startLong);
 
     Trip* trip = tripFactory->create(*user, user->getStartLocation(), *endLocation);
+    trip->setUberType(user->getUberType());
 
     user->addTrip(trip);
     uber->getFareEstimate(trip);
+
+    cout << "Trip cost: " << trip->getFareValue() << endl;
+    cout << "Trip time" << trip->getTimeEstimate() << endl;
+
 
     string response = "";
     cout << "confirm [Y]es, [N]o? ";
@@ -69,6 +74,17 @@ void getCurrentETA(User *user){
 
 }
 
+void cancelRide(User *user){
+    Trip* trip = user->getTrip();
+    UberApiInterface* uber = new UberApiImplementation();
+    uber->cancelRideRequest(trip);
+    if(trip->getStatus() == "Cancelled"){
+        cout << "Ride cancelled" << endl;
+    } else {
+        cout << "Could not cancel ride" << endl;
+    }
+}
+
 
 int main(int argc, char** argv){
 
@@ -83,11 +99,13 @@ int main(int argc, char** argv){
         cout << "1) Request Ride" << endl;
         cout << "2) Set Uber Type" << endl;
         cout << "3) Get Current Ride ETA" << endl;
-        cout << "4) Exit" << endl;
+        cout << "4) Cancel Uber Ride" << endl;
+        cout << "5) Exit" << endl;
 
-        int response = 0;
-        cin >> response;
-        if(response != 1 && response != 2 && response != 3 && response != 4) {
+        string response_text = "";
+        cin >> response_text;
+        int response = stoi(response_text);
+        if(response != 1 && response != 2 && response != 3 && response != 4 && response != 5) {
             continue;
         }
         if(response == 1) {
@@ -102,6 +120,12 @@ int main(int argc, char** argv){
                 cout << "Please request a ride first" << endl;
             }
         } else if(response == 4) {
+            if(rideRequest == 1){
+                cancelRide(user);
+            } else {
+                cout << "Please request a ride first" << endl;
+            }
+        } else {
             break;
         }
 

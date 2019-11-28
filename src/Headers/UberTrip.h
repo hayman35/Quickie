@@ -16,6 +16,7 @@ class UberTrip: public Trip {
         GeographicCoordinate *startLocation;
         GeographicCoordinate *endLocation;
         time_t orderTime;
+        std::string uberType;
 
     public:
         UberTrip();
@@ -57,6 +58,8 @@ class UberTrip: public Trip {
         void setOrderTime(time_t orderTime);
 
         time_t getOrderTime();
+
+        void setUberType(std::string uberType);
 
 };
 #endif //QUICKIE_UBERTRIP_H

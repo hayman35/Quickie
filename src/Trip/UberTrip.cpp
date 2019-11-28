@@ -80,3 +80,7 @@ void UberTrip::setOrderTime(time_t orderTime){
 time_t UberTrip::getOrderTime(){
     return orderTime;
 }
+
+void UberTrip::setUberType(std::string uberType){
+    this->uberType = uberType;
+}

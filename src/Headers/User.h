@@ -25,6 +25,7 @@ class User {
         Trip* getTrip();
         void removeTrip();
         void updateUberType(std::string uberType);
+        std::string getUberType();
 
 };
 
