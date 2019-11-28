@@ -2,16 +2,19 @@
 #include <string>
 #include "../Headers/UserHttpRequest.h"
 
+using namespace Poco::JSON;
+using namespace Poco::Dynamic;
 using namespace Poco::Net;
 using namespace Poco;
+using namespace std;
 
-std::string UserHttpRequest::sendRequest(std::string url){
+Object::Ptr UserHttpRequest::sendRequest(string url){
     try{
         URI uri(url);
         HTTPClientSession session(uri.getHost(), uri.getPort());
 
         // prepare path
-        std::string path(uri.getPathAndQuery());
+        string path(uri.getPathAndQuery());
         if (path.empty()) {
             path = "/";
         }
@@ -22,17 +25,28 @@ std::string UserHttpRequest::sendRequest(std::string url){
 
         // get response
         HTTPResponse res;
-        std::cout << "Status: " << res.getStatus() << std::endl;
-        std::cout << "Reason: " << res.getReason() << std::endl;
+        cout << "Status: " << res.getStatus() << endl;
+        cout << "Reason: " << res.getReason() << endl;
 
         // print response
         std::istream &is = session.receiveResponse(res);
-        StreamCopier::copyStream(is, std::cout);
+        string json;
 
+        StreamCopier::copyToString(is, json);
+
+//        cout << json << endl;
+
+//      Convert response to JSON object
+        Parser parser;
+        Var result = parser.parse(json);
+        Object::Ptr object = result.extract<Object::Ptr>();
+        return object;
     }
     catch (Poco::Exception &ex){
-        std::cout << "ERROR" << std::endl;
-        return "failed";
+        Parser parser;
+        string json = "{}";
+        Var result = parser.parse(json);
+        Object::Ptr object = result.extract<Object::Ptr>();
+        return object;
     }
-    return "Succesful";
 }
