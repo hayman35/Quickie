@@ -64,3 +64,19 @@ void UberTrip::setEndLocation(GeographicCoordinate endLocation){
 void UberTrip::start(){
     ;
 }
+
+void UberTrip::setTimeToArrive(double timeToArrive){
+    this->timeToArrive = timeToArrive;
+}
+
+double UberTrip::getTimeToArrive(){
+    return timeToArrive;
+}
+
+void UberTrip::setOrderTime(time_t orderTime){
+    this->orderTime = orderTime;
+}
+
+time_t UberTrip::getOrderTime(){
+    return orderTime;
+}

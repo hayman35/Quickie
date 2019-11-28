@@ -9,7 +9,6 @@ class UberApiInterface {
         virtual void getFareEstimate(Trip*) = 0;
         virtual void rideRequest(Trip*) = 0;
         virtual void cancelRideRequest(Trip*) = 0;
-        virtual void getCurrentRide(Trip*) = 0;
 
     private:
         std::string clientID;

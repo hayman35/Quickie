@@ -14,6 +14,5 @@ class UberApiImplementation : public UberApiInterface {
         void getFareEstimate(Trip *trip);
         void rideRequest(Trip *trip);
         void cancelRideRequest(Trip *trip);
-        void getCurrentRide(Trip *trip);
 };
 #endif //QUICKIE_UBERAPIIMPLEMENTATION_H

@@ -32,6 +32,10 @@ class Trip {
         virtual void setEndLocation(GeographicCoordinate endLocation) = 0;
         virtual void start() = 0;
         virtual double getFareValue() = 0;
+        virtual void setTimeToArrive(double timeToArrive) = 0;
+        virtual double getTimeToArrive() = 0;
+        virtual void setOrderTime(time_t orderTime) = 0;
+        virtual time_t getOrderTime() = 0;
 
 };
 #endif //QUICKIE_TRIP_H

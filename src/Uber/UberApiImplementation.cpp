@@ -3,11 +3,16 @@
 using namespace std;
 
 void UberApiImplementation::rideRequest(Trip *trip) {
+    UserHttpRequest* requestFactory = new UserHttpRequest();
+    Poco::JSON::Object::Ptr object = requestFactory->sendRequest("http://cs3307uwo.api.stdlib.com/uberrequests@dev/");
+    Poco::Dynamic::Var fare = object->get("fare");
+    Poco::JSON::Object::Ptr fare_extracted = fare.extract<Poco::JSON::Object::Ptr>();
 
-}
-
-void UberApiImplementation::getCurrentRide(Trip *trip) {
-
+    Poco::Dynamic::Var pickup_estimate = object->get("pickup_estimate");
+    std::string pickup_text = pickup_estimate.convert<std::string>();
+    trip->setStatus("Arriving");
+    trip->setTimeToArrive(std::stod(pickup_text)*60);
+    trip->setOrderTime(std::time(nullptr));
 }
 
 void UberApiImplementation::getFareEstimate(Trip *trip) {

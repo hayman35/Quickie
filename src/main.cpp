@@ -37,8 +37,8 @@ void requestRide(User *user) {
     cout << "confirm [Y]es, [N]o? ";
     cin >> response;
     if(response == "Y"){
-        trip->start();
-        cout << "Trip Started!";
+        uber->rideRequest(trip);
+        cout << "Trip Started! Arriving in " << to_string(trip->getTimeToArrive()) << " seconds" << endl;
     } else {
         cout << "Trip cancelled" << endl;
         user->removeTrip();
@@ -47,7 +47,7 @@ void requestRide(User *user) {
 
 void setUberType(User *user){
     string uberType = "";
-    cout << "Enter Uber Type (UberX, UberXL, UberBlack): ";
+    cout << "Enter Uber Type (uberX, uberXL, BLACK): ";
     cin >> uberType;
     user->updateUberType(uberType);
     cout << endl <<"Uber type updated";
@@ -55,7 +55,18 @@ void setUberType(User *user){
 
 void getCurrentETA(User *user){
     Trip* trip = user->getTrip();
-    cout << trip->getTimeEstimate() << endl;
+    time_t curTime = time(nullptr);
+    time_t orderTime = trip->getOrderTime();
+
+    time_t diff = curTime - orderTime;
+
+    double timeToArrivalUpdated = trip->getTimeToArrive() - diff;
+    if(timeToArrivalUpdated > 0){
+        cout << timeToArrivalUpdated << " seconds until arrival" << endl;
+    } else {
+        cout << "Uber has arrived!!" << endl;
+    }
+
 }
 
 
