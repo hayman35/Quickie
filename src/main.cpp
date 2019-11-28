@@ -7,11 +7,15 @@
 #include "Headers/User.h"
 #include "Headers/GeographicCoordinate.h"
 #include "Headers/UserHttpRequest.h"
+#include "Headers/UberApiInterface.h"
+#include "Headers/UberApiImplementation.h"
+
 
 using namespace std;
 
 void requestRide(User *user) {
     TripFactory* tripFactory = new TripFactory();
+    UberApiInterface* uber = new UberApiImplementation();
 
     long startLat = 0;
     long startLong = 0;
@@ -25,7 +29,10 @@ void requestRide(User *user) {
     GeographicCoordinate* endLocation = new GeographicCoordinate(startLat, startLong);
 
     Trip* trip = tripFactory->create(*user, user->getStartLocation(), *endLocation);
+
     user->addTrip(trip);
+    uber->getFareEstimate(trip);
+
     string response = "";
     cout << "confirm [Y]es, [N]o? ";
     cin >> response;
@@ -53,8 +60,6 @@ void getCurrentETA(User *user){
 
 
 int main(int argc, char** argv){
-    UserHttpRequest* requestFactory = new UserHttpRequest();
-    requestFactory->sendRequest("http://cs3307uwo.api.stdlib.com/uberestimate@dev/");
 
     UserFactory* userFactory = new UserFactory();
     User* user = userFactory->createUser();
