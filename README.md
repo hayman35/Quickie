@@ -26,3 +26,6 @@ In build directory
 ```
 ./bin/quickie.exe
 ```
+
+
+sudo g++ synthesisTest.cpp -o out -I ../../../src/c++ -I /usr/lib/jvm/java-11-openjdk-armhf/include -I /usr/lib/jvm/java-11-openjdk-armhf/include/linux -L/usr/lib/jvm/java-11-openjdk-armhf/lib/server -ljvm -Wl,-R/usr/lib/jvm/java-11-openjdk-armhf/lib/server
