@@ -1,48 +1,37 @@
 
 #include "../Headers/voce.h"
-#ifdef WIN32
-#include <windows.h>
-#else
-#include <unistd.h>
-#endif
-
-/// A sample application showing how to use Voce's speech synthesis 
-/// capabilities.
 
 int main(int argc, char **argv)
 {
-	voce::init("../../../lib", false, true, "./grammar", "digits");
+	voce::init("../../lib", true, false, "", "");
 
-	std::cout << "This is a speech recognition test. " 
-		<< "Speak digits from 0-9 into the microphone. " 
-		<< "Speak 'quit' to quit." << std::endl;
+	voce::synthesize("This is a speech synthesis test.");
+	voce::synthesize("Type a message to hear it spoken aloud.");
 
-	bool quit = false;
-	while (!quit)
+	std::cout << "This is a speech synthesis test.  " 
+		<< "Type a message to hear it spoken aloud." << std::endl;
+	std::cout << "Type 's' + 'enter' to make the "
+		<< "synthesizer stop speaking.  Type 'q' + 'enter' to quit." 
+		<< std::endl;
+
+	std::string s;
+
+	while (s != "q")
 	{
-		// Normally, applications would do application-specific things 
-		// here.  For this sample, we'll just sleep for a little bit.
-#ifdef WIN32
-		::Sleep(200);
-#else
-		usleep(200);
-#endif
+		// Read a line from keyboard.
+		std::getline(std::cin, s);
 
-		while (voce::getRecognizerQueueSize() > 0)
+		if ("s" == s)
 		{
-			std::string s = voce::popRecognizedString();
-
-			// Check if the string contains 'quit'.
-			if (std::string::npos != s.rfind("quit"))
-			{
-				quit = true;
-			}
-
-			std::cout << "You said: " << s << std::endl;
-			//voce::synthesize(s);
+			voce::stopSynthesizing();
+		}
+		else
+		{
+			// Speak what was typed.
+			voce::synthesize(s);
 		}
 	}
-
+	
 	voce::destroy();
 	return 0;
 }
