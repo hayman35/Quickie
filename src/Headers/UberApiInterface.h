@@ -7,7 +7,6 @@
 class UberApiInterface {
     public:
         virtual void getFareEstimate(Trip*) = 0;
-        virtual void getTripEstimate(Trip*) = 0;
         virtual void rideRequest(Trip*) = 0;
         virtual void cancelRideRequest(Trip*) = 0;
         virtual void getCurrentRide(Trip*) = 0;

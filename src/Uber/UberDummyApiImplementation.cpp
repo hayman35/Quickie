@@ -8,14 +8,6 @@ void UberDummyApiImplementation::getFareEstimate(Trip* trip){
         trip->setDistanceUnit("miles");
 }
 
-void UberDummyApiImplementation::getTripEstimate(Trip* trip){
-    trip->setStatus("trip estimated");
-    trip->setFareValue(10.0);
-    trip->setDistance(5);
-    trip->setTimeEstimate(3);
-    trip->setDistanceUnit("miles");
-}
-
 void UberDummyApiImplementation::rideRequest(Trip* trip){
     trip->setStatus("ride requested");
 }
