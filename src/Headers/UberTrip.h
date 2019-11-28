@@ -61,5 +61,7 @@ class UberTrip: public Trip {
 
         void setUberType(std::string uberType);
 
+        std::string getUberType();
+
 };
 #endif //QUICKIE_UBERTRIP_H

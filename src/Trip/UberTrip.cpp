@@ -84,3 +84,7 @@ time_t UberTrip::getOrderTime(){
 void UberTrip::setUberType(std::string uberType){
     this->uberType = uberType;
 }
+
+std::string UberTrip::getUberType(){
+    return uberType;
+}

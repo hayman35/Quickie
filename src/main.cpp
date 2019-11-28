@@ -43,6 +43,9 @@ void requestRide(User *user) {
     cin >> response;
     if(response == "Y"){
         uber->rideRequest(trip);
+        //pickup, destination, type, payment method, fare estimation
+        cout << "Pickup Location Lat: " << (trip->getStartLocation()).getLatitude() << endl;
+        cout << "Pickup Location Long: " << (trip->getStartLocation()).getLongitude() << endl;
         cout << "Trip Started! Arriving in " << to_string(trip->getTimeToArrive()) << " seconds" << endl;
     } else {
         cout << "Trip cancelled" << endl;
@@ -55,7 +58,7 @@ void setUberType(User *user){
     cout << "Enter Uber Type (uberX, uberXL, BLACK): ";
     cin >> uberType;
     user->updateUberType(uberType);
-    cout << endl <<"Uber type updated";
+    cout << endl <<"Uber type updated" << endl;
 }
 
 void getCurrentETA(User *user){

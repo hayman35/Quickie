@@ -37,6 +37,7 @@ class Trip {
         virtual void setOrderTime(time_t orderTime) = 0;
         virtual time_t getOrderTime() = 0;
         virtual void setUberType(std::string uberType) = 0;
+        virtual std::string getUberType() = 0;
 
 };
 #endif //QUICKIE_TRIP_H

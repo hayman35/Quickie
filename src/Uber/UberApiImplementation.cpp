@@ -17,7 +17,8 @@ void UberApiImplementation::rideRequest(Trip *trip) {
 
 void UberApiImplementation::getFareEstimate(Trip *trip) {
     UserHttpRequest* requestFactory = new UserHttpRequest();
-    Poco::JSON::Object::Ptr object = requestFactory->sendRequest("http://cs3307uwo.api.stdlib.com/uberestimate@dev/");
+    std::string uberType = trip->getUberType();
+    Poco::JSON::Object::Ptr object = requestFactory->sendRequest("http://cs3307uwo.api.stdlib.com/uberestimate@dev/?uberType="+uberType);
     Poco::Dynamic::Var prices = object->get("prices");
     Poco::JSON::Array::Ptr prices_array = prices.extract<Poco::JSON::Array::Ptr>();
 
