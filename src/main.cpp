@@ -35,7 +35,7 @@ void requestRide(User *user) {
     uber->getFareEstimate(trip);
 
     cout << "Trip cost: " << trip->getFareValue() << endl;
-    cout << "Trip time" << trip->getTimeEstimate() << endl;
+    cout << "Trip time: " << trip->getTimeEstimate() << endl;
 
 
     string response = "";
@@ -46,6 +46,8 @@ void requestRide(User *user) {
         //pickup, destination, type, payment method, fare estimation
         cout << "Pickup Location Lat: " << (trip->getStartLocation()).getLatitude() << endl;
         cout << "Pickup Location Long: " << (trip->getStartLocation()).getLongitude() << endl;
+        cout << 
+
         cout << "Trip Started! Arriving in " << to_string(trip->getTimeToArrive()) << " seconds" << endl;
     } else {
         cout << "Trip cancelled" << endl;
