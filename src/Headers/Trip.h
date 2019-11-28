@@ -38,6 +38,8 @@ class Trip {
         virtual time_t getOrderTime() = 0;
         virtual void setUberType(std::string uberType) = 0;
         virtual std::string getUberType() = 0;
+        virtual std::string getDriverName() = 0;
+        virtual void setDriverName(std::string driverName) = 0;
 
 };
 #endif //QUICKIE_TRIP_H
