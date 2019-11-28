@@ -20,10 +20,10 @@ void requestRide(User *user) {
     long startLat = 0;
     long startLong = 0;
 
-    cout << "Enter starting lat: ";
+    cout << "Enter ending latitude: ";
     cin >> startLat;
 
-    cout << "Enter starting long: ";
+    cout << "Enter ending longitude: ";
     cin >> startLong;
 
     GeographicCoordinate* endLocation = new GeographicCoordinate(startLat, startLong);
@@ -44,9 +44,13 @@ void requestRide(User *user) {
     if(response == "Y"){
         uber->rideRequest(trip);
         //pickup, destination, type, payment method, fare estimation
-        cout << "Pickup Location Lat: " << (trip->getStartLocation()).getLatitude() << endl;
-        cout << "Pickup Location Long: " << (trip->getStartLocation()).getLongitude() << endl;
-        cout << 
+        cout << "Pickup Location Latitude: " << (trip->getStartLocation()).getLatitude() << endl;
+        cout << "Pickup Location Longitude: " << (trip->getStartLocation()).getLongitude() << endl;
+        //TODO fix pointer
+        cout << "Destination Location Latitude: " << (trip->getEndLocation()).getLatitude() << endl;
+        cout << "Destination Location Longitude: " << (trip->getEndLocation()).getLongitude() << endl;
+        cout << "Driver name: " << trip->getDriverName() << endl;
+
 
         cout << "Trip Started! Arriving in " << to_string(trip->getTimeToArrive()) << " seconds" << endl;
     } else {

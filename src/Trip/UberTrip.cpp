@@ -88,3 +88,11 @@ void UberTrip::setUberType(std::string uberType){
 std::string UberTrip::getUberType(){
     return uberType;
 }
+
+void UberTrip::setDriverName(std::string driverName){
+    this->driverName = driverName;
+}
+
+std::string UberTrip::getDriverName(){
+    return driverName;
+}

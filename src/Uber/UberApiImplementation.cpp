@@ -10,6 +10,11 @@ void UberApiImplementation::rideRequest(Trip *trip) {
 
     Poco::Dynamic::Var pickup_estimate = object->get("pickup_estimate");
     std::string pickup_text = pickup_estimate.convert<std::string>();
+
+    Poco::Dynamic::Var driver_name = object->get("driver_name");
+    std::string driver_name_text = driver_name.convert<std::string>();
+
+    trip->setDriverName(driver_name_text);
     trip->setStatus("Arriving");
     trip->setTimeToArrive(std::stod(pickup_text)*60);
     trip->setOrderTime(std::time(nullptr));
