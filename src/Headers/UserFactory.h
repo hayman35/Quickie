@@ -7,6 +7,7 @@
 
 /**
  * @brief Factory for creating users
+ * @authors Kevin, Nikka, Nirmal, Andrew, Hayman
  */
 class UserFactory {
     public:

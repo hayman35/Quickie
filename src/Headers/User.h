@@ -7,6 +7,7 @@
 
 /**
  * @brief User object
+ * @authors Kevin, Nikka, Nirmal, Andrew, Hayman
  */
 class User {
     private:

@@ -19,6 +19,7 @@
 
 /**
  * @brief class used to facilitate http requests
+ * @authors Kevin, Nikka, Nirmal, Andrew, Hayman
  */
 class UserHttpRequest {
     public:

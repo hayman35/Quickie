@@ -11,6 +11,7 @@
 
 /**
  * @brief Implementation of the UberAPI
+ * @authors Kevin, Nikka, Nirmal, Andrew, Hayman
  */
 class UberApiImplementation : public UberApiInterface {
     public:

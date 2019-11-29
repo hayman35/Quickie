@@ -6,6 +6,7 @@
 
 /**
  * @brief API Interface for the Uber API
+ * @authors Kevin, Nikka, Nirmal, Andrew, Hayman
  */
 class UberApiInterface {
     public:
