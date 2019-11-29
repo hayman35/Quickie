@@ -14,7 +14,7 @@
 #include "Headers/UserHttpRequest.h"
 #include "Headers/UberApiInterface.h"
 #include "Headers/UberApiImplementation.h"
-//#include "Headers/voce.h"
+#include "Headers/voce.h"
 
 
 using namespace std;
@@ -47,11 +47,11 @@ void requestRide(User *user) {
     uber->getFareEstimate(trip);
 
     voce::synthesize("Trip cost: ");
-    voce::synthesize(trip->getFareValue());
+    voce::synthesize(to_string(trip->getFareValue()));
     cout << "Trip cost: " << trip->getFareValue() << endl;
 
     voce::synthesize("Trip time: ");
-    voce::synthesize(trip->getTimeEstimate());
+    voce::synthesize(to_string(trip->getTimeEstimate()));
     cout << "Trip time: " << trip->getTimeEstimate() << endl;
 
 
@@ -105,7 +105,7 @@ void getCurrentETA(User *user){
 
     double timeToArrivalUpdated = trip->getTimeToArrive() - diff;
     if(timeToArrivalUpdated > 0){
-        voce::synthesize(timeToArrivalUpdated);
+        voce::synthesize(to_string(timeToArrivalUpdated));
         voce::synthesize("Uber has arrived!!");
         cout << timeToArrivalUpdated << " seconds until arrival" << endl;
     } else {
@@ -139,7 +139,7 @@ void cancelRide(User *user){
  * @return 0 is successful
  */
 int main(int argc, char** argv){
-    voce::init("../../lib", true, false, "", "");
+    voce::init("../lib", true, false, "", "");
     UserFactory* userFactory = new UserFactory();
     User* user = userFactory->createUser();
     //Get command
