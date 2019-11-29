@@ -21,9 +21,11 @@ void requestRide(User *user) {
     long startLat = 0;
     long startLong = 0;
 
+    voce::synthesize("Enter ending latitude: ");
     cout << "Enter ending latitude: ";
     cin >> startLat;
 
+    voce::synthesize("Enter ending longitude: ");
     cout << "Enter ending longitude: ";
     cin >> startLong;
 
@@ -35,7 +37,12 @@ void requestRide(User *user) {
     user->addTrip(trip);
     uber->getFareEstimate(trip);
 
+    voce::synthesize("Trip cost: ");
+    voce::synthesize(trip->getFareValue());
     cout << "Trip cost: " << trip->getFareValue() << endl;
+
+    voce::synthesize("Trip time: ");
+    voce::synthesize(trip->getTimeEstimate());
     cout << "Trip time: " << trip->getTimeEstimate() << endl;
 
 
@@ -55,6 +62,7 @@ void requestRide(User *user) {
 
         cout << "Trip Started! Arriving in " << to_string(trip->getTimeToArrive()) << " seconds" << endl;
     } else {
+        voce::synthesize("Trip cancelled");
         cout << "Trip cancelled" << endl;
         user->removeTrip();
     }
@@ -62,9 +70,12 @@ void requestRide(User *user) {
 
 void setUberType(User *user){
     string uberType = "";
+    voce::synthesize("Enter Uber Type (uberX, uberXL, BLACK): ");
     cout << "Enter Uber Type (uberX, uberXL, BLACK): ";
     cin >> uberType;
     user->updateUberType(uberType);
+
+    voce::synthesize("Uber type updated");
     cout << endl <<"Uber type updated" << endl;
 }
 
@@ -77,8 +88,11 @@ void getCurrentETA(User *user){
 
     double timeToArrivalUpdated = trip->getTimeToArrive() - diff;
     if(timeToArrivalUpdated > 0){
+        voce::synthesize(timeToArrivalUpdated);
+        voce::synthesize("Uber has arrived!!");
         cout << timeToArrivalUpdated << " seconds until arrival" << endl;
     } else {
+        voce::synthesize("Uber has arrived!!");
         cout << "Uber has arrived!!" << endl;
     }
 
@@ -89,15 +103,17 @@ void cancelRide(User *user){
     UberApiInterface* uber = new UberApiImplementation();
     uber->cancelRideRequest(trip);
     if(trip->getStatus() == "Cancelled"){
+        voce::synthesize("Ride cancelled");
         cout << "Ride cancelled" << endl;
     } else {
+        voce::synthesize("Could not cancel ride");
         cout << "Could not cancel ride" << endl;
     }
 }
 
 
 int main(int argc, char** argv){
-    //voce::init("../../lib", true, false, "", "");
+    voce::init("../../lib", true, false, "", "");
     UserFactory* userFactory = new UserFactory();
     User* user = userFactory->createUser();
     //Get command
@@ -105,7 +121,13 @@ int main(int argc, char** argv){
 
     int rideRequest = 0;
     while(true) {
-        //voce::synthesize("Select command");
+        voce::synthesize("Select command");
+        voce::synthesize("1) Request Ride");
+        voce::synthesize("2) Set Uber Type");
+        voce::synthesize("3) Get Current Ride ETA");
+        voce::synthesize("4) Cancel Uber Ride");
+        voce::synthesize("5) Exit");
+
         cout << "Select command" << endl;
         cout << "1) Request Ride" << endl;
         cout << "2) Set Uber Type" << endl;
@@ -128,12 +150,14 @@ int main(int argc, char** argv){
             if(rideRequest == 1){
                 getCurrentETA(user);
             } else {
+                voce::synthesize("Please request a ride first");
                 cout << "Please request a ride first" << endl;
             }
         } else if(response == 4) {
             if(rideRequest == 1){
                 cancelRide(user);
             } else {
+                voce::synthesize("Please request a ride first");
                 cout << "Please request a ride first" << endl;
             }
         } else {
