@@ -1,8 +1,3 @@
-/**
- * @brief Factory for creating trips
- * @authors Kevin, Andrew, Hayman, Nirmal
- */
-
 #include "../Headers/GeographicCoordinate.h"
 #include "../Headers/Trip.h"
 #include "../Headers/User.h"
@@ -13,6 +8,10 @@
 #ifndef QUICKIE_TRIPFACTORY_H
 #define QUICKIE_TRIPFACTORY_H
 
+/**
+ * @brief Factory for creating trips
+ * @authors Kevin, Andrew, Hayman, Nirmal
+ */
 class TripFactory {
     public:
 
