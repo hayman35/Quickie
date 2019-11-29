@@ -1,4 +1,9 @@
 
+/**
+ * @brief Main class
+ * @authors Andrew, Kevin, Nirmal, Hayman
+ */
+
 #include <iostream>
 #include <string>
 #include "Headers/Trip.h"
@@ -14,6 +19,10 @@
 
 using namespace std;
 
+/**
+ * @brief user requests a ride
+ * @param user
+ */
 void requestRide(User *user) {
     TripFactory* tripFactory = new TripFactory();
     UberApiInterface* uber = new UberApiImplementation();
@@ -68,6 +77,10 @@ void requestRide(User *user) {
     }
 }
 
+/**
+ * @brief setter method for ubertype
+ * @param user
+ */
 void setUberType(User *user){
     string uberType = "";
     voce::synthesize("Enter Uber Type (uberX, uberXL, BLACK): ");
@@ -79,6 +92,10 @@ void setUberType(User *user){
     cout << endl <<"Uber type updated" << endl;
 }
 
+/**
+ * @brief getter method for the current estimated time of arrival
+ * @param user
+ */
 void getCurrentETA(User *user){
     Trip* trip = user->getTrip();
     time_t curTime = time(nullptr);
@@ -98,6 +115,10 @@ void getCurrentETA(User *user){
 
 }
 
+/**
+ * @brief method to cancel ride
+ * @param user
+ */
 void cancelRide(User *user){
     Trip* trip = user->getTrip();
     UberApiInterface* uber = new UberApiImplementation();
@@ -111,7 +132,12 @@ void cancelRide(User *user){
     }
 }
 
-
+/**
+ * @brief main method to request or cancel an uber, set an uber type, get the current ride estimated time of arrival or exit the program
+ * @param argc
+ * @param argv
+ * @return 0 is successful
+ */
 int main(int argc, char** argv){
     voce::init("../../lib", true, false, "", "");
     UserFactory* userFactory = new UserFactory();
