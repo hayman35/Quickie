@@ -1,0 +1,78 @@
+\hypertarget{namespacevoce}{}\doxysection{voce Namespace Reference}
+\label{namespacevoce}\index{voce@{voce}}
+
+
+The namespace containing everything in the Voce C++ A\+PI.  
+
+
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacevoce_1_1internal}{internal}}
+\begin{DoxyCompactList}\small\item\em Contains things that should only be accessed within Voce. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespacevoce_abd7e9a5653eaecb01b090deb67a7aa41}{init}} (const std\+::string \&voce\+Path, bool init\+Synthesis, bool init\+Recognition, const std\+::string \&grammar\+Path, const std\+::string \&grammar\+Name)
+\item 
+void \mbox{\hyperlink{namespacevoce_a43a398bd6aef6e100b2a3f9100a92da7}{destroy}} ()
+\item 
+\mbox{\Hypertarget{namespacevoce_a4e2abd9f7676d45f307b333884fcffc3}\label{namespacevoce_a4e2abd9f7676d45f307b333884fcffc3}} 
+void \mbox{\hyperlink{namespacevoce_a4e2abd9f7676d45f307b333884fcffc3}{synthesize}} (const std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Requests that the given string be synthesized as soon as possible. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacevoce_a3f7167ec764269382ba0373171bfd924}{stop\+Synthesizing}} ()
+\item 
+int \mbox{\hyperlink{namespacevoce_a74f38cc36b3d102467bdf6e22d11aa2a}{get\+Recognizer\+Queue\+Size}} ()
+\item 
+std\+::string \mbox{\hyperlink{namespacevoce_a503594287b94014c1da7213073d01405}{pop\+Recognized\+String}} ()
+\item 
+\mbox{\Hypertarget{namespacevoce_af270ef4d3d94ca458f144a4cced457e5}\label{namespacevoce_af270ef4d3d94ca458f144a4cced457e5}} 
+void \mbox{\hyperlink{namespacevoce_af270ef4d3d94ca458f144a4cced457e5}{set\+Recognizer\+Enabled}} (bool e)
+\begin{DoxyCompactList}\small\item\em Enables and disables the speech recognizer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespacevoce_aec40c095a1dd6bf43695c3e63194d40b}\label{namespacevoce_aec40c095a1dd6bf43695c3e63194d40b}} 
+bool \mbox{\hyperlink{namespacevoce_aec40c095a1dd6bf43695c3e63194d40b}{is\+Recognizer\+Enabled}} ()
+\begin{DoxyCompactList}\small\item\em Returns true if the recognizer is currently enabled. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacevoce_abe4d7fd54ec122cdf0689cd1c7853030}\label{namespacevoce_abe4d7fd54ec122cdf0689cd1c7853030}} 
+const std\+::string {\bfseries path\+Separator} = \char`\"{}\+:\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The namespace containing everything in the Voce C++ A\+PI. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacevoce_a43a398bd6aef6e100b2a3f9100a92da7}\label{namespacevoce_a43a398bd6aef6e100b2a3f9100a92da7}} 
+\index{voce@{voce}!destroy@{destroy}}
+\index{destroy@{destroy}!voce@{voce}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily void voce\+::destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+In addition to the usual Java Voce destroy call, this function performs some extra stuff needed to destroy the virtual machine. \mbox{\Hypertarget{namespacevoce_a74f38cc36b3d102467bdf6e22d11aa2a}\label{namespacevoce_a74f38cc36b3d102467bdf6e22d11aa2a}} 
+\index{voce@{voce}!getRecognizerQueueSize@{getRecognizerQueueSize}}
+\index{getRecognizerQueueSize@{getRecognizerQueueSize}!voce@{voce}}
+\doxysubsubsection{\texorpdfstring{getRecognizerQueueSize()}{getRecognizerQueueSize()}}
+{\footnotesize\ttfamily int voce\+::get\+Recognizer\+Queue\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the number of recognized strings currently in the recognizer\textquotesingle{}s queue. \mbox{\Hypertarget{namespacevoce_abd7e9a5653eaecb01b090deb67a7aa41}\label{namespacevoce_abd7e9a5653eaecb01b090deb67a7aa41}} 
+\index{voce@{voce}!init@{init}}
+\index{init@{init}!voce@{voce}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void voce\+::init (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{voce\+Path,  }\item[{bool}]{init\+Synthesis,  }\item[{bool}]{init\+Recognition,  }\item[{const std\+::string \&}]{grammar\+Path,  }\item[{const std\+::string \&}]{grammar\+Name }\end{DoxyParamCaption})}
+
+Initializes Voce. This function performs some extra stuff needed to setup the Java virtual machine and cache the Java method I\+Ds. ~\newline
+ The \textquotesingle{}voce\+Path\textquotesingle{} argument is the path to the Voce class files and config file. This path can be absolute or relative to the working directory of the executable using Voce. See documentation for the Java version for an explanation of the rest of the parameters. \mbox{\Hypertarget{namespacevoce_a503594287b94014c1da7213073d01405}\label{namespacevoce_a503594287b94014c1da7213073d01405}} 
+\index{voce@{voce}!popRecognizedString@{popRecognizedString}}
+\index{popRecognizedString@{popRecognizedString}!voce@{voce}}
+\doxysubsubsection{\texorpdfstring{popRecognizedString()}{popRecognizedString()}}
+{\footnotesize\ttfamily std\+::string voce\+::pop\+Recognized\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns and removes the oldest recognized string from the recognizer\textquotesingle{}s queue. \mbox{\Hypertarget{namespacevoce_a3f7167ec764269382ba0373171bfd924}\label{namespacevoce_a3f7167ec764269382ba0373171bfd924}} 
+\index{voce@{voce}!stopSynthesizing@{stopSynthesizing}}
+\index{stopSynthesizing@{stopSynthesizing}!voce@{voce}}
+\doxysubsubsection{\texorpdfstring{stopSynthesizing()}{stopSynthesizing()}}
+{\footnotesize\ttfamily void voce\+::stop\+Synthesizing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tells the speech synthesizer to stop synthesizing. This cancels all pending messages. 
