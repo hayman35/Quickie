@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['setup_0',['Setup',['../md__r_e_a_d_m_e.html',1,'']]]
+  ['addtrip_0',['addTrip',['../class_user.html#ab63fc7d3a06d255d83a5c40b555d65f1',1,'User']]]
 ];
