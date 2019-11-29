@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['gclass_5',['gClass',['../namespacevoce_1_1internal.html#abf9e5f01b94e6dee06cb655563f034dd',1,'voce::internal']]],
+  ['gclassname_6',['gClassName',['../namespacevoce_1_1internal.html#a360be58384cc68677e040fd4752137fb',1,'voce::internal']]],
+  ['genv_7',['gEnv',['../namespacevoce_1_1internal.html#a373e8f899e082d9e301be544b6d58d00',1,'voce::internal']]],
+  ['geographiccoordinate_8',['GeographicCoordinate',['../class_geographic_coordinate.html',1,'GeographicCoordinate'],['../class_geographic_coordinate.html#ad13579ae4b46d83f599365bd9e7065ec',1,'GeographicCoordinate::GeographicCoordinate()']]],
+  ['getdistance_9',['getDistance',['../class_trip.html#a0d86786f9d853535607432fca0626885',1,'Trip::getDistance()'],['../class_uber_trip.html#ad35d1a793f78419fc8940f890d4c7430',1,'UberTrip::getDistance()']]],
+  ['getdistanceunit_10',['getDistanceUnit',['../class_trip.html#a910fcd42ed3da7bd479e590547e2cac6',1,'Trip::getDistanceUnit()'],['../class_uber_trip.html#aa5d8653ed6a4910c0129f8cfac4dd050',1,'UberTrip::getDistanceUnit()']]],
+  ['getdrivername_11',['getDriverName',['../class_trip.html#adf125f4677a38aa382e5e6b74441789e',1,'Trip::getDriverName()'],['../class_uber_trip.html#a893317c918fbdc64db69a3be86ca80d1',1,'UberTrip::getDriverName()']]],
+  ['getendlocation_12',['getEndLocation',['../class_trip.html#a22cfe227151fa37a5509aaf1ca3a70e9',1,'Trip::getEndLocation()'],['../class_uber_trip.html#a4cdd53780a286bf26a946f10d8c166f3',1,'UberTrip::getEndLocation()']]],
+  ['getfareestimate_13',['getFareEstimate',['../class_uber_api_implementation.html#a6e5d1c1df15157e69a073b226d64dcaa',1,'UberApiImplementation::getFareEstimate()'],['../class_uber_api_interface.html#a5a5abc165e6105035e36d91f3cd0e9eb',1,'UberApiInterface::getFareEstimate()']]],
+  ['getfarevalue_14',['getFareValue',['../class_trip.html#a065aee3d785a9ce744b7c7bca8f2eb70',1,'Trip::getFareValue()'],['../class_uber_trip.html#afab66d5bec471a29075fcf9f22c60a59',1,'UberTrip::getFareValue()']]],
+  ['getlatitude_15',['getLatitude',['../class_geographic_coordinate.html#acb8f811160819ece8163ddcc5d1dde2b',1,'GeographicCoordinate']]],
+  ['getlongitude_16',['getLongitude',['../class_geographic_coordinate.html#adfba9fb7113a0c3743348a3835b32886',1,'GeographicCoordinate']]],
+  ['getoauthtoken_17',['getOAuthToken',['../class_user.html#a6ceae1e6ee50b96ff0d22a5517b61e95',1,'User']]],
+  ['getordertime_18',['getOrderTime',['../class_trip.html#a469c855a4675897b584868f7b1dec249',1,'Trip::getOrderTime()'],['../class_uber_trip.html#a7ed20e997f3ee0941466063f104bf2e1',1,'UberTrip::getOrderTime()']]],
+  ['getrecognizerqueuesize_19',['getRecognizerQueueSize',['../namespacevoce.html#a74f38cc36b3d102467bdf6e22d11aa2a',1,'voce']]],
+  ['getstartlocation_20',['getStartLocation',['../class_trip.html#abe927661f1b34efedbe17462a9a7c570',1,'Trip::getStartLocation()'],['../class_uber_trip.html#a34e20866740017648d763a37ba3f8d34',1,'UberTrip::getStartLocation()'],['../class_user.html#a912253a9c2fbaa8f4e72c1ff3e3dd2b5',1,'User::getStartLocation()']]],
+  ['getstatus_21',['getStatus',['../class_trip.html#a3f5055584c52d7bdbedfcc475b954927',1,'Trip::getStatus()'],['../class_uber_trip.html#ad5382161621eb4578e471f94eb4668ad',1,'UberTrip::getStatus()']]],
+  ['gettimeestimate_22',['getTimeEstimate',['../class_trip.html#a475c7e13fda6ecba567d2fda338ebe3c',1,'Trip::getTimeEstimate()'],['../class_uber_trip.html#a82127c52b62cd5c80d9d012b92e3ea24',1,'UberTrip::getTimeEstimate()']]],
+  ['gettimetoarrive_23',['getTimeToArrive',['../class_trip.html#ae1c6d7b54963477a5b8ce1fe19246797',1,'Trip::getTimeToArrive()'],['../class_uber_trip.html#a68ed7e9c2a453c3e0aefe4872ffce478',1,'UberTrip::getTimeToArrive()']]],
+  ['gettrip_24',['getTrip',['../class_user.html#a34468b9cbb62679e3d8746fb88b70707',1,'User']]],
+  ['getubertype_25',['getUberType',['../class_trip.html#a2ae579ef9863cd623b5e4ff32523d64f',1,'Trip::getUberType()'],['../class_uber_trip.html#a8241b76467a35563b3f3284a6551578f',1,'UberTrip::getUberType()'],['../class_user.html#ae224b7b590574c7dcf4a890d6dedbd22',1,'User::getUberType()']]],
+  ['getuserid_26',['getUserID',['../class_user.html#ab550077686904581ed2036e6250702a7',1,'User']]],
+  ['ginitid_27',['gInitID',['../namespacevoce_1_1internal.html#ad153c652e8139eabb0e574bb6d9995e3',1,'voce::internal']]],
+  ['gjvm_28',['gJVM',['../namespacevoce_1_1internal.html#aeb47688c7765376739a7f259c6aebc7d',1,'voce::internal']]]
+];
