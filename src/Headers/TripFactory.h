@@ -2,7 +2,6 @@
 #include "../Headers/Trip.h"
 #include "../Headers/User.h"
 #include "../Headers/UberTrip.h"
-#include "../Headers/UberDummyApiImplementation.h"
 #include "../Headers/UberApiInterface.h"
 
 #ifndef QUICKIE_TRIPFACTORY_H
