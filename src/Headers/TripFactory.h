@@ -1,3 +1,8 @@
+/**
+ * @brief Factory for creating trips
+ * @authors Kevin, Andrew, Hayman, Nirmal
+ */
+
 #include "../Headers/GeographicCoordinate.h"
 #include "../Headers/Trip.h"
 #include "../Headers/User.h"
@@ -10,6 +15,13 @@
 
 class TripFactory {
     public:
+
+    /**
+     * @param user
+     * @param start
+     * @param end
+     * @return Trip* pointer to trip
+     */
         Trip* create(User user, GeographicCoordinate* start, GeographicCoordinate* end);
 };
 #endif //QUICKIE_TRIPFACTORY_H
