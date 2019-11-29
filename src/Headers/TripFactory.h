@@ -14,7 +14,6 @@
  */
 class TripFactory {
     public:
-
     /**
      * @param user
      * @param start
