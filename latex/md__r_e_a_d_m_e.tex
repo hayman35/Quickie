@@ -1,0 +1,29 @@
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{setup.sh}
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{Building}\label{md__r_e_a_d_m_e_autotoc_md1}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mkdir build}
+\DoxyCodeLine{cd build}
+\DoxyCodeLine{conan install ..}
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysubsection{Windows}\label{md__r_e_a_d_m_e_autotoc_md2}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake .. -\/G "Visual Studio 15 Win64"}
+\DoxyCodeLine{cmake -\/-\/build . -\/-\/config Release}
+\end{DoxyCode}
+ \hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysubsection{Unix/\+Mac}\label{md__r_e_a_d_m_e_autotoc_md3}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake .. -\/G "Unix Makefiles" -\/DCMAKE\_BUILD\_TYPE=Release}
+\DoxyCodeLine{cmake -\/-\/build .}
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysection{Running}\label{md__r_e_a_d_m_e_autotoc_md4}
+In build directory 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./bin/quickie.exe}
+\end{DoxyCode}
+ 

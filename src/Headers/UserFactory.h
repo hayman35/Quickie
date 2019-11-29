@@ -4,8 +4,17 @@
 #define QUICKIE_USERFACTORY_H
 
 #include "../Headers/User.h"
+
+/**
+ * @brief Factory for creating users
+ * @authors Kevin, Nikka, Nirmal, Andrew, Hayman
+ */
 class UserFactory {
     public:
+        /**
+         * @brief Create a User object
+         * @return User* pointer to user
+         */
         User* createUser();
 };
 
