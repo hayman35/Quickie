@@ -17,8 +17,16 @@
 #ifndef QUICKIE_USERHTTPREQUEST_H
 #define QUICKIE_USERHTTPREQUEST_H
 
+/**
+ * @brief class used to facilitate http requests
+ */
 class UserHttpRequest {
     public:
+        /**
+         * @brief Sends http request
+         * @param uri to be requested by the method
+         * @return Poco::JSON::Object::Ptr json object from the http request
+         */
         Poco::JSON::Object::Ptr sendRequest(std::string uri);
 };
 
