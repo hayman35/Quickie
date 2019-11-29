@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['removetrip_34',['removeTrip',['../class_user.html#ad4b1669e28fdef6de54067e1ff140b8f',1,'User']]],
-  ['riderequest_35',['rideRequest',['../class_uber_api_implementation.html#a960cddc2d3644d44eb1e66524d7f135a',1,'UberApiImplementation::rideRequest()'],['../class_uber_api_interface.html#a69490eb2889c298daa1da62885578e8d',1,'UberApiInterface::rideRequest()']]]
+  ['latitude_36',['latitude',['../class_geographic_coordinate.html#a0b0913ce70e59bc9d673a669563b4f87',1,'GeographicCoordinate']]],
+  ['loadjavamethodid_37',['loadJavaMethodID',['../namespacevoce_1_1internal.html#aec804e40b7001b08c59d43ff80be8a5d',1,'voce::internal']]],
+  ['log_38',['log',['../namespacevoce_1_1internal.html#a87f0fb0a3ba5e320775b05932e91885d',1,'voce::internal']]],
+  ['longitude_39',['longitude',['../class_geographic_coordinate.html#a26bede26be981d7d11ebb8322e06544a',1,'GeographicCoordinate']]]
 ];

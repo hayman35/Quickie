@@ -12,7 +12,7 @@
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_user_a4a45c9bd0494cceac741f6c051c7aa1b}{User}} (std\+::string user\+ID, \mbox{\hyperlink{class_geographic_coordinate}{Geographic\+Coordinate}} $\ast$start\+Location)
+\mbox{\hyperlink{class_user_a4a45c9bd0494cceac741f6c051c7aa1b}{User}} (std\+::string user\+ID, \mbox{\hyperlink{class_geographic_coordinate}{Geographic\+Coordinate}} $\ast$\mbox{\hyperlink{class_user_a625f7d9406c2ddf082b7a78db9d37caa}{start\+Location}})
 \begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_user}{User}} object. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{class_user_ab550077686904581ed2036e6250702a7}{get\+User\+ID}} ()
 \begin{DoxyCompactList}\small\item\em Get the \mbox{\hyperlink{class_user}{User}} ID. \end{DoxyCompactList}\item 
@@ -20,23 +20,37 @@ void \mbox{\hyperlink{class_user_abd5f2c8dcfe3fdd144ad95d865613f64}{set\+User\+I
 \begin{DoxyCompactList}\small\item\em Set the \mbox{\hyperlink{class_user}{User}} ID object. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{class_user_a6ceae1e6ee50b96ff0d22a5517b61e95}{get\+O\+Auth\+Token}} ()
 \begin{DoxyCompactList}\small\item\em gets o\+Auth\+Token \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_user_a39014be114e4f6f4ca6717ff7b84484d}{set\+O\+Auth\+Token}} (std\+::string o\+Auth\+Token)
+void \mbox{\hyperlink{class_user_a39014be114e4f6f4ca6717ff7b84484d}{set\+O\+Auth\+Token}} (std\+::string \mbox{\hyperlink{class_user_a9ada4b4d2146ef3a0dc0e1991f8bf06f}{o\+Auth\+Token}})
 \begin{DoxyCompactList}\small\item\em sets o\+Auth\+Token \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_geographic_coordinate}{Geographic\+Coordinate}} $\ast$ \mbox{\hyperlink{class_user_a912253a9c2fbaa8f4e72c1ff3e3dd2b5}{get\+Start\+Location}} ()
 \begin{DoxyCompactList}\small\item\em Get the Start Location object. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_user_af93cf8161372bfed658b1f1b05614265}{set\+Start\+Location}} (\mbox{\hyperlink{class_geographic_coordinate}{Geographic\+Coordinate}} $\ast$start\+Location)
+void \mbox{\hyperlink{class_user_af93cf8161372bfed658b1f1b05614265}{set\+Start\+Location}} (\mbox{\hyperlink{class_geographic_coordinate}{Geographic\+Coordinate}} $\ast$\mbox{\hyperlink{class_user_a625f7d9406c2ddf082b7a78db9d37caa}{start\+Location}})
 \begin{DoxyCompactList}\small\item\em Set the Start Location object. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_user_ab63fc7d3a06d255d83a5c40b555d65f1}{add\+Trip}} (\mbox{\hyperlink{class_trip}{Trip}} $\ast$trip)
+void \mbox{\hyperlink{class_user_ab63fc7d3a06d255d83a5c40b555d65f1}{add\+Trip}} (\mbox{\hyperlink{class_trip}{Trip}} $\ast$\mbox{\hyperlink{class_user_ab7b40cf63bd1dee7fc32551f43198986}{trip}})
 \begin{DoxyCompactList}\small\item\em Adds a trip to the user. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_trip}{Trip}} $\ast$ \mbox{\hyperlink{class_user_a34468b9cbb62679e3d8746fb88b70707}{get\+Trip}} ()
 \begin{DoxyCompactList}\small\item\em Get the \mbox{\hyperlink{class_trip}{Trip}} object. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_user_ad4b1669e28fdef6de54067e1ff140b8f}\label{class_user_ad4b1669e28fdef6de54067e1ff140b8f}} 
 void \mbox{\hyperlink{class_user_ad4b1669e28fdef6de54067e1ff140b8f}{remove\+Trip}} ()
 \begin{DoxyCompactList}\small\item\em Remove any current trips. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_user_a886ad5bde056e217fe5da8278038866e}{update\+Uber\+Type}} (std\+::string uber\+Type)
+void \mbox{\hyperlink{class_user_a886ad5bde056e217fe5da8278038866e}{update\+Uber\+Type}} (std\+::string \mbox{\hyperlink{class_user_a67158df55da55dceb8d93a1f366f1dd1}{uber\+Type}})
 \begin{DoxyCompactList}\small\item\em updates the ubertype \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{class_user_ae224b7b590574c7dcf4a890d6dedbd22}{get\+Uber\+Type}} ()
 \begin{DoxyCompactList}\small\item\em Get the Uber Type string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_user_a23edbe719dce1faa2f50f858c211f652}\label{class_user_a23edbe719dce1faa2f50f858c211f652}} 
+std\+::string {\bfseries user\+ID}
+\item 
+std\+::string \mbox{\hyperlink{class_user_a9ada4b4d2146ef3a0dc0e1991f8bf06f}{o\+Auth\+Token}}
+\item 
+\mbox{\hyperlink{class_geographic_coordinate}{Geographic\+Coordinate}} $\ast$ \mbox{\hyperlink{class_user_a625f7d9406c2ddf082b7a78db9d37caa}{start\+Location}}
+\item 
+\mbox{\hyperlink{class_trip}{Trip}} $\ast$ \mbox{\hyperlink{class_user_ab7b40cf63bd1dee7fc32551f43198986}{trip}}
+\item 
+std\+::string \mbox{\hyperlink{class_user_a67158df55da55dceb8d93a1f366f1dd1}{uber\+Type}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -209,6 +223,33 @@ updates the ubertype
 \hline
 \end{DoxyParams}
 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_user_a9ada4b4d2146ef3a0dc0e1991f8bf06f}\label{class_user_a9ada4b4d2146ef3a0dc0e1991f8bf06f}} 
+\index{User@{User}!oAuthToken@{oAuthToken}}
+\index{oAuthToken@{oAuthToken}!User@{User}}
+\doxysubsubsection{\texorpdfstring{oAuthToken}{oAuthToken}}
+{\footnotesize\ttfamily std\+::string User\+::o\+Auth\+Token\hspace{0.3cm}{\ttfamily [private]}}
+
+$<$ \mbox{\hyperlink{class_user}{User}} ID \mbox{\Hypertarget{class_user_a625f7d9406c2ddf082b7a78db9d37caa}\label{class_user_a625f7d9406c2ddf082b7a78db9d37caa}} 
+\index{User@{User}!startLocation@{startLocation}}
+\index{startLocation@{startLocation}!User@{User}}
+\doxysubsubsection{\texorpdfstring{startLocation}{startLocation}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_geographic_coordinate}{Geographic\+Coordinate}}$\ast$ User\+::start\+Location\hspace{0.3cm}{\ttfamily [private]}}
+
+$<$ token used for authentication \mbox{\Hypertarget{class_user_ab7b40cf63bd1dee7fc32551f43198986}\label{class_user_ab7b40cf63bd1dee7fc32551f43198986}} 
+\index{User@{User}!trip@{trip}}
+\index{trip@{trip}!User@{User}}
+\doxysubsubsection{\texorpdfstring{trip}{trip}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_trip}{Trip}}$\ast$ User\+::trip\hspace{0.3cm}{\ttfamily [private]}}
+
+$<$ start\+Location of user \mbox{\Hypertarget{class_user_a67158df55da55dceb8d93a1f366f1dd1}\label{class_user_a67158df55da55dceb8d93a1f366f1dd1}} 
+\index{User@{User}!uberType@{uberType}}
+\index{uberType@{uberType}!User@{User}}
+\doxysubsubsection{\texorpdfstring{uberType}{uberType}}
+{\footnotesize\ttfamily std\+::string User\+::uber\+Type\hspace{0.3cm}{\ttfamily [private]}}
+
+$<$ Users current trip 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

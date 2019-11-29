@@ -23,6 +23,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Quickie
    </div>
+   <div id="projectbrief">Quickie allows a user to order an uber using their voice</div>
   </td>
  </tr>
  </tbody>
@@ -63,6 +64,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_uber_api_interface-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UberApiInterface Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -97,6 +99,21 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uber_api_interface.html#a9bc4fc039000987b4617f873b5b218f5">cancelRideRequest</a> (<a class="el" href="class_trip.html">Trip</a> *)=0</td></tr>
 <tr class="memdesc:a9bc4fc039000987b4617f873b5b218f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">cancel a ride request <br /></td></tr>
 <tr class="separator:a9bc4fc039000987b4617f873b5b218f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aac67bdbdff236283011aa94238e31153"><td class="memItemLeft" align="right" valign="top"><a id="aac67bdbdff236283011aa94238e31153"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uber_api_interface.html#aac67bdbdff236283011aa94238e31153">clientID</a></td></tr>
+<tr class="memdesc:aac67bdbdff236283011aa94238e31153"><td class="mdescLeft">&#160;</td><td class="mdescRight">clientID used for API <br /></td></tr>
+<tr class="separator:aac67bdbdff236283011aa94238e31153"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad39b59c7c839b7302da3fdf432b16444"><td class="memItemLeft" align="right" valign="top"><a id="ad39b59c7c839b7302da3fdf432b16444"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uber_api_interface.html#ad39b59c7c839b7302da3fdf432b16444">state</a></td></tr>
+<tr class="memdesc:ad39b59c7c839b7302da3fdf432b16444"><td class="mdescLeft">&#160;</td><td class="mdescRight">current state of api <br /></td></tr>
+<tr class="separator:ad39b59c7c839b7302da3fdf432b16444"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b9817c419eb7bb05ad78ee38a8fe204"><td class="memItemLeft" align="right" valign="top"><a id="a3b9817c419eb7bb05ad78ee38a8fe204"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uber_api_interface.html#a3b9817c419eb7bb05ad78ee38a8fe204">redirectURL</a></td></tr>
+<tr class="memdesc:a3b9817c419eb7bb05ad78ee38a8fe204"><td class="mdescLeft">&#160;</td><td class="mdescRight">redirectionURL for future oAuth <br /></td></tr>
+<tr class="separator:a3b9817c419eb7bb05ad78ee38a8fe204"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>API Interface for the Uber API. </p>

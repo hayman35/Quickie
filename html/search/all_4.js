@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['init_29',['init',['../namespacevoce.html#abd7e9a5653eaecb01b090deb67a7aa41',1,'voce']]],
-  ['isrecognizerenabled_30',['isRecognizerEnabled',['../namespacevoce.html#aec40c095a1dd6bf43695c3e63194d40b',1,'voce']]]
+  ['farevalue_9',['fareValue',['../class_trip.html#a3b8846918e50a9700a456ce1bc3def0e',1,'Trip::fareValue()'],['../class_uber_trip.html#a9c97ef29e8fe01423a95f536c958a525',1,'UberTrip::fareValue()']]]
 ];
