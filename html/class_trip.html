@@ -68,88 +68,823 @@ $(function() {
 <div class="title">Trip Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Main fuction that handles all the information about the uber trips.  
+ <a href="class_trip.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_trip_8h_source.html">Trip.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Trip:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_trip.png" usemap="#Trip_map" alt=""/>
   <map id="Trip_map" name="Trip_map">
-<area href="class_uber_trip.html" alt="UberTrip" shape="rect" coords="0,56,61,80"/>
+<area href="class_uber_trip.html" title="Creates an UberTrip from the information stored in the trip interface." alt="UberTrip" shape="rect" coords="0,56,61,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3f5055584c52d7bdbedfcc475b954927"><td class="memItemLeft" align="right" valign="top"><a id="a3f5055584c52d7bdbedfcc475b954927"></a>
-virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getStatus</b> ()=0</td></tr>
+<tr class="memitem:a3f5055584c52d7bdbedfcc475b954927"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trip.html#a3f5055584c52d7bdbedfcc475b954927">getStatus</a> ()=0</td></tr>
+<tr class="memdesc:a3f5055584c52d7bdbedfcc475b954927"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Status object.  <a href="class_trip.html#a3f5055584c52d7bdbedfcc475b954927">More...</a><br /></td></tr>
 <tr class="separator:a3f5055584c52d7bdbedfcc475b954927"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e2a2cdc061f785ad9782ed4d3eeac1b"><td class="memItemLeft" align="right" valign="top"><a id="a9e2a2cdc061f785ad9782ed4d3eeac1b"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setStatus</b> (std::string status)=0</td></tr>
+<tr class="memitem:a9e2a2cdc061f785ad9782ed4d3eeac1b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trip.html#a9e2a2cdc061f785ad9782ed4d3eeac1b">setStatus</a> (std::string status)=0</td></tr>
+<tr class="memdesc:a9e2a2cdc061f785ad9782ed4d3eeac1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Status object.  <a href="class_trip.html#a9e2a2cdc061f785ad9782ed4d3eeac1b">More...</a><br /></td></tr>
 <tr class="separator:a9e2a2cdc061f785ad9782ed4d3eeac1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4350b82d6b47fb8ce362236b59e4dcba"><td class="memItemLeft" align="right" valign="top"><a id="a4350b82d6b47fb8ce362236b59e4dcba"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setFareValue</b> (double fareValue)=0</td></tr>
+<tr class="memitem:a4350b82d6b47fb8ce362236b59e4dcba"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trip.html#a4350b82d6b47fb8ce362236b59e4dcba">setFareValue</a> (double fareValue)=0</td></tr>
+<tr class="memdesc:a4350b82d6b47fb8ce362236b59e4dcba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Fare Value object.  <a href="class_trip.html#a4350b82d6b47fb8ce362236b59e4dcba">More...</a><br /></td></tr>
 <tr class="separator:a4350b82d6b47fb8ce362236b59e4dcba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d86786f9d853535607432fca0626885"><td class="memItemLeft" align="right" valign="top"><a id="a0d86786f9d853535607432fca0626885"></a>
-virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>getDistance</b> ()=0</td></tr>
+<tr class="memitem:a0d86786f9d853535607432fca0626885"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trip.html#a0d86786f9d853535607432fca0626885">getDistance</a> ()=0</td></tr>
+<tr class="memdesc:a0d86786f9d853535607432fca0626885"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Distance object.  <a href="class_trip.html#a0d86786f9d853535607432fca0626885">More...</a><br /></td></tr>
 <tr class="separator:a0d86786f9d853535607432fca0626885"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af494388ab2610c5a53ce4e5786926feb"><td class="memItemLeft" align="right" valign="top"><a id="af494388ab2610c5a53ce4e5786926feb"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setDistance</b> (double distance)=0</td></tr>
+<tr class="memitem:af494388ab2610c5a53ce4e5786926feb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trip.html#af494388ab2610c5a53ce4e5786926feb">setDistance</a> (double distance)=0</td></tr>
+<tr class="memdesc:af494388ab2610c5a53ce4e5786926feb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Distance object.  <a href="class_trip.html#af494388ab2610c5a53ce4e5786926feb">More...</a><br /></td></tr>
 <tr class="separator:af494388ab2610c5a53ce4e5786926feb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a475c7e13fda6ecba567d2fda338ebe3c"><td class="memItemLeft" align="right" valign="top"><a id="a475c7e13fda6ecba567d2fda338ebe3c"></a>
-virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>getTimeEstimate</b> ()=0</td></tr>
+<tr class="memitem:a475c7e13fda6ecba567d2fda338ebe3c"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trip.html#a475c7e13fda6ecba567d2fda338ebe3c">getTimeEstimate</a> ()=0</td></tr>
+<tr class="memdesc:a475c7e13fda6ecba567d2fda338ebe3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Time Estimate object.  <a href="class_trip.html#a475c7e13fda6ecba567d2fda338ebe3c">More...</a><br /></td></tr>
 <tr class="separator:a475c7e13fda6ecba567d2fda338ebe3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44e068c30e5b1d60249cc5037c9135d4"><td class="memItemLeft" align="right" valign="top"><a id="a44e068c30e5b1d60249cc5037c9135d4"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setTimeEstimate</b> (double timeEstimate)=0</td></tr>
+<tr class="memitem:a44e068c30e5b1d60249cc5037c9135d4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trip.html#a44e068c30e5b1d60249cc5037c9135d4">setTimeEstimate</a> (double timeEstimate)=0</td></tr>
+<tr class="memdesc:a44e068c30e5b1d60249cc5037c9135d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Time Estimate object.  <a href="class_trip.html#a44e068c30e5b1d60249cc5037c9135d4">More...</a><br /></td></tr>
 <tr class="separator:a44e068c30e5b1d60249cc5037c9135d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a910fcd42ed3da7bd479e590547e2cac6"><td class="memItemLeft" align="right" valign="top"><a id="a910fcd42ed3da7bd479e590547e2cac6"></a>
-virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getDistanceUnit</b> ()=0</td></tr>
+<tr class="memitem:a910fcd42ed3da7bd479e590547e2cac6"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trip.html#a910fcd42ed3da7bd479e590547e2cac6">getDistanceUnit</a> ()=0</td></tr>
+<tr class="memdesc:a910fcd42ed3da7bd479e590547e2cac6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Distance Unit object.  <a href="class_trip.html#a910fcd42ed3da7bd479e590547e2cac6">More...</a><br /></td></tr>
 <tr class="separator:a910fcd42ed3da7bd479e590547e2cac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a064dd90d745b9e3ec30bc14ddc862834"><td class="memItemLeft" align="right" valign="top"><a id="a064dd90d745b9e3ec30bc14ddc862834"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setDistanceUnit</b> (std::string distanceUnit)=0</td></tr>
+<tr class="memitem:a064dd90d745b9e3ec30bc14ddc862834"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trip.html#a064dd90d745b9e3ec30bc14ddc862834">setDistanceUnit</a> (std::string distanceUnit)=0</td></tr>
+<tr class="memdesc:a064dd90d745b9e3ec30bc14ddc862834"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Distance Unit object.  <a href="class_trip.html#a064dd90d745b9e3ec30bc14ddc862834">More...</a><br /></td></tr>
 <tr class="separator:a064dd90d745b9e3ec30bc14ddc862834"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe927661f1b34efedbe17462a9a7c570"><td class="memItemLeft" align="right" valign="top"><a id="abe927661f1b34efedbe17462a9a7c570"></a>
-virtual <a class="el" href="class_geographic_coordinate.html">GeographicCoordinate</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getStartLocation</b> ()=0</td></tr>
+<tr class="memitem:abe927661f1b34efedbe17462a9a7c570"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_geographic_coordinate.html">GeographicCoordinate</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trip.html#abe927661f1b34efedbe17462a9a7c570">getStartLocation</a> ()=0</td></tr>
+<tr class="memdesc:abe927661f1b34efedbe17462a9a7c570"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Start Location object.  <a href="class_trip.html#abe927661f1b34efedbe17462a9a7c570">More...</a><br /></td></tr>
 <tr class="separator:abe927661f1b34efedbe17462a9a7c570"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace6fc94ba81485b769d586e1187fcca1"><td class="memItemLeft" align="right" valign="top"><a id="ace6fc94ba81485b769d586e1187fcca1"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setStartLocation</b> (<a class="el" href="class_geographic_coordinate.html">GeographicCoordinate</a> *startLocation)=0</td></tr>
+<tr class="memitem:ace6fc94ba81485b769d586e1187fcca1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trip.html#ace6fc94ba81485b769d586e1187fcca1">setStartLocation</a> (<a class="el" href="class_geographic_coordinate.html">GeographicCoordinate</a> *startLocation)=0</td></tr>
+<tr class="memdesc:ace6fc94ba81485b769d586e1187fcca1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Start Location object.  <a href="class_trip.html#ace6fc94ba81485b769d586e1187fcca1">More...</a><br /></td></tr>
 <tr class="separator:ace6fc94ba81485b769d586e1187fcca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22cfe227151fa37a5509aaf1ca3a70e9"><td class="memItemLeft" align="right" valign="top"><a id="a22cfe227151fa37a5509aaf1ca3a70e9"></a>
-virtual <a class="el" href="class_geographic_coordinate.html">GeographicCoordinate</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getEndLocation</b> ()=0</td></tr>
+<tr class="memitem:a22cfe227151fa37a5509aaf1ca3a70e9"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_geographic_coordinate.html">GeographicCoordinate</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trip.html#a22cfe227151fa37a5509aaf1ca3a70e9">getEndLocation</a> ()=0</td></tr>
+<tr class="memdesc:a22cfe227151fa37a5509aaf1ca3a70e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the End Location object.  <a href="class_trip.html#a22cfe227151fa37a5509aaf1ca3a70e9">More...</a><br /></td></tr>
 <tr class="separator:a22cfe227151fa37a5509aaf1ca3a70e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb64503cb4a27b8428e47b835767bb07"><td class="memItemLeft" align="right" valign="top"><a id="acb64503cb4a27b8428e47b835767bb07"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setEndLocation</b> (<a class="el" href="class_geographic_coordinate.html">GeographicCoordinate</a> *endLocation)=0</td></tr>
+<tr class="memitem:acb64503cb4a27b8428e47b835767bb07"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trip.html#acb64503cb4a27b8428e47b835767bb07">setEndLocation</a> (<a class="el" href="class_geographic_coordinate.html">GeographicCoordinate</a> *endLocation)=0</td></tr>
+<tr class="memdesc:acb64503cb4a27b8428e47b835767bb07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the End Location object.  <a href="class_trip.html#acb64503cb4a27b8428e47b835767bb07">More...</a><br /></td></tr>
 <tr class="separator:acb64503cb4a27b8428e47b835767bb07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acfbb36bd1a25af0f976d41b608fd55f7"><td class="memItemLeft" align="right" valign="top"><a id="acfbb36bd1a25af0f976d41b608fd55f7"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>start</b> ()=0</td></tr>
 <tr class="separator:acfbb36bd1a25af0f976d41b608fd55f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a065aee3d785a9ce744b7c7bca8f2eb70"><td class="memItemLeft" align="right" valign="top"><a id="a065aee3d785a9ce744b7c7bca8f2eb70"></a>
-virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>getFareValue</b> ()=0</td></tr>
+<tr class="memitem:a065aee3d785a9ce744b7c7bca8f2eb70"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trip.html#a065aee3d785a9ce744b7c7bca8f2eb70">getFareValue</a> ()=0</td></tr>
+<tr class="memdesc:a065aee3d785a9ce744b7c7bca8f2eb70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Fare Value object.  <a href="class_trip.html#a065aee3d785a9ce744b7c7bca8f2eb70">More...</a><br /></td></tr>
 <tr class="separator:a065aee3d785a9ce744b7c7bca8f2eb70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7553e753af55097ba1baed20e7294231"><td class="memItemLeft" align="right" valign="top"><a id="a7553e753af55097ba1baed20e7294231"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setTimeToArrive</b> (double timeToArrive)=0</td></tr>
+<tr class="memitem:a7553e753af55097ba1baed20e7294231"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trip.html#a7553e753af55097ba1baed20e7294231">setTimeToArrive</a> (double timeToArrive)=0</td></tr>
+<tr class="memdesc:a7553e753af55097ba1baed20e7294231"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Time To Arrive object.  <a href="class_trip.html#a7553e753af55097ba1baed20e7294231">More...</a><br /></td></tr>
 <tr class="separator:a7553e753af55097ba1baed20e7294231"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1c6d7b54963477a5b8ce1fe19246797"><td class="memItemLeft" align="right" valign="top"><a id="ae1c6d7b54963477a5b8ce1fe19246797"></a>
-virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>getTimeToArrive</b> ()=0</td></tr>
+<tr class="memitem:ae1c6d7b54963477a5b8ce1fe19246797"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trip.html#ae1c6d7b54963477a5b8ce1fe19246797">getTimeToArrive</a> ()=0</td></tr>
+<tr class="memdesc:ae1c6d7b54963477a5b8ce1fe19246797"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Time To Arrive object.  <a href="class_trip.html#ae1c6d7b54963477a5b8ce1fe19246797">More...</a><br /></td></tr>
 <tr class="separator:ae1c6d7b54963477a5b8ce1fe19246797"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abcd677bd262d2113a8ee624dd603472c"><td class="memItemLeft" align="right" valign="top"><a id="abcd677bd262d2113a8ee624dd603472c"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setOrderTime</b> (time_t orderTime)=0</td></tr>
+<tr class="memitem:abcd677bd262d2113a8ee624dd603472c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trip.html#abcd677bd262d2113a8ee624dd603472c">setOrderTime</a> (time_t orderTime)=0</td></tr>
+<tr class="memdesc:abcd677bd262d2113a8ee624dd603472c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Order Time object.  <a href="class_trip.html#abcd677bd262d2113a8ee624dd603472c">More...</a><br /></td></tr>
 <tr class="separator:abcd677bd262d2113a8ee624dd603472c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a469c855a4675897b584868f7b1dec249"><td class="memItemLeft" align="right" valign="top"><a id="a469c855a4675897b584868f7b1dec249"></a>
-virtual time_t&#160;</td><td class="memItemRight" valign="bottom"><b>getOrderTime</b> ()=0</td></tr>
+<tr class="memitem:a469c855a4675897b584868f7b1dec249"><td class="memItemLeft" align="right" valign="top">virtual time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trip.html#a469c855a4675897b584868f7b1dec249">getOrderTime</a> ()=0</td></tr>
+<tr class="memdesc:a469c855a4675897b584868f7b1dec249"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Order Time object.  <a href="class_trip.html#a469c855a4675897b584868f7b1dec249">More...</a><br /></td></tr>
 <tr class="separator:a469c855a4675897b584868f7b1dec249"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac134104b800eb206588d1d66fdd76c36"><td class="memItemLeft" align="right" valign="top"><a id="ac134104b800eb206588d1d66fdd76c36"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setUberType</b> (std::string uberType)=0</td></tr>
+<tr class="memitem:ac134104b800eb206588d1d66fdd76c36"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trip.html#ac134104b800eb206588d1d66fdd76c36">setUberType</a> (std::string uberType)=0</td></tr>
+<tr class="memdesc:ac134104b800eb206588d1d66fdd76c36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Uber Type object.  <a href="class_trip.html#ac134104b800eb206588d1d66fdd76c36">More...</a><br /></td></tr>
 <tr class="separator:ac134104b800eb206588d1d66fdd76c36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ae579ef9863cd623b5e4ff32523d64f"><td class="memItemLeft" align="right" valign="top"><a id="a2ae579ef9863cd623b5e4ff32523d64f"></a>
-virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getUberType</b> ()=0</td></tr>
+<tr class="memitem:a2ae579ef9863cd623b5e4ff32523d64f"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trip.html#a2ae579ef9863cd623b5e4ff32523d64f">getUberType</a> ()=0</td></tr>
+<tr class="memdesc:a2ae579ef9863cd623b5e4ff32523d64f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Uber Type object.  <a href="class_trip.html#a2ae579ef9863cd623b5e4ff32523d64f">More...</a><br /></td></tr>
 <tr class="separator:a2ae579ef9863cd623b5e4ff32523d64f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf125f4677a38aa382e5e6b74441789e"><td class="memItemLeft" align="right" valign="top"><a id="adf125f4677a38aa382e5e6b74441789e"></a>
-virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getDriverName</b> ()=0</td></tr>
+<tr class="memitem:adf125f4677a38aa382e5e6b74441789e"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trip.html#adf125f4677a38aa382e5e6b74441789e">getDriverName</a> ()=0</td></tr>
+<tr class="memdesc:adf125f4677a38aa382e5e6b74441789e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Driver Name object.  <a href="class_trip.html#adf125f4677a38aa382e5e6b74441789e">More...</a><br /></td></tr>
 <tr class="separator:adf125f4677a38aa382e5e6b74441789e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ee7d23dd5978ebca4249720079d58df"><td class="memItemLeft" align="right" valign="top"><a id="a1ee7d23dd5978ebca4249720079d58df"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setDriverName</b> (std::string driverName)=0</td></tr>
+<tr class="memitem:a1ee7d23dd5978ebca4249720079d58df"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trip.html#a1ee7d23dd5978ebca4249720079d58df">setDriverName</a> (std::string driverName)=0</td></tr>
+<tr class="memdesc:a1ee7d23dd5978ebca4249720079d58df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Driver Name object.  <a href="class_trip.html#a1ee7d23dd5978ebca4249720079d58df">More...</a><br /></td></tr>
 <tr class="separator:a1ee7d23dd5978ebca4249720079d58df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Main fuction that handles all the information about the uber trips. </p>
+<dl class="section author"><dt>Authors</dt><dd>Nirmal and Hayman </dd></dl>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0d86786f9d853535607432fca0626885"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d86786f9d853535607432fca0626885">&#9670;&nbsp;</a></span>getDistance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double Trip::getDistance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the Distance object. </p>
+<dl class="section return"><dt>Returns</dt><dd>double </dd></dl>
+
+<p>Implemented in <a class="el" href="class_uber_trip.html#ad35d1a793f78419fc8940f890d4c7430">UberTrip</a>.</p>
+
+</div>
+</div>
+<a id="a910fcd42ed3da7bd479e590547e2cac6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a910fcd42ed3da7bd479e590547e2cac6">&#9670;&nbsp;</a></span>getDistanceUnit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string Trip::getDistanceUnit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the Distance Unit object. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::string </dd></dl>
+
+<p>Implemented in <a class="el" href="class_uber_trip.html#aa5d8653ed6a4910c0129f8cfac4dd050">UberTrip</a>.</p>
+
+</div>
+</div>
+<a id="adf125f4677a38aa382e5e6b74441789e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf125f4677a38aa382e5e6b74441789e">&#9670;&nbsp;</a></span>getDriverName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string Trip::getDriverName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the Driver Name object. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::string </dd></dl>
+
+<p>Implemented in <a class="el" href="class_uber_trip.html#a893317c918fbdc64db69a3be86ca80d1">UberTrip</a>.</p>
+
+</div>
+</div>
+<a id="a22cfe227151fa37a5509aaf1ca3a70e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22cfe227151fa37a5509aaf1ca3a70e9">&#9670;&nbsp;</a></span>getEndLocation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_geographic_coordinate.html">GeographicCoordinate</a>* Trip::getEndLocation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the End Location object. </p>
+<dl class="section return"><dt>Returns</dt><dd>GeographicCoordinate* </dd></dl>
+
+<p>Implemented in <a class="el" href="class_uber_trip.html#a4cdd53780a286bf26a946f10d8c166f3">UberTrip</a>.</p>
+
+</div>
+</div>
+<a id="a065aee3d785a9ce744b7c7bca8f2eb70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a065aee3d785a9ce744b7c7bca8f2eb70">&#9670;&nbsp;</a></span>getFareValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double Trip::getFareValue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the Fare Value object. </p>
+<dl class="section return"><dt>Returns</dt><dd>double </dd></dl>
+
+<p>Implemented in <a class="el" href="class_uber_trip.html#afab66d5bec471a29075fcf9f22c60a59">UberTrip</a>.</p>
+
+</div>
+</div>
+<a id="a469c855a4675897b584868f7b1dec249"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a469c855a4675897b584868f7b1dec249">&#9670;&nbsp;</a></span>getOrderTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual time_t Trip::getOrderTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the Order Time object. </p>
+<dl class="section return"><dt>Returns</dt><dd>time_t </dd></dl>
+
+<p>Implemented in <a class="el" href="class_uber_trip.html#a7ed20e997f3ee0941466063f104bf2e1">UberTrip</a>.</p>
+
+</div>
+</div>
+<a id="abe927661f1b34efedbe17462a9a7c570"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe927661f1b34efedbe17462a9a7c570">&#9670;&nbsp;</a></span>getStartLocation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_geographic_coordinate.html">GeographicCoordinate</a>* Trip::getStartLocation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the Start Location object. </p>
+<dl class="section return"><dt>Returns</dt><dd>GeographicCoordinate* </dd></dl>
+
+<p>Implemented in <a class="el" href="class_uber_trip.html#a34e20866740017648d763a37ba3f8d34">UberTrip</a>.</p>
+
+</div>
+</div>
+<a id="a3f5055584c52d7bdbedfcc475b954927"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f5055584c52d7bdbedfcc475b954927">&#9670;&nbsp;</a></span>getStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string Trip::getStatus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the Status object. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::string </dd></dl>
+
+<p>Implemented in <a class="el" href="class_uber_trip.html#ad5382161621eb4578e471f94eb4668ad">UberTrip</a>.</p>
+
+</div>
+</div>
+<a id="a475c7e13fda6ecba567d2fda338ebe3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a475c7e13fda6ecba567d2fda338ebe3c">&#9670;&nbsp;</a></span>getTimeEstimate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double Trip::getTimeEstimate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the Time Estimate object. </p>
+<dl class="section return"><dt>Returns</dt><dd>double </dd></dl>
+
+<p>Implemented in <a class="el" href="class_uber_trip.html#a82127c52b62cd5c80d9d012b92e3ea24">UberTrip</a>.</p>
+
+</div>
+</div>
+<a id="ae1c6d7b54963477a5b8ce1fe19246797"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1c6d7b54963477a5b8ce1fe19246797">&#9670;&nbsp;</a></span>getTimeToArrive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double Trip::getTimeToArrive </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the Time To Arrive object. </p>
+<dl class="section return"><dt>Returns</dt><dd>double </dd></dl>
+
+<p>Implemented in <a class="el" href="class_uber_trip.html#a68ed7e9c2a453c3e0aefe4872ffce478">UberTrip</a>.</p>
+
+</div>
+</div>
+<a id="a2ae579ef9863cd623b5e4ff32523d64f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ae579ef9863cd623b5e4ff32523d64f">&#9670;&nbsp;</a></span>getUberType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string Trip::getUberType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the Uber Type object. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::string </dd></dl>
+
+<p>Implemented in <a class="el" href="class_uber_trip.html#a8241b76467a35563b3f3284a6551578f">UberTrip</a>.</p>
+
+</div>
+</div>
+<a id="af494388ab2610c5a53ce4e5786926feb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af494388ab2610c5a53ce4e5786926feb">&#9670;&nbsp;</a></span>setDistance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Trip::setDistance </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>distance</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the Distance object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">distance</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_uber_trip.html#a721500a1b163da4e6ccc7700c182d877">UberTrip</a>.</p>
+
+</div>
+</div>
+<a id="a064dd90d745b9e3ec30bc14ddc862834"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a064dd90d745b9e3ec30bc14ddc862834">&#9670;&nbsp;</a></span>setDistanceUnit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Trip::setDistanceUnit </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>distanceUnit</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the Distance Unit object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">distanceUnit</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_uber_trip.html#a23f5ce61f06c7f5a8e4d6449f6668890">UberTrip</a>.</p>
+
+</div>
+</div>
+<a id="a1ee7d23dd5978ebca4249720079d58df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ee7d23dd5978ebca4249720079d58df">&#9670;&nbsp;</a></span>setDriverName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Trip::setDriverName </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>driverName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the Driver Name object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">driverName</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_uber_trip.html#a35ac49b07db563df71233add8895df39">UberTrip</a>.</p>
+
+</div>
+</div>
+<a id="acb64503cb4a27b8428e47b835767bb07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb64503cb4a27b8428e47b835767bb07">&#9670;&nbsp;</a></span>setEndLocation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Trip::setEndLocation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_geographic_coordinate.html">GeographicCoordinate</a> *&#160;</td>
+          <td class="paramname"><em>endLocation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the End Location object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">endLocation</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_uber_trip.html#aae2c907efa309c7d56cfa3aa699325d9">UberTrip</a>.</p>
+
+</div>
+</div>
+<a id="a4350b82d6b47fb8ce362236b59e4dcba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4350b82d6b47fb8ce362236b59e4dcba">&#9670;&nbsp;</a></span>setFareValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Trip::setFareValue </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>fareValue</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the Fare Value object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fareValue</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_uber_trip.html#a8ad120f426729a48b3e935b47c546af9">UberTrip</a>.</p>
+
+</div>
+</div>
+<a id="abcd677bd262d2113a8ee624dd603472c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcd677bd262d2113a8ee624dd603472c">&#9670;&nbsp;</a></span>setOrderTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Trip::setOrderTime </td>
+          <td>(</td>
+          <td class="paramtype">time_t&#160;</td>
+          <td class="paramname"><em>orderTime</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the Order Time object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">orderTime</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_uber_trip.html#afaa2185d2000e92a6d17e71fa8f4b68c">UberTrip</a>.</p>
+
+</div>
+</div>
+<a id="ace6fc94ba81485b769d586e1187fcca1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace6fc94ba81485b769d586e1187fcca1">&#9670;&nbsp;</a></span>setStartLocation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Trip::setStartLocation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_geographic_coordinate.html">GeographicCoordinate</a> *&#160;</td>
+          <td class="paramname"><em>startLocation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the Start Location object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">startLocation</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_uber_trip.html#a20d8bc5309c60f1a74c98abd58038a73">UberTrip</a>.</p>
+
+</div>
+</div>
+<a id="a9e2a2cdc061f785ad9782ed4d3eeac1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e2a2cdc061f785ad9782ed4d3eeac1b">&#9670;&nbsp;</a></span>setStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Trip::setStatus </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>status</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the Status object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">status</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_uber_trip.html#a1f9aa29935714ebb19a4e0888fa6de06">UberTrip</a>.</p>
+
+</div>
+</div>
+<a id="a44e068c30e5b1d60249cc5037c9135d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44e068c30e5b1d60249cc5037c9135d4">&#9670;&nbsp;</a></span>setTimeEstimate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Trip::setTimeEstimate </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>timeEstimate</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the Time Estimate object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeEstimate</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_uber_trip.html#a1cb09e411d0b9c47ba632c8abc1ec18d">UberTrip</a>.</p>
+
+</div>
+</div>
+<a id="a7553e753af55097ba1baed20e7294231"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7553e753af55097ba1baed20e7294231">&#9670;&nbsp;</a></span>setTimeToArrive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Trip::setTimeToArrive </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>timeToArrive</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the Time To Arrive object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeToArrive</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_uber_trip.html#a6d86211a3d6c0a976e5a26bc02a9fd17">UberTrip</a>.</p>
+
+</div>
+</div>
+<a id="ac134104b800eb206588d1d66fdd76c36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac134104b800eb206588d1d66fdd76c36">&#9670;&nbsp;</a></span>setUberType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Trip::setUberType </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>uberType</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the Uber Type object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uberType</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_uber_trip.html#a777b547b65c926b226d51ff26b3be11d">UberTrip</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/Headers/<a class="el" href="_trip_8h_source.html">Trip.h</a></li>
 </ul>

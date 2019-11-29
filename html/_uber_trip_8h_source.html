@@ -76,75 +76,96 @@ $(function() {
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef QUICKIE_UBERTRIP_H</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define QUICKIE_UBERTRIP_H</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_uber_trip.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_uber_trip.html">UberTrip</a>: <span class="keyword">public</span> <a class="code" href="class_trip.html">Trip</a> {</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        std::string status;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keywordtype">double</span> fareValue;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keywordtype">double</span> distance;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keywordtype">double</span> timeEstimate;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keywordtype">double</span> timeToArrive;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        std::string distanceUnit;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="class_geographic_coordinate.html">GeographicCoordinate</a>* startLocation;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="class_geographic_coordinate.html">GeographicCoordinate</a>* endLocation;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        time_t orderTime;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        std::string uberType;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        std::string driverName;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="class_uber_trip.html">UberTrip</a>();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        std::string getStatus();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordtype">void</span> setStatus(std::string status);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">double</span> getFareValue();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordtype">void</span> setFareValue(<span class="keywordtype">double</span> fareValue);</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_uber_trip.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_uber_trip.html">UberTrip</a>: <span class="keyword">public</span> <a class="code" href="class_trip.html">Trip</a> {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        std::string status; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordtype">double</span> fareValue; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordtype">double</span> distance; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordtype">double</span> timeEstimate; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordtype">double</span> timeToArrive; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        std::string distanceUnit; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="class_geographic_coordinate.html">GeographicCoordinate</a>* startLocation; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="class_geographic_coordinate.html">GeographicCoordinate</a>* endLocation; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        time_t orderTime; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        std::string uberType; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        std::string driverName; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="class_uber_trip.html#a4f24132205bc6c00b1a501548a247e79">UberTrip</a>();</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordtype">double</span> getDistance();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordtype">void</span> setDistance(<span class="keywordtype">double</span> distance);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordtype">double</span> getTimeEstimate();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordtype">void</span> setTimeEstimate(<span class="keywordtype">double</span> timeEstimate);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        std::string getDistanceUnit();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordtype">void</span> setDistanceUnit(std::string distanceUnit);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="class_geographic_coordinate.html">GeographicCoordinate</a>* getStartLocation();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">void</span> setStartLocation(<a class="code" href="class_geographic_coordinate.html">GeographicCoordinate</a>* startLocation);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="class_geographic_coordinate.html">GeographicCoordinate</a>* getEndLocation();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">void</span> setEndLocation(<a class="code" href="class_geographic_coordinate.html">GeographicCoordinate</a>* endLocation);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">void</span> start();</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">void</span> setTimeToArrive(<span class="keywordtype">double</span> timeToArrive);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">double</span> getTimeToArrive();</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordtype">void</span> setOrderTime(time_t orderTime);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        std::string <a class="code" href="class_uber_trip.html#ad5382161621eb4578e471f94eb4668ad">getStatus</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_uber_trip.html#a1f9aa29935714ebb19a4e0888fa6de06">setStatus</a>(std::string status);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_uber_trip.html#afab66d5bec471a29075fcf9f22c60a59">getFareValue</a>();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_uber_trip.html#a8ad120f426729a48b3e935b47c546af9">setFareValue</a>(<span class="keywordtype">double</span> fareValue);</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        time_t getOrderTime();</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordtype">void</span> setUberType(std::string uberType);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        std::string getUberType();</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordtype">void</span> setDriverName(std::string driverName);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        std::string getDriverName();</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;};</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#endif //QUICKIE_UBERTRIP_H</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_uber_trip.html#ad35d1a793f78419fc8940f890d4c7430">getDistance</a>();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_uber_trip.html#a721500a1b163da4e6ccc7700c182d877">setDistance</a>(<span class="keywordtype">double</span> distance);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_uber_trip.html#a82127c52b62cd5c80d9d012b92e3ea24">getTimeEstimate</a>();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_uber_trip.html#a1cb09e411d0b9c47ba632c8abc1ec18d">setTimeEstimate</a>(<span class="keywordtype">double</span> timeEstimate);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        std::string <a class="code" href="class_uber_trip.html#aa5d8653ed6a4910c0129f8cfac4dd050">getDistanceUnit</a>();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_uber_trip.html#a23f5ce61f06c7f5a8e4d6449f6668890">setDistanceUnit</a>(std::string distanceUnit);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <a class="code" href="class_geographic_coordinate.html">GeographicCoordinate</a>* <a class="code" href="class_uber_trip.html#a34e20866740017648d763a37ba3f8d34">getStartLocation</a>();</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_uber_trip.html#a20d8bc5309c60f1a74c98abd58038a73">setStartLocation</a>(<a class="code" href="class_geographic_coordinate.html">GeographicCoordinate</a>* startLocation);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <a class="code" href="class_geographic_coordinate.html">GeographicCoordinate</a>* <a class="code" href="class_uber_trip.html#a4cdd53780a286bf26a946f10d8c166f3">getEndLocation</a>();</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_uber_trip.html#aae2c907efa309c7d56cfa3aa699325d9">setEndLocation</a>(<a class="code" href="class_geographic_coordinate.html">GeographicCoordinate</a>* endLocation);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_uber_trip.html#ae049741a6fb23774e2190afcc881b21f">start</a>();</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_uber_trip.html#a6d86211a3d6c0a976e5a26bc02a9fd17">setTimeToArrive</a>(<span class="keywordtype">double</span> timeToArrive);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_uber_trip.html#a68ed7e9c2a453c3e0aefe4872ffce478">getTimeToArrive</a>();</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_uber_trip.html#afaa2185d2000e92a6d17e71fa8f4b68c">setOrderTime</a>(time_t orderTime);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        time_t <a class="code" href="class_uber_trip.html#a7ed20e997f3ee0941466063f104bf2e1">getOrderTime</a>();</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_uber_trip.html#a777b547b65c926b226d51ff26b3be11d">setUberType</a>(std::string uberType);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        std::string <a class="code" href="class_uber_trip.html#a8241b76467a35563b3f3284a6551578f">getUberType</a>();</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_uber_trip.html#a35ac49b07db563df71233add8895df39">setDriverName</a>(std::string driverName);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        std::string <a class="code" href="class_uber_trip.html#a893317c918fbdc64db69a3be86ca80d1">getDriverName</a>();</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;};</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="preprocessor">#endif //QUICKIE_UBERTRIP_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_trip_html"><div class="ttname"><a href="class_trip.html">Trip</a></div><div class="ttdef"><b>Definition:</b> Trip.h:7</div></div>
-<div class="ttc" id="aclass_uber_trip_html"><div class="ttname"><a href="class_uber_trip.html">UberTrip</a></div><div class="ttdef"><b>Definition:</b> UberTrip.h:8</div></div>
-<div class="ttc" id="aclass_geographic_coordinate_html"><div class="ttname"><a href="class_geographic_coordinate.html">GeographicCoordinate</a></div><div class="ttdef"><b>Definition:</b> GeographicCoordinate.h:4</div></div>
+<div class="ttc" id="aclass_uber_trip_html_a6d86211a3d6c0a976e5a26bc02a9fd17"><div class="ttname"><a href="class_uber_trip.html#a6d86211a3d6c0a976e5a26bc02a9fd17">UberTrip::setTimeToArrive</a></div><div class="ttdeci">void setTimeToArrive(double timeToArrive)</div><div class="ttdoc">Set the Time To Arrive object.</div><div class="ttdef"><b>Definition:</b> UberTrip.cpp:68</div></div>
+<div class="ttc" id="aclass_uber_trip_html_a20d8bc5309c60f1a74c98abd58038a73"><div class="ttname"><a href="class_uber_trip.html#a20d8bc5309c60f1a74c98abd58038a73">UberTrip::setStartLocation</a></div><div class="ttdeci">void setStartLocation(GeographicCoordinate *startLocation)</div><div class="ttdoc">Set the Start Location object.</div><div class="ttdef"><b>Definition:</b> UberTrip.cpp:52</div></div>
+<div class="ttc" id="aclass_uber_trip_html_a23f5ce61f06c7f5a8e4d6449f6668890"><div class="ttname"><a href="class_uber_trip.html#a23f5ce61f06c7f5a8e4d6449f6668890">UberTrip::setDistanceUnit</a></div><div class="ttdeci">void setDistanceUnit(std::string distanceUnit)</div><div class="ttdoc">Set the Distance Unit object.</div><div class="ttdef"><b>Definition:</b> UberTrip.cpp:44</div></div>
+<div class="ttc" id="aclass_uber_trip_html_a8241b76467a35563b3f3284a6551578f"><div class="ttname"><a href="class_uber_trip.html#a8241b76467a35563b3f3284a6551578f">UberTrip::getUberType</a></div><div class="ttdeci">std::string getUberType()</div><div class="ttdoc">Get the Uber Type object.</div><div class="ttdef"><b>Definition:</b> UberTrip.cpp:88</div></div>
+<div class="ttc" id="aclass_uber_trip_html_a4f24132205bc6c00b1a501548a247e79"><div class="ttname"><a href="class_uber_trip.html#a4f24132205bc6c00b1a501548a247e79">UberTrip::UberTrip</a></div><div class="ttdeci">UberTrip()</div><div class="ttdoc">Construct a new Uber Trip object.</div><div class="ttdef"><b>Definition:</b> UberTrip.cpp:4</div></div>
+<div class="ttc" id="aclass_uber_trip_html_a1f9aa29935714ebb19a4e0888fa6de06"><div class="ttname"><a href="class_uber_trip.html#a1f9aa29935714ebb19a4e0888fa6de06">UberTrip::setStatus</a></div><div class="ttdeci">void setStatus(std::string status)</div><div class="ttdoc">Set the Status object.</div><div class="ttdef"><b>Definition:</b> UberTrip.cpp:12</div></div>
+<div class="ttc" id="aclass_uber_trip_html_a777b547b65c926b226d51ff26b3be11d"><div class="ttname"><a href="class_uber_trip.html#a777b547b65c926b226d51ff26b3be11d">UberTrip::setUberType</a></div><div class="ttdeci">void setUberType(std::string uberType)</div><div class="ttdoc">Set the Uber Type object.</div><div class="ttdef"><b>Definition:</b> UberTrip.cpp:84</div></div>
+<div class="ttc" id="aclass_uber_trip_html_aae2c907efa309c7d56cfa3aa699325d9"><div class="ttname"><a href="class_uber_trip.html#aae2c907efa309c7d56cfa3aa699325d9">UberTrip::setEndLocation</a></div><div class="ttdeci">void setEndLocation(GeographicCoordinate *endLocation)</div><div class="ttdoc">Set the End Location object.</div><div class="ttdef"><b>Definition:</b> UberTrip.cpp:60</div></div>
+<div class="ttc" id="aclass_uber_trip_html_aa5d8653ed6a4910c0129f8cfac4dd050"><div class="ttname"><a href="class_uber_trip.html#aa5d8653ed6a4910c0129f8cfac4dd050">UberTrip::getDistanceUnit</a></div><div class="ttdeci">std::string getDistanceUnit()</div><div class="ttdoc">Get the Distance Unit object.</div><div class="ttdef"><b>Definition:</b> UberTrip.cpp:40</div></div>
+<div class="ttc" id="aclass_uber_trip_html_a721500a1b163da4e6ccc7700c182d877"><div class="ttname"><a href="class_uber_trip.html#a721500a1b163da4e6ccc7700c182d877">UberTrip::setDistance</a></div><div class="ttdeci">void setDistance(double distance)</div><div class="ttdoc">Set the Distance object.</div><div class="ttdef"><b>Definition:</b> UberTrip.cpp:28</div></div>
+<div class="ttc" id="aclass_uber_trip_html_a34e20866740017648d763a37ba3f8d34"><div class="ttname"><a href="class_uber_trip.html#a34e20866740017648d763a37ba3f8d34">UberTrip::getStartLocation</a></div><div class="ttdeci">GeographicCoordinate * getStartLocation()</div><div class="ttdoc">Get the Start Location object.</div><div class="ttdef"><b>Definition:</b> UberTrip.cpp:48</div></div>
+<div class="ttc" id="aclass_uber_trip_html_a82127c52b62cd5c80d9d012b92e3ea24"><div class="ttname"><a href="class_uber_trip.html#a82127c52b62cd5c80d9d012b92e3ea24">UberTrip::getTimeEstimate</a></div><div class="ttdeci">double getTimeEstimate()</div><div class="ttdoc">Get the Time Estimate object.</div><div class="ttdef"><b>Definition:</b> UberTrip.cpp:32</div></div>
+<div class="ttc" id="aclass_uber_trip_html_a8ad120f426729a48b3e935b47c546af9"><div class="ttname"><a href="class_uber_trip.html#a8ad120f426729a48b3e935b47c546af9">UberTrip::setFareValue</a></div><div class="ttdeci">void setFareValue(double fareValue)</div><div class="ttdoc">Set the Fare Value object.</div><div class="ttdef"><b>Definition:</b> UberTrip.cpp:20</div></div>
+<div class="ttc" id="aclass_uber_trip_html_ad5382161621eb4578e471f94eb4668ad"><div class="ttname"><a href="class_uber_trip.html#ad5382161621eb4578e471f94eb4668ad">UberTrip::getStatus</a></div><div class="ttdeci">std::string getStatus()</div><div class="ttdoc">Get the Status object.</div><div class="ttdef"><b>Definition:</b> UberTrip.cpp:8</div></div>
+<div class="ttc" id="aclass_trip_html"><div class="ttname"><a href="class_trip.html">Trip</a></div><div class="ttdoc">Main fuction that handles all the information about the uber trips.</div><div class="ttdef"><b>Definition:</b> Trip.h:12</div></div>
+<div class="ttc" id="aclass_uber_trip_html_afab66d5bec471a29075fcf9f22c60a59"><div class="ttname"><a href="class_uber_trip.html#afab66d5bec471a29075fcf9f22c60a59">UberTrip::getFareValue</a></div><div class="ttdeci">double getFareValue()</div><div class="ttdoc">Get the Fare Value object.</div><div class="ttdef"><b>Definition:</b> UberTrip.cpp:16</div></div>
+<div class="ttc" id="aclass_uber_trip_html"><div class="ttname"><a href="class_uber_trip.html">UberTrip</a></div><div class="ttdoc">Creates an UberTrip from the information stored in the trip interface.</div><div class="ttdef"><b>Definition:</b> UberTrip.h:12</div></div>
+<div class="ttc" id="aclass_uber_trip_html_a7ed20e997f3ee0941466063f104bf2e1"><div class="ttname"><a href="class_uber_trip.html#a7ed20e997f3ee0941466063f104bf2e1">UberTrip::getOrderTime</a></div><div class="ttdeci">time_t getOrderTime()</div><div class="ttdoc">Get the Order Time object.</div><div class="ttdef"><b>Definition:</b> UberTrip.cpp:80</div></div>
+<div class="ttc" id="aclass_uber_trip_html_a4cdd53780a286bf26a946f10d8c166f3"><div class="ttname"><a href="class_uber_trip.html#a4cdd53780a286bf26a946f10d8c166f3">UberTrip::getEndLocation</a></div><div class="ttdeci">GeographicCoordinate * getEndLocation()</div><div class="ttdoc">Get the End Location object.</div><div class="ttdef"><b>Definition:</b> UberTrip.cpp:56</div></div>
+<div class="ttc" id="aclass_uber_trip_html_a68ed7e9c2a453c3e0aefe4872ffce478"><div class="ttname"><a href="class_uber_trip.html#a68ed7e9c2a453c3e0aefe4872ffce478">UberTrip::getTimeToArrive</a></div><div class="ttdeci">double getTimeToArrive()</div><div class="ttdoc">Get the Time To Arrive object.</div><div class="ttdef"><b>Definition:</b> UberTrip.cpp:72</div></div>
+<div class="ttc" id="aclass_uber_trip_html_a893317c918fbdc64db69a3be86ca80d1"><div class="ttname"><a href="class_uber_trip.html#a893317c918fbdc64db69a3be86ca80d1">UberTrip::getDriverName</a></div><div class="ttdeci">std::string getDriverName()</div><div class="ttdoc">Get the Driver Name object.</div><div class="ttdef"><b>Definition:</b> UberTrip.cpp:96</div></div>
+<div class="ttc" id="aclass_uber_trip_html_a1cb09e411d0b9c47ba632c8abc1ec18d"><div class="ttname"><a href="class_uber_trip.html#a1cb09e411d0b9c47ba632c8abc1ec18d">UberTrip::setTimeEstimate</a></div><div class="ttdeci">void setTimeEstimate(double timeEstimate)</div><div class="ttdoc">Set the Time Estimate object.</div><div class="ttdef"><b>Definition:</b> UberTrip.cpp:36</div></div>
+<div class="ttc" id="aclass_uber_trip_html_afaa2185d2000e92a6d17e71fa8f4b68c"><div class="ttname"><a href="class_uber_trip.html#afaa2185d2000e92a6d17e71fa8f4b68c">UberTrip::setOrderTime</a></div><div class="ttdeci">void setOrderTime(time_t orderTime)</div><div class="ttdoc">Set the Order Time object.</div><div class="ttdef"><b>Definition:</b> UberTrip.cpp:76</div></div>
+<div class="ttc" id="aclass_uber_trip_html_ad35d1a793f78419fc8940f890d4c7430"><div class="ttname"><a href="class_uber_trip.html#ad35d1a793f78419fc8940f890d4c7430">UberTrip::getDistance</a></div><div class="ttdeci">double getDistance()</div><div class="ttdoc">Get the Distance object.</div><div class="ttdef"><b>Definition:</b> UberTrip.cpp:24</div></div>
+<div class="ttc" id="aclass_uber_trip_html_a35ac49b07db563df71233add8895df39"><div class="ttname"><a href="class_uber_trip.html#a35ac49b07db563df71233add8895df39">UberTrip::setDriverName</a></div><div class="ttdeci">void setDriverName(std::string driverName)</div><div class="ttdoc">Set the Driver Name object.</div><div class="ttdef"><b>Definition:</b> UberTrip.cpp:92</div></div>
+<div class="ttc" id="aclass_uber_trip_html_ae049741a6fb23774e2190afcc881b21f"><div class="ttname"><a href="class_uber_trip.html#ae049741a6fb23774e2190afcc881b21f">UberTrip::start</a></div><div class="ttdeci">void start()</div><div class="ttdoc">Starts the uber trip.</div><div class="ttdef"><b>Definition:</b> UberTrip.cpp:64</div></div>
+<div class="ttc" id="aclass_geographic_coordinate_html"><div class="ttname"><a href="class_geographic_coordinate.html">GeographicCoordinate</a></div><div class="ttdoc">Header file for Geographic Coordinate.</div><div class="ttdef"><b>Definition:</b> GeographicCoordinate.h:7</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

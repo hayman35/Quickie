@@ -1,5 +1,14 @@
 \hypertarget{class_uber_trip}{}\doxysection{Uber\+Trip Class Reference}
 \label{class_uber_trip}\index{UberTrip@{UberTrip}}
+
+
+Creates an \mbox{\hyperlink{class_uber_trip}{Uber\+Trip}} from the information stored in the trip interface.  
+
+
+
+
+{\ttfamily \#include $<$Uber\+Trip.\+h$>$}
+
 Inheritance diagram for Uber\+Trip\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,75 +18,488 @@ Inheritance diagram for Uber\+Trip\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_uber_trip_ad5382161621eb4578e471f94eb4668ad}\label{class_uber_trip_ad5382161621eb4578e471f94eb4668ad}} 
-std\+::string {\bfseries get\+Status} ()
-\item 
-\mbox{\Hypertarget{class_uber_trip_a1f9aa29935714ebb19a4e0888fa6de06}\label{class_uber_trip_a1f9aa29935714ebb19a4e0888fa6de06}} 
-void {\bfseries set\+Status} (std\+::string status)
-\item 
-\mbox{\Hypertarget{class_uber_trip_afab66d5bec471a29075fcf9f22c60a59}\label{class_uber_trip_afab66d5bec471a29075fcf9f22c60a59}} 
-double {\bfseries get\+Fare\+Value} ()
-\item 
-\mbox{\Hypertarget{class_uber_trip_a8ad120f426729a48b3e935b47c546af9}\label{class_uber_trip_a8ad120f426729a48b3e935b47c546af9}} 
-void {\bfseries set\+Fare\+Value} (double fare\+Value)
-\item 
+\mbox{\hyperlink{class_uber_trip_a4f24132205bc6c00b1a501548a247e79}{Uber\+Trip}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Uber \mbox{\hyperlink{class_trip}{Trip}} object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_uber_trip_ad5382161621eb4578e471f94eb4668ad}{get\+Status}} ()
+\begin{DoxyCompactList}\small\item\em Get the Status object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_uber_trip_a1f9aa29935714ebb19a4e0888fa6de06}{set\+Status}} (std\+::string status)
+\begin{DoxyCompactList}\small\item\em Set the Status object. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_uber_trip_afab66d5bec471a29075fcf9f22c60a59}{get\+Fare\+Value}} ()
+\begin{DoxyCompactList}\small\item\em Get the Fare Value object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_uber_trip_a8ad120f426729a48b3e935b47c546af9}{set\+Fare\+Value}} (double fare\+Value)
+\begin{DoxyCompactList}\small\item\em Set the Fare Value object. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_uber_trip_ad35d1a793f78419fc8940f890d4c7430}{get\+Distance}} ()
+\begin{DoxyCompactList}\small\item\em Get the Distance object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_uber_trip_a721500a1b163da4e6ccc7700c182d877}{set\+Distance}} (double distance)
+\begin{DoxyCompactList}\small\item\em Set the Distance object. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_uber_trip_a82127c52b62cd5c80d9d012b92e3ea24}{get\+Time\+Estimate}} ()
+\begin{DoxyCompactList}\small\item\em Get the Time Estimate object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_uber_trip_a1cb09e411d0b9c47ba632c8abc1ec18d}{set\+Time\+Estimate}} (double time\+Estimate)
+\begin{DoxyCompactList}\small\item\em Set the Time Estimate object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_uber_trip_aa5d8653ed6a4910c0129f8cfac4dd050}{get\+Distance\+Unit}} ()
+\begin{DoxyCompactList}\small\item\em Get the Distance Unit object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_uber_trip_a23f5ce61f06c7f5a8e4d6449f6668890}{set\+Distance\+Unit}} (std\+::string distance\+Unit)
+\begin{DoxyCompactList}\small\item\em Set the Distance Unit object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_geographic_coordinate}{Geographic\+Coordinate}} $\ast$ \mbox{\hyperlink{class_uber_trip_a34e20866740017648d763a37ba3f8d34}{get\+Start\+Location}} ()
+\begin{DoxyCompactList}\small\item\em Get the Start Location object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_uber_trip_a20d8bc5309c60f1a74c98abd58038a73}{set\+Start\+Location}} (\mbox{\hyperlink{class_geographic_coordinate}{Geographic\+Coordinate}} $\ast$start\+Location)
+\begin{DoxyCompactList}\small\item\em Set the Start Location object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_geographic_coordinate}{Geographic\+Coordinate}} $\ast$ \mbox{\hyperlink{class_uber_trip_a4cdd53780a286bf26a946f10d8c166f3}{get\+End\+Location}} ()
+\begin{DoxyCompactList}\small\item\em Get the End Location object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_uber_trip_aae2c907efa309c7d56cfa3aa699325d9}{set\+End\+Location}} (\mbox{\hyperlink{class_geographic_coordinate}{Geographic\+Coordinate}} $\ast$end\+Location)
+\begin{DoxyCompactList}\small\item\em Set the End Location object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_uber_trip_ae049741a6fb23774e2190afcc881b21f}{start}} ()
+\begin{DoxyCompactList}\small\item\em Starts the uber trip. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_uber_trip_a6d86211a3d6c0a976e5a26bc02a9fd17}{set\+Time\+To\+Arrive}} (double time\+To\+Arrive)
+\begin{DoxyCompactList}\small\item\em Set the Time To Arrive object. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_uber_trip_a68ed7e9c2a453c3e0aefe4872ffce478}{get\+Time\+To\+Arrive}} ()
+\begin{DoxyCompactList}\small\item\em Get the Time To Arrive object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_uber_trip_afaa2185d2000e92a6d17e71fa8f4b68c}{set\+Order\+Time}} (time\+\_\+t order\+Time)
+\begin{DoxyCompactList}\small\item\em Set the Order Time object. \end{DoxyCompactList}\item 
+time\+\_\+t \mbox{\hyperlink{class_uber_trip_a7ed20e997f3ee0941466063f104bf2e1}{get\+Order\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Get the Order Time object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_uber_trip_a777b547b65c926b226d51ff26b3be11d}{set\+Uber\+Type}} (std\+::string uber\+Type)
+\begin{DoxyCompactList}\small\item\em Set the Uber Type object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_uber_trip_a8241b76467a35563b3f3284a6551578f}{get\+Uber\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Get the Uber Type object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_uber_trip_a35ac49b07db563df71233add8895df39}{set\+Driver\+Name}} (std\+::string driver\+Name)
+\begin{DoxyCompactList}\small\item\em Set the Driver Name object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_uber_trip_a893317c918fbdc64db69a3be86ca80d1}{get\+Driver\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Get the Driver Name object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Creates an \mbox{\hyperlink{class_uber_trip}{Uber\+Trip}} from the information stored in the trip interface. 
+
+\begin{DoxyAuthor}{Authors}
+Hayman, Kevin and Nirmal 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_uber_trip_a4f24132205bc6c00b1a501548a247e79}\label{class_uber_trip_a4f24132205bc6c00b1a501548a247e79}} 
+\index{UberTrip@{UberTrip}!UberTrip@{UberTrip}}
+\index{UberTrip@{UberTrip}!UberTrip@{UberTrip}}
+\doxysubsubsection{\texorpdfstring{UberTrip()}{UberTrip()}}
+{\footnotesize\ttfamily Uber\+Trip\+::\+Uber\+Trip (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new Uber \mbox{\hyperlink{class_trip}{Trip}} object. 
+
+The name of the driver 
+
+\doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_uber_trip_ad35d1a793f78419fc8940f890d4c7430}\label{class_uber_trip_ad35d1a793f78419fc8940f890d4c7430}} 
-double {\bfseries get\+Distance} ()
-\item 
-\mbox{\Hypertarget{class_uber_trip_a721500a1b163da4e6ccc7700c182d877}\label{class_uber_trip_a721500a1b163da4e6ccc7700c182d877}} 
-void {\bfseries set\+Distance} (double distance)
-\item 
-\mbox{\Hypertarget{class_uber_trip_a82127c52b62cd5c80d9d012b92e3ea24}\label{class_uber_trip_a82127c52b62cd5c80d9d012b92e3ea24}} 
-double {\bfseries get\+Time\+Estimate} ()
-\item 
-\mbox{\Hypertarget{class_uber_trip_a1cb09e411d0b9c47ba632c8abc1ec18d}\label{class_uber_trip_a1cb09e411d0b9c47ba632c8abc1ec18d}} 
-void {\bfseries set\+Time\+Estimate} (double time\+Estimate)
-\item 
+\index{UberTrip@{UberTrip}!getDistance@{getDistance}}
+\index{getDistance@{getDistance}!UberTrip@{UberTrip}}
+\doxysubsubsection{\texorpdfstring{getDistance()}{getDistance()}}
+{\footnotesize\ttfamily double Uber\+Trip\+::get\+Distance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the Distance object. 
+
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_trip_a0d86786f9d853535607432fca0626885}{Trip}}.
+
 \mbox{\Hypertarget{class_uber_trip_aa5d8653ed6a4910c0129f8cfac4dd050}\label{class_uber_trip_aa5d8653ed6a4910c0129f8cfac4dd050}} 
-std\+::string {\bfseries get\+Distance\+Unit} ()
-\item 
-\mbox{\Hypertarget{class_uber_trip_a23f5ce61f06c7f5a8e4d6449f6668890}\label{class_uber_trip_a23f5ce61f06c7f5a8e4d6449f6668890}} 
-void {\bfseries set\+Distance\+Unit} (std\+::string distance\+Unit)
-\item 
-\mbox{\Hypertarget{class_uber_trip_a34e20866740017648d763a37ba3f8d34}\label{class_uber_trip_a34e20866740017648d763a37ba3f8d34}} 
-\mbox{\hyperlink{class_geographic_coordinate}{Geographic\+Coordinate}} $\ast$ {\bfseries get\+Start\+Location} ()
-\item 
-\mbox{\Hypertarget{class_uber_trip_a20d8bc5309c60f1a74c98abd58038a73}\label{class_uber_trip_a20d8bc5309c60f1a74c98abd58038a73}} 
-void {\bfseries set\+Start\+Location} (\mbox{\hyperlink{class_geographic_coordinate}{Geographic\+Coordinate}} $\ast$start\+Location)
-\item 
-\mbox{\Hypertarget{class_uber_trip_a4cdd53780a286bf26a946f10d8c166f3}\label{class_uber_trip_a4cdd53780a286bf26a946f10d8c166f3}} 
-\mbox{\hyperlink{class_geographic_coordinate}{Geographic\+Coordinate}} $\ast$ {\bfseries get\+End\+Location} ()
-\item 
-\mbox{\Hypertarget{class_uber_trip_aae2c907efa309c7d56cfa3aa699325d9}\label{class_uber_trip_aae2c907efa309c7d56cfa3aa699325d9}} 
-void {\bfseries set\+End\+Location} (\mbox{\hyperlink{class_geographic_coordinate}{Geographic\+Coordinate}} $\ast$end\+Location)
-\item 
-\mbox{\Hypertarget{class_uber_trip_ae049741a6fb23774e2190afcc881b21f}\label{class_uber_trip_ae049741a6fb23774e2190afcc881b21f}} 
-void {\bfseries start} ()
-\item 
-\mbox{\Hypertarget{class_uber_trip_a6d86211a3d6c0a976e5a26bc02a9fd17}\label{class_uber_trip_a6d86211a3d6c0a976e5a26bc02a9fd17}} 
-void {\bfseries set\+Time\+To\+Arrive} (double time\+To\+Arrive)
-\item 
-\mbox{\Hypertarget{class_uber_trip_a68ed7e9c2a453c3e0aefe4872ffce478}\label{class_uber_trip_a68ed7e9c2a453c3e0aefe4872ffce478}} 
-double {\bfseries get\+Time\+To\+Arrive} ()
-\item 
-\mbox{\Hypertarget{class_uber_trip_afaa2185d2000e92a6d17e71fa8f4b68c}\label{class_uber_trip_afaa2185d2000e92a6d17e71fa8f4b68c}} 
-void {\bfseries set\+Order\+Time} (time\+\_\+t order\+Time)
-\item 
-\mbox{\Hypertarget{class_uber_trip_a7ed20e997f3ee0941466063f104bf2e1}\label{class_uber_trip_a7ed20e997f3ee0941466063f104bf2e1}} 
-time\+\_\+t {\bfseries get\+Order\+Time} ()
-\item 
-\mbox{\Hypertarget{class_uber_trip_a777b547b65c926b226d51ff26b3be11d}\label{class_uber_trip_a777b547b65c926b226d51ff26b3be11d}} 
-void {\bfseries set\+Uber\+Type} (std\+::string uber\+Type)
-\item 
-\mbox{\Hypertarget{class_uber_trip_a8241b76467a35563b3f3284a6551578f}\label{class_uber_trip_a8241b76467a35563b3f3284a6551578f}} 
-std\+::string {\bfseries get\+Uber\+Type} ()
-\item 
-\mbox{\Hypertarget{class_uber_trip_a35ac49b07db563df71233add8895df39}\label{class_uber_trip_a35ac49b07db563df71233add8895df39}} 
-void {\bfseries set\+Driver\+Name} (std\+::string driver\+Name)
-\item 
+\index{UberTrip@{UberTrip}!getDistanceUnit@{getDistanceUnit}}
+\index{getDistanceUnit@{getDistanceUnit}!UberTrip@{UberTrip}}
+\doxysubsubsection{\texorpdfstring{getDistanceUnit()}{getDistanceUnit()}}
+{\footnotesize\ttfamily std\+::string Uber\+Trip\+::get\+Distance\+Unit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the Distance Unit object. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_trip_a910fcd42ed3da7bd479e590547e2cac6}{Trip}}.
+
 \mbox{\Hypertarget{class_uber_trip_a893317c918fbdc64db69a3be86ca80d1}\label{class_uber_trip_a893317c918fbdc64db69a3be86ca80d1}} 
-std\+::string {\bfseries get\+Driver\+Name} ()
-\end{DoxyCompactItemize}
+\index{UberTrip@{UberTrip}!getDriverName@{getDriverName}}
+\index{getDriverName@{getDriverName}!UberTrip@{UberTrip}}
+\doxysubsubsection{\texorpdfstring{getDriverName()}{getDriverName()}}
+{\footnotesize\ttfamily std\+::string Uber\+Trip\+::get\+Driver\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the Driver Name object. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_trip_adf125f4677a38aa382e5e6b74441789e}{Trip}}.
+
+\mbox{\Hypertarget{class_uber_trip_a4cdd53780a286bf26a946f10d8c166f3}\label{class_uber_trip_a4cdd53780a286bf26a946f10d8c166f3}} 
+\index{UberTrip@{UberTrip}!getEndLocation@{getEndLocation}}
+\index{getEndLocation@{getEndLocation}!UberTrip@{UberTrip}}
+\doxysubsubsection{\texorpdfstring{getEndLocation()}{getEndLocation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_geographic_coordinate}{Geographic\+Coordinate}} $\ast$ Uber\+Trip\+::get\+End\+Location (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the End Location object. 
+
+\begin{DoxyReturn}{Returns}
+Geographic\+Coordinate$\ast$ 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_trip_a22cfe227151fa37a5509aaf1ca3a70e9}{Trip}}.
+
+\mbox{\Hypertarget{class_uber_trip_afab66d5bec471a29075fcf9f22c60a59}\label{class_uber_trip_afab66d5bec471a29075fcf9f22c60a59}} 
+\index{UberTrip@{UberTrip}!getFareValue@{getFareValue}}
+\index{getFareValue@{getFareValue}!UberTrip@{UberTrip}}
+\doxysubsubsection{\texorpdfstring{getFareValue()}{getFareValue()}}
+{\footnotesize\ttfamily double Uber\+Trip\+::get\+Fare\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the Fare Value object. 
+
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_trip_a065aee3d785a9ce744b7c7bca8f2eb70}{Trip}}.
+
+\mbox{\Hypertarget{class_uber_trip_a7ed20e997f3ee0941466063f104bf2e1}\label{class_uber_trip_a7ed20e997f3ee0941466063f104bf2e1}} 
+\index{UberTrip@{UberTrip}!getOrderTime@{getOrderTime}}
+\index{getOrderTime@{getOrderTime}!UberTrip@{UberTrip}}
+\doxysubsubsection{\texorpdfstring{getOrderTime()}{getOrderTime()}}
+{\footnotesize\ttfamily time\+\_\+t Uber\+Trip\+::get\+Order\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the Order Time object. 
+
+\begin{DoxyReturn}{Returns}
+time\+\_\+t 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_trip_a469c855a4675897b584868f7b1dec249}{Trip}}.
+
+\mbox{\Hypertarget{class_uber_trip_a34e20866740017648d763a37ba3f8d34}\label{class_uber_trip_a34e20866740017648d763a37ba3f8d34}} 
+\index{UberTrip@{UberTrip}!getStartLocation@{getStartLocation}}
+\index{getStartLocation@{getStartLocation}!UberTrip@{UberTrip}}
+\doxysubsubsection{\texorpdfstring{getStartLocation()}{getStartLocation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_geographic_coordinate}{Geographic\+Coordinate}} $\ast$ Uber\+Trip\+::get\+Start\+Location (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the Start Location object. 
+
+\begin{DoxyReturn}{Returns}
+Geographic\+Coordinate$\ast$ 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_trip_abe927661f1b34efedbe17462a9a7c570}{Trip}}.
+
+\mbox{\Hypertarget{class_uber_trip_ad5382161621eb4578e471f94eb4668ad}\label{class_uber_trip_ad5382161621eb4578e471f94eb4668ad}} 
+\index{UberTrip@{UberTrip}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!UberTrip@{UberTrip}}
+\doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
+{\footnotesize\ttfamily std\+::string Uber\+Trip\+::get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the Status object. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_trip_a3f5055584c52d7bdbedfcc475b954927}{Trip}}.
+
+\mbox{\Hypertarget{class_uber_trip_a82127c52b62cd5c80d9d012b92e3ea24}\label{class_uber_trip_a82127c52b62cd5c80d9d012b92e3ea24}} 
+\index{UberTrip@{UberTrip}!getTimeEstimate@{getTimeEstimate}}
+\index{getTimeEstimate@{getTimeEstimate}!UberTrip@{UberTrip}}
+\doxysubsubsection{\texorpdfstring{getTimeEstimate()}{getTimeEstimate()}}
+{\footnotesize\ttfamily double Uber\+Trip\+::get\+Time\+Estimate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the Time Estimate object. 
+
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_trip_a475c7e13fda6ecba567d2fda338ebe3c}{Trip}}.
+
+\mbox{\Hypertarget{class_uber_trip_a68ed7e9c2a453c3e0aefe4872ffce478}\label{class_uber_trip_a68ed7e9c2a453c3e0aefe4872ffce478}} 
+\index{UberTrip@{UberTrip}!getTimeToArrive@{getTimeToArrive}}
+\index{getTimeToArrive@{getTimeToArrive}!UberTrip@{UberTrip}}
+\doxysubsubsection{\texorpdfstring{getTimeToArrive()}{getTimeToArrive()}}
+{\footnotesize\ttfamily double Uber\+Trip\+::get\+Time\+To\+Arrive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the Time To Arrive object. 
+
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_trip_ae1c6d7b54963477a5b8ce1fe19246797}{Trip}}.
+
+\mbox{\Hypertarget{class_uber_trip_a8241b76467a35563b3f3284a6551578f}\label{class_uber_trip_a8241b76467a35563b3f3284a6551578f}} 
+\index{UberTrip@{UberTrip}!getUberType@{getUberType}}
+\index{getUberType@{getUberType}!UberTrip@{UberTrip}}
+\doxysubsubsection{\texorpdfstring{getUberType()}{getUberType()}}
+{\footnotesize\ttfamily std\+::string Uber\+Trip\+::get\+Uber\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the Uber Type object. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_trip_a2ae579ef9863cd623b5e4ff32523d64f}{Trip}}.
+
+\mbox{\Hypertarget{class_uber_trip_a721500a1b163da4e6ccc7700c182d877}\label{class_uber_trip_a721500a1b163da4e6ccc7700c182d877}} 
+\index{UberTrip@{UberTrip}!setDistance@{setDistance}}
+\index{setDistance@{setDistance}!UberTrip@{UberTrip}}
+\doxysubsubsection{\texorpdfstring{setDistance()}{setDistance()}}
+{\footnotesize\ttfamily void Uber\+Trip\+::set\+Distance (\begin{DoxyParamCaption}\item[{double}]{distance }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Set the Distance object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em distance} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_trip_af494388ab2610c5a53ce4e5786926feb}{Trip}}.
+
+\mbox{\Hypertarget{class_uber_trip_a23f5ce61f06c7f5a8e4d6449f6668890}\label{class_uber_trip_a23f5ce61f06c7f5a8e4d6449f6668890}} 
+\index{UberTrip@{UberTrip}!setDistanceUnit@{setDistanceUnit}}
+\index{setDistanceUnit@{setDistanceUnit}!UberTrip@{UberTrip}}
+\doxysubsubsection{\texorpdfstring{setDistanceUnit()}{setDistanceUnit()}}
+{\footnotesize\ttfamily void Uber\+Trip\+::set\+Distance\+Unit (\begin{DoxyParamCaption}\item[{std\+::string}]{distance\+Unit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Set the Distance Unit object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em distance\+Unit} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_trip_a064dd90d745b9e3ec30bc14ddc862834}{Trip}}.
+
+\mbox{\Hypertarget{class_uber_trip_a35ac49b07db563df71233add8895df39}\label{class_uber_trip_a35ac49b07db563df71233add8895df39}} 
+\index{UberTrip@{UberTrip}!setDriverName@{setDriverName}}
+\index{setDriverName@{setDriverName}!UberTrip@{UberTrip}}
+\doxysubsubsection{\texorpdfstring{setDriverName()}{setDriverName()}}
+{\footnotesize\ttfamily void Uber\+Trip\+::set\+Driver\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{driver\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Set the Driver Name object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver\+Name} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_trip_a1ee7d23dd5978ebca4249720079d58df}{Trip}}.
+
+\mbox{\Hypertarget{class_uber_trip_aae2c907efa309c7d56cfa3aa699325d9}\label{class_uber_trip_aae2c907efa309c7d56cfa3aa699325d9}} 
+\index{UberTrip@{UberTrip}!setEndLocation@{setEndLocation}}
+\index{setEndLocation@{setEndLocation}!UberTrip@{UberTrip}}
+\doxysubsubsection{\texorpdfstring{setEndLocation()}{setEndLocation()}}
+{\footnotesize\ttfamily void Uber\+Trip\+::set\+End\+Location (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_geographic_coordinate}{Geographic\+Coordinate}} $\ast$}]{end\+Location }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Set the End Location object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em end\+Location} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_trip_acb64503cb4a27b8428e47b835767bb07}{Trip}}.
+
+\mbox{\Hypertarget{class_uber_trip_a8ad120f426729a48b3e935b47c546af9}\label{class_uber_trip_a8ad120f426729a48b3e935b47c546af9}} 
+\index{UberTrip@{UberTrip}!setFareValue@{setFareValue}}
+\index{setFareValue@{setFareValue}!UberTrip@{UberTrip}}
+\doxysubsubsection{\texorpdfstring{setFareValue()}{setFareValue()}}
+{\footnotesize\ttfamily void Uber\+Trip\+::set\+Fare\+Value (\begin{DoxyParamCaption}\item[{double}]{fare\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Set the Fare Value object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fare\+Value} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_trip_a4350b82d6b47fb8ce362236b59e4dcba}{Trip}}.
+
+\mbox{\Hypertarget{class_uber_trip_afaa2185d2000e92a6d17e71fa8f4b68c}\label{class_uber_trip_afaa2185d2000e92a6d17e71fa8f4b68c}} 
+\index{UberTrip@{UberTrip}!setOrderTime@{setOrderTime}}
+\index{setOrderTime@{setOrderTime}!UberTrip@{UberTrip}}
+\doxysubsubsection{\texorpdfstring{setOrderTime()}{setOrderTime()}}
+{\footnotesize\ttfamily void Uber\+Trip\+::set\+Order\+Time (\begin{DoxyParamCaption}\item[{time\+\_\+t}]{order\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Set the Order Time object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order\+Time} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_trip_abcd677bd262d2113a8ee624dd603472c}{Trip}}.
+
+\mbox{\Hypertarget{class_uber_trip_a20d8bc5309c60f1a74c98abd58038a73}\label{class_uber_trip_a20d8bc5309c60f1a74c98abd58038a73}} 
+\index{UberTrip@{UberTrip}!setStartLocation@{setStartLocation}}
+\index{setStartLocation@{setStartLocation}!UberTrip@{UberTrip}}
+\doxysubsubsection{\texorpdfstring{setStartLocation()}{setStartLocation()}}
+{\footnotesize\ttfamily void Uber\+Trip\+::set\+Start\+Location (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_geographic_coordinate}{Geographic\+Coordinate}} $\ast$}]{start\+Location }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Set the Start Location object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Location} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_trip_ace6fc94ba81485b769d586e1187fcca1}{Trip}}.
+
+\mbox{\Hypertarget{class_uber_trip_a1f9aa29935714ebb19a4e0888fa6de06}\label{class_uber_trip_a1f9aa29935714ebb19a4e0888fa6de06}} 
+\index{UberTrip@{UberTrip}!setStatus@{setStatus}}
+\index{setStatus@{setStatus}!UberTrip@{UberTrip}}
+\doxysubsubsection{\texorpdfstring{setStatus()}{setStatus()}}
+{\footnotesize\ttfamily void Uber\+Trip\+::set\+Status (\begin{DoxyParamCaption}\item[{std\+::string}]{status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Set the Status object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em status} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_trip_a9e2a2cdc061f785ad9782ed4d3eeac1b}{Trip}}.
+
+\mbox{\Hypertarget{class_uber_trip_a1cb09e411d0b9c47ba632c8abc1ec18d}\label{class_uber_trip_a1cb09e411d0b9c47ba632c8abc1ec18d}} 
+\index{UberTrip@{UberTrip}!setTimeEstimate@{setTimeEstimate}}
+\index{setTimeEstimate@{setTimeEstimate}!UberTrip@{UberTrip}}
+\doxysubsubsection{\texorpdfstring{setTimeEstimate()}{setTimeEstimate()}}
+{\footnotesize\ttfamily void Uber\+Trip\+::set\+Time\+Estimate (\begin{DoxyParamCaption}\item[{double}]{time\+Estimate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Set the Time Estimate object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time\+Estimate} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_trip_a44e068c30e5b1d60249cc5037c9135d4}{Trip}}.
+
+\mbox{\Hypertarget{class_uber_trip_a6d86211a3d6c0a976e5a26bc02a9fd17}\label{class_uber_trip_a6d86211a3d6c0a976e5a26bc02a9fd17}} 
+\index{UberTrip@{UberTrip}!setTimeToArrive@{setTimeToArrive}}
+\index{setTimeToArrive@{setTimeToArrive}!UberTrip@{UberTrip}}
+\doxysubsubsection{\texorpdfstring{setTimeToArrive()}{setTimeToArrive()}}
+{\footnotesize\ttfamily void Uber\+Trip\+::set\+Time\+To\+Arrive (\begin{DoxyParamCaption}\item[{double}]{time\+To\+Arrive }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Set the Time To Arrive object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time\+To\+Arrive} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_trip_a7553e753af55097ba1baed20e7294231}{Trip}}.
+
+\mbox{\Hypertarget{class_uber_trip_a777b547b65c926b226d51ff26b3be11d}\label{class_uber_trip_a777b547b65c926b226d51ff26b3be11d}} 
+\index{UberTrip@{UberTrip}!setUberType@{setUberType}}
+\index{setUberType@{setUberType}!UberTrip@{UberTrip}}
+\doxysubsubsection{\texorpdfstring{setUberType()}{setUberType()}}
+{\footnotesize\ttfamily void Uber\+Trip\+::set\+Uber\+Type (\begin{DoxyParamCaption}\item[{std\+::string}]{uber\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Set the Uber Type object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uber\+Type} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_trip_ac134104b800eb206588d1d66fdd76c36}{Trip}}.
+
+\mbox{\Hypertarget{class_uber_trip_ae049741a6fb23774e2190afcc881b21f}\label{class_uber_trip_ae049741a6fb23774e2190afcc881b21f}} 
+\index{UberTrip@{UberTrip}!start@{start}}
+\index{start@{start}!UberTrip@{UberTrip}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void Uber\+Trip\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Starts the uber trip. 
+
+
+
+Implements \mbox{\hyperlink{class_trip}{Trip}}.
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
